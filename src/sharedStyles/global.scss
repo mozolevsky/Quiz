@@ -1,0 +1,21 @@
+@import "../fonts/fonts.css";
+@import "variables.scss";
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-text;
+
+  @media (max-width: 767px) {
+    font-size: $font-size * 0.9;
+  }
+}
+
+
+
+

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Landing extends Component {
     render() {
         return (
-           <div>Here will be landing page</div>
+            <div>Here will be landing page</div>
         );
     }
 }

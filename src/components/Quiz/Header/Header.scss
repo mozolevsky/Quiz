@@ -1,0 +1,15 @@
+@import "../../../sharedStyles/variables.scss";
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 42px;
+  background: white;
+
+  &__logo {
+    font-size: 3.17rem;
+    line-height: 3.17rem;
+    color: $color-main;
+    text-decoration: none;
+  }
+}

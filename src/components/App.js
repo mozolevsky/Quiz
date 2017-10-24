@@ -4,6 +4,8 @@ import Landing from './Landing/Landing';
 import Quiz from './Quiz/Quiz';
 import Report from './Report/Report';
 
+import '../sharedStyles/global.css';
+
 class App extends Component {
   render() {
     return (

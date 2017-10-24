@@ -1,0 +1,40 @@
+@import "../../sharedStyles/variables.scss";
+
+.quiz {
+  display: flex;
+  height: 100vh;
+
+  &__left-side {
+    width: 70%;
+    background: lightgreen; // temp
+  }
+
+  &__right-side {
+    width: 30%;
+    background: lightcoral; // temp
+  }
+}
+
+@media (max-width: $screen-md) {
+  .quiz {
+    &__left-side {
+      width: 60%;
+    }
+
+    &__right-side {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .quiz {
+    &__left-side {
+      width: 100%;
+    }
+
+    &__right-side {
+      display: none;
+    }
+  }
+}
