@@ -1,0 +1,9 @@
+
+React official docs
+https://reactjs.org/docs/
+
+React router tutorial (rus)
+https://habrahabr.ru/post/329996/
+
+React cli guide
+https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
