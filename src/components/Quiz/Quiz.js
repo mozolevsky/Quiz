@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import Title from './Title/Title';
-import Description from './Description/Description';
+import QuizTitle from './QuizTitle/QuizTitle';
+import QuizDescription from './QuizDescription/QuizDescription';
 import Button from './Button/Button';
 import ProgressBar from './ProgressBar/ProgressBar';
 import DeviceArea from './DeviceArea/DeviceArea';
@@ -17,11 +17,11 @@ class Quiz extends Component {
                 <div className="quiz__left-side">
                     <Header/>
                     <div className="quiz__area">
-                        <Title/>
-                        <Description/>
-                        <Button/>
+                        <QuizTitle questionName="The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes."/>
+                        <QuizDescription questionDesc="When choosing your answers please think of your situation all round rather than what you currently feel."/>
+                        <Button buttonName="Start the body type quiz"/>
                     </div>
-                    <ProgressBar/>
+                    <ProgressBar currentAnswer={3} totalAnswers={30}/>
                 </div>
                 <div className="quiz__right-side">
                     <DeviceArea/>

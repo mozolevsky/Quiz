@@ -1,0 +1,28 @@
+@import "../../../sharedStyles/variables.scss";
+
+
+.progress-line {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12%;
+  padding-top: 25px;
+  height: 78px;
+  box-sizing: border-box;
+  background-color: #faf9ff;
+
+  &__desc {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.21;
+    letter-spacing: -0.9px;
+    color: $color-main;
+  }
+}
+
+@media (max-width: $screen-md) {
+ .progress-line {
+   padding-left: 5%;
+ }
+}

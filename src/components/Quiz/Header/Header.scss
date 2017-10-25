@@ -3,13 +3,23 @@
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 42px;
+  margin-left: 42px;
   background: white;
 
   &__logo {
-    font-size: 3.17rem;
-    line-height: 3.17rem;
     color: $color-main;
     text-decoration: none;
+  }
+
+  &__img {
+    width: 116px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5%;
   }
 }

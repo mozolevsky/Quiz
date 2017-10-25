@@ -1,0 +1,13 @@
+@import "../../../sharedStyles/variables.scss";
+
+.quiz__description {
+  margin-top: 0;
+  font-size: 2.4rem;
+  color: #65606b;
+  }
+
+@media (max-width: $screen-sm) {
+  .quiz__description {
+    font-size: 2rem;
+  }
+}

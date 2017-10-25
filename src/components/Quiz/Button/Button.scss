@@ -1,0 +1,36 @@
+@import "../../../sharedStyles/variables.scss";
+
+.button {
+  position: relative;
+  height: 77px;
+  width: 450px;
+
+  border-radius: 100px;
+  background-color: $color-main;
+  box-shadow: 0 12px 24px 0 rgba(124, 91, 209, 0.26);
+  border: solid 4px $color-main;
+
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+
+  &_arrow {
+    &::before {
+      content: '';
+      position: absolute;
+      right: -43px;
+      top: -30px;
+      width: 45px;
+      height: 45px;
+      background: url('../../../img/arrow-for-button.svg') no-repeat center;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .button {
+    width: 85%;
+    display: block;
+  }
+}

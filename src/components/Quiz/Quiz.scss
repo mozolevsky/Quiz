@@ -6,14 +6,30 @@
 
   &__left-side {
     width: 70%;
-    background: lightgreen; // temp
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__area {
+    margin-left: 12%;
+    margin-right: 19%;
   }
 
   &__right-side {
     width: 30%;
-    background: lightcoral; // temp
+    background: $color-main;
   }
 }
+
+@media (min-width: 1400px) {
+  .quiz {
+    &__area {
+      margin-bottom: 138px;
+    }
+  }
+}
+
 
 @media (max-width: $screen-md) {
   .quiz {
@@ -27,12 +43,21 @@
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .quiz {
     &__left-side {
       width: 100%;
     }
 
+    &__area {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .quiz {
     &__right-side {
       display: none;
     }
