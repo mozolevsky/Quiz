@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import './DeviceArea.css';
 
 class DeviceArea extends Component {
     render() {
         return (
-            <div>Device area</div>
-        );
+            <div className="phone-container">
+                <div className="phone">
+                    <div className="screen">
+                        Here will be text
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
 

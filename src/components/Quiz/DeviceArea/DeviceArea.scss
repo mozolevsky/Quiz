@@ -1,0 +1,70 @@
+@import "../../../sharedStyles/variables.scss";
+
+.phone-container {
+  margin: auto;
+  width: 290px;
+}
+
+.phone {
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  bottom: 0;
+  top: 0;
+  background: rgba(246, 249, 252, .95);
+  transition: opacity .8s;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 249px;
+  height: 491px;
+  border-radius: 30px;
+  box-shadow: inset 6px -6px 15px rgba(145, 160, 180, .45), -30px 30px 40px rgba(118, 146, 180, .18);
+  left: 0;
+  z-index: auto;
+  background: linear-gradient(to bottom left, #f3f8fb, #e5ebf2);
+  opacity: 1;
+  }
+
+  .phone:after,
+  .phone:before {
+    content: "";
+    position: absolute
+  }
+  .phone:before {
+    width: 76px;
+    height: 8px;
+    left: 90px;
+    top: 26px;
+    border-radius: 4px;
+    background: #e4eaf1;
+  }
+  .phone:after {
+    width: 40px;
+    height: 40px;
+    left: 110px;
+    bottom: 12px;
+    border-radius: 35px;
+    background: #dde3eb;
+  }
+
+ .phone .screen {
+  --screen-width: 216px;
+  --form-spacing: 25px;
+  --form-separator: #e6ebf1;
+  position: relative;
+  width: var(--screen-width);
+  height: 379px;
+  border-radius: 6px;
+  background: linear-gradient(#f6f9fc 70%, #fff);
+  overflow: hidden;
+  margin: 0 auto;
+  transform: none;
+  left: 0;
+  top: 52px;
+  box-shadow: -1px 1px 6px rgba(170, 183, 204, .2)
+}
+
+ .phone .screen>* {
+  width: 100%
+}
+

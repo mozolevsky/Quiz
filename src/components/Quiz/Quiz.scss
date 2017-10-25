@@ -19,6 +19,15 @@
   &__right-side {
     width: 30%;
     background: $color-main;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__list-area {
+    margin-top: -40px;
+    width: 100%;
+    background-color: #352856;
   }
 }
 
@@ -27,11 +36,15 @@
     &__area {
       margin-bottom: 138px;
     }
+
+    &__right-side {
+      padding-top: 90px;
+    }
   }
 }
 
 
-@media (max-width: $screen-md) {
+@media (max-width: 1399px) {
   .quiz {
     &__left-side {
       width: 60%;
@@ -52,6 +65,10 @@
     &__area {
       margin-left: 5%;
       margin-right: 5%;
+    }
+
+    &__list-area {
+      display: none;
     }
   }
 }

@@ -9,6 +9,16 @@ import TickList from './TickList/TickList';
 
 import './Quiz.css';
 
+const listData = {
+    listTitle: 'Your Ayurvedic Report',
+    listItems: [
+        'Understand your qualities and quirks',
+        'Everyone will be on the same page',
+        'Projects will get off the ground faster',
+        'You’ll know exactly what’s going on',
+        'You’ll free up time spent on meetings',
+    ]
+};
 
 class Quiz extends Component {
     render() {
@@ -25,7 +35,12 @@ class Quiz extends Component {
                 </div>
                 <div className="quiz__right-side">
                     <DeviceArea/>
-                    <TickList/>
+                   <div className="quiz__list-area">
+                       <TickList
+                           listTitle={listData.listTitle}
+                           listItems={listData.listItems}
+                       />
+                   </div>
                 </div>
             </div>
         );
