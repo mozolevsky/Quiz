@@ -1,14 +1,61 @@
 @import "../../../sharedStyles/variables.scss";
 
 .phone-container {
+  position: relative;
   margin: auto;
   width: 290px;
+
+  &__marker {
+    position: absolute;
+    z-index: 3;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60.7px;
+    padding-left: 7px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 25.4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 9px;
+      width: 6.6px;
+      height: 6.6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    &_vitta {
+      background-color: $color-main;
+      top: 92px;
+      left: 8px;
+    }
+
+    &_pitta {
+      background-color: #fdbea3;
+      top: 102px;
+      right: -8px;
+    }
+
+    &_kapha {
+      background-color: #f492d2;
+      top: 184px;
+      right: 10px;
+    }
+  }
 }
 
 .phone {
   margin: auto;
   position: relative;
-  z-index: 2;
   bottom: 0;
   top: 0;
   background: rgba(246, 249, 252, .95);
@@ -20,9 +67,43 @@
   border-radius: 30px;
   box-shadow: inset 6px -6px 15px rgba(145, 160, 180, .45), -30px 30px 40px rgba(118, 146, 180, .18);
   left: 0;
-  z-index: auto;
   background: linear-gradient(to bottom left, #f3f8fb, #e5ebf2);
   opacity: 1;
+
+  &__marker {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60.7px;
+    padding-left: 7px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 25.4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &_vitta {
+      background-color: $color-main;
+      top: 95px;
+      left: -11px;
+    }
+
+    &_pitta {
+      background-color: #fdbea3;
+      top: 106px;
+      right: -31px;
+    }
+
+    &_kapha {
+      background-color: #f492d2;
+      top: 189px;
+      right: -13px;
+    }
+  }
   }
 
   .phone:after,
@@ -41,30 +122,77 @@
   .phone:after {
     width: 40px;
     height: 40px;
-    left: 110px;
+    left: 102px;
     bottom: 12px;
     border-radius: 35px;
     background: #dde3eb;
   }
 
- .phone .screen {
+.screen {
   --screen-width: 216px;
   --form-spacing: 25px;
   --form-separator: #e6ebf1;
   position: relative;
+  z-index: 2;
   width: var(--screen-width);
   height: 379px;
   border-radius: 6px;
-  background: linear-gradient(#f6f9fc 70%, #fff);
+  background: url('../../../img/device-bg.jpg') no-repeat center;
+  background-size: cover;
   overflow: hidden;
   margin: 0 auto;
   transform: none;
   left: 0;
   top: 52px;
-  box-shadow: -1px 1px 6px rgba(170, 183, 204, .2)
+  box-shadow: -1px 1px 6px rgba(170, 183, 204, .2);
+
+  &__number-container {
+    position: absolute;
+    left: 50%;
+    top: 63px;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 10px;
+    opacity: 0.9;
+    font-size: 3.8rem;
+    font-weight: bold;
+    letter-spacing: -2.2px;
+    line-height: 1;
+    color: $color-main;
+
+    &::after {
+      content: '%';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: right;
+      color: $color-main;
+    }
+  }
+
+  &__number-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    color: $color-main;
+    text-transform: uppercase;
+  }
 }
 
- .phone .screen>* {
-  width: 100%
-}
 

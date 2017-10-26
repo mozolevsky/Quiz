@@ -43,9 +43,6 @@
   }
 }
 
-@media (max-width: $screen-md) {
-
-}
 
 @media (max-width: $screen-lg) {
   .tick-list {
@@ -68,7 +65,7 @@
 
 @media (max-width: 1399px) {
   .tick-list {
-    width: 90%;
+    width: 75%;
 
     &__item {
       font-size: 1.8rem;

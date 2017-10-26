@@ -58,25 +58,29 @@
 
 @media (max-width: $screen-md) {
   .quiz {
-    &__left-side {
-      width: 100%;
-    }
-
     &__area {
       margin-left: 5%;
       margin-right: 5%;
-    }
-
-    &__list-area {
-      display: none;
     }
   }
 }
 
 @media (max-width: $screen-sm) {
   .quiz {
+    &__left-side {
+      width: 100%;
+    }
+
     &__right-side {
       display: none;
     }
   }
+}
+
+@media (max-height: 728px) {
+ .quiz {
+   &__list-area {
+     display: none;
+   }
+ }
 }

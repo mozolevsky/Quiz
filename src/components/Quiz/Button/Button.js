@@ -5,15 +5,22 @@ import './Button.css';
 
 class Button extends Component {
     render() {
-        const {buttonName} = this.props;
+        const {buttonName, visible} = this.props;
+        let status = visible ? 'block' : 'none';
+
         return (
-            <button type="submit" className="button button_arrow">{buttonName}</button>
+            <button
+                type="submit"
+                className="button button_arrow"
+                style={{display: status}}
+            >{buttonName}</button>
         );
     }
 }
 
 Button.PropTypes = {
-    buttonName: PropTypes.string
+    buttonName: PropTypes.string,
+    visible: PropTypes.bool
 };
 
 export default Button;

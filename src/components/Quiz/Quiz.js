@@ -27,9 +27,17 @@ class Quiz extends Component {
                 <div className="quiz__left-side">
                     <Header/>
                     <div className="quiz__area">
-                        <QuizTitle questionName="The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes."/>
-                        <QuizDescription questionDesc="When choosing your answers please think of your situation all round rather than what you currently feel."/>
-                        <Button buttonName="Start the body type quiz"/>
+                        <QuizTitle
+                            questionName="The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes."
+                        />
+                        <QuizDescription
+                            questionDesc="When choosing your answers please think of your situation all round rather than what you currently feel."
+                            visible={false}
+                        />
+                        <Button
+                            buttonName="Start the body type quiz"
+                            visible={false}
+                        />
                     </div>
                     <ProgressBar currentAnswer={3} totalAnswers={30}/>
                 </div>
