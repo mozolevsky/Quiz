@@ -1,4 +1,4 @@
-@import "../../../sharedStyles/variables.scss";
+@import "../../../../sharedStyles/variables.scss";
 
 .button {
   position: relative;
@@ -23,7 +23,7 @@
       top: -30px;
       width: 45px;
       height: 45px;
-      background: url('../../../img/arrow-for-button.svg') no-repeat center;
+      background: url('../../../../img/arrow-for-button.svg') no-repeat center;
     }
   }
 }

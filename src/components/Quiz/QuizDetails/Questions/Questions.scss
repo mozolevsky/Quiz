@@ -1,0 +1,46 @@
+@import "../../../../sharedStyles/variables.scss";
+
+.questions {
+  font-size: 1.8rem;
+
+  &__question {
+    margin-bottom: 20px;
+    padding-left: 27px;
+    padding-right: 27px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background: #ffffff url('../../../../img/right-arrow.svg') no-repeat calc(100% - 27px) center;
+    background-size: 24px;
+    box-shadow: 0 6px 10px 0 rgba(214, 200, 251, 0.24);
+    border: solid 1px #e3d8ff;
+    border-left: 2px solid $color-main;
+  }
+
+  &__variant {
+    margin: 0;
+    margin-right: 19px;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    background-color: rgba(202, 156, 244, 0.11);
+    border: solid 1px $color-main;
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $color-main;
+  }
+
+  &__text {
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: $color-text;
+  }
+}

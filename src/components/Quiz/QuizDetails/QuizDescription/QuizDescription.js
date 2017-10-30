@@ -4,17 +4,18 @@ import './QuizDescription.css';
 
 class QuizDescription extends Component {
     render() {
-        const {questionDesc, visible} = this.props;
-        let status = visible ? 'block' : 'none';
+        const {stepDesc} = this.props;
 
         return (
-            <p className="quiz__description" style={{display: status}}>{questionDesc}</p>
+            <div>
+                {stepDesc && <p className="quiz__description">{stepDesc}</p>}
+            </div>
         );
     }
 }
 
 QuizDescription.PropTypes = {
-    questionDesc: PropTypes.string,
+    stepDesc: PropTypes.string,
     visible: PropTypes.bool
 };
 

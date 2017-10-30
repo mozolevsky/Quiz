@@ -5,16 +5,16 @@ import './QuizTitle.css';
 
 class QuizTitle extends Component {
     render() {
-        const {questionName} = this.props;
+        const {stepTitle} = this.props;
 
         return (
-            <h1 className="quiz__title">{questionName}</h1>
+            <h1 className="quiz__title">{stepTitle}</h1>
         );
     }
 }
 
 QuizTitle.PropTypes = {
-    questionName: PropTypes.string
+    stepTitle: PropTypes.string
 };
 
 

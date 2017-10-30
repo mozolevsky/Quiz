@@ -3,12 +3,14 @@ import './DeviceArea.css';
 
 class DeviceArea extends Component {
     render() {
+        const {currentAnswer, totalAnswers} = this.props;
+
         return (
             <div className="phone-container">
                 <div className="phone">
                     <div className="screen">
                         <div className="screen__number-container">
-                            <p className="screen__number">0</p>
+                            <p className="screen__number">{Math.round(currentAnswer / totalAnswers * 100)}</p>
                             <p className="screen__number-text">complete</p>
                         </div>
                     </div>
