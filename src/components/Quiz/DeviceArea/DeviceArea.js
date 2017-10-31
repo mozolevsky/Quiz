@@ -2,15 +2,40 @@ import React, { Component } from 'react';
 import './DeviceArea.css';
 
 class DeviceArea extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            progress: 0
+        }
+    };
+
+    componentWillReceiveProps(nextProps) {
+        let newProgress = Math.round(nextProps.currentAnswer / nextProps.totalAnswers * 100);
+
+        let timerId = setInterval(() => {
+           this.setState((prev) => {
+               return {
+                   progress: prev.progress + 1
+               }
+           });
+
+            console.log(this.state.progress);
+            if (this.state.progress === newProgress) {
+                clearInterval(timerId);
+            }
+
+        }, 25);
+    };
+
     render() {
-        const {currentAnswer, totalAnswers} = this.props;
 
         return (
             <div className="phone-container">
                 <div className="phone">
                     <div className="screen">
                         <div className="screen__number-container">
-                            <p className="screen__number">{Math.round(currentAnswer / totalAnswers * 100)}</p>
+                            <p className="screen__number">{this.state.progress}</p>
                             <p className="screen__number-text">complete</p>
                         </div>
                     </div>

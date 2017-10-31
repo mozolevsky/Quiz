@@ -17,7 +17,10 @@ class QuizDetails extends Component {
                     buttonData={data.button}
                     toNextStep={toNextStep}
                 />
-                <Questions stepQuestions={data.questions}/>
+                <Questions
+                    stepQuestions={data.questions}
+                    toNextStep={toNextStep}
+                />
             </div>
         );
     }

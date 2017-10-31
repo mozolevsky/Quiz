@@ -5,7 +5,7 @@ import './Questions.css';
 
 class Questions extends Component {
     render() {
-        const {stepQuestions} = this.props;
+        const {stepQuestions, toNextStep} = this.props;
 
         if (stepQuestions) {
             const questionsList = stepQuestions.map( (item, i) => {
@@ -20,7 +20,11 @@ class Questions extends Component {
             return (
                 <div className="questions">
                     {questionsList}
-                    <button className="questions__skip-link" type="button">Skip</button>
+                    <button
+                        className="questions__skip-link"
+                        type="button"
+                        onClick={toNextStep}
+                    >Skip</button>
                 </div>
             );
         } else {

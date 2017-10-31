@@ -195,4 +195,22 @@
   }
 }
 
+.showing-enter {
+  opacity: 0.01;
+}
+
+.showing-enter.showing-enter-active {
+  opacity: 1;
+  transition: opacity 600ms ease;
+}
+
+.showing-leave {
+  opacity: 1;
+}
+
+.showing-leave.showing-leave-active {
+  opacity: 0.01;
+  transition: opacity 600ms ease;
+}
+
 

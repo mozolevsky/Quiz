@@ -110,7 +110,7 @@ class Quiz extends Component {
     }
 
     nextStep = () => {
-        if (this.state.step < quizData.length - 1) {
+        if (this.state.step < this.state.questionsAmount) {
             this.setState((prevState) => {
                 return {
                     step: prevState.step + 1

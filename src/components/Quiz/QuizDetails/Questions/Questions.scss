@@ -7,8 +7,9 @@
     margin-bottom: 20px;
     padding-left: 27px;
     padding-right: 27px;
+    padding-top: 26px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 3px;
     background: #ffffff url('../../../../img/right-arrow.svg') no-repeat calc(100% - 27px) center;
     background-size: 24px;
@@ -37,10 +38,31 @@
 
   &__text {
     margin: 0;
-    padding-top: 26px;
     padding-bottom: 26px;
+    width: 80%;
     font-size: 1.8rem;
-    line-height: 1;
+    line-height: 1.38;
     color: $color-text;
+  }
+
+  &__skip-link {
+    padding-right: 23px;
+    position: relative;
+    border: none;
+    background: transparent;
+    line-height: 25px;
+    font-size: 1.8rem;
+    color: $color-main;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      content: '→';
+      right: 0;
+      color: $color-main;
+    }
   }
 }
