@@ -4,6 +4,7 @@ import QuizDetails from './QuizDetails/QuizDetails';
 import ProgressBar from './ProgressBar/ProgressBar';
 import DeviceArea from './DeviceArea/DeviceArea';
 import TickList from './TickList/TickList';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './Quiz.css';
 
 const listData = {
@@ -91,8 +92,11 @@ class Quiz extends Component {
         super(props);
         this.state = {
             step: 0,
-            questionsAmount: 0
-        }
+            questionsAmount: 0,
+            answers: []
+        };
+
+        this.nextStep = this.nextStep.bind(this);
     }
 
     componentWillMount() {
@@ -109,11 +113,12 @@ class Quiz extends Component {
         }
     }
 
-    nextStep = () => {
+    nextStep(answerType = 'unknown') {
         if (this.state.step < this.state.questionsAmount) {
             this.setState((prevState) => {
                 return {
-                    step: prevState.step + 1
+                    step: prevState.step + 1,
+                    answers: [...prevState.answers, answerType]
                 }
             });
         }
@@ -127,7 +132,12 @@ class Quiz extends Component {
                 <div className="quiz__left-side">
                     <Header/>
                     <div className="quiz__area">
-                       <QuizDetails data={quizData[step]} toNextStep={this.nextStep}/>
+                        <ReactCSSTransitionGroup
+                            transitionName="quiz"
+                            transitionEnterTimeout={500}
+                            transitionLeaveTimeout={1}>
+                            <QuizDetails key={step} data={quizData[step]} toNextStep={this.nextStep}/>
+                        </ReactCSSTransitionGroup>
                     </div>
                     <ProgressBar currentAnswer={step} totalAnswers={questionsAmount}/>
                 </div>

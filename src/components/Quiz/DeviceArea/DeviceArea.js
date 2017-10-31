@@ -20,12 +20,10 @@ class DeviceArea extends Component {
                }
            });
 
-            console.log(this.state.progress);
             if (this.state.progress === newProgress) {
                 clearInterval(timerId);
             }
-
-        }, 25);
+        }, 50);
     };
 
     render() {

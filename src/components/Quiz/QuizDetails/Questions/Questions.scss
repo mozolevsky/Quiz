@@ -16,6 +16,10 @@
     box-shadow: 0 6px 10px 0 rgba(214, 200, 251, 0.24);
     border: solid 1px #e3d8ff;
     border-left: 2px solid $color-main;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__variant {
@@ -64,5 +68,30 @@
       right: 0;
       color: $color-main;
     }
+  }
+}
+
+.blink {
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+
+}
+
+.blink-infinite {
+  animation-iteration-count: infinite;
+}
+
+.blink-3 {
+  animation-iteration-count: 3;
+}
+
+.blink-furiously {
+  animation-duration: 0.3s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }

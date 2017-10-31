@@ -31,6 +31,24 @@
   }
 }
 
+.quiz-enter {
+  opacity: 0.01;
+}
+
+.quiz-enter.quiz-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.quiz-leave {
+  opacity: 1;
+}
+
+.quiz-leave.quiz-leave-active {
+  opacity: 0.01;
+  transition: opacity 1ms ease-in;
+}
+
 @media (min-width: 1400px) {
   .quiz {
     &__area {

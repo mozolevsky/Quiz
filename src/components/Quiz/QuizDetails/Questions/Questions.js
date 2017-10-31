@@ -4,15 +4,31 @@ import './Questions.css';
 
 
 class Questions extends Component {
+    constructor(props) {
+        super(props);
+        this.switchStep = this.switchStep.bind(this);
+    }
+
+    switchStep(answerType, e) {
+        e.currentTarget.classList.add("blink", "blink-3", "blink-furiously");
+
+        setTimeout(() => {
+            this.props.toNextStep(answerType);
+        }, 1000);
+    }
+
     render() {
         const {stepQuestions, toNextStep} = this.props;
 
         if (stepQuestions) {
-            const questionsList = stepQuestions.map( (item, i) => {
+            const questionsList = stepQuestions.map((item, i) => {
                 return (
-                    <div className="questions__question" key={i}>
+                    <div className="questions__question" key={i} onClick={(e) => this.switchStep(item.label, e)}>
                         <div className="questions__variant">{item.label}</div>
-                        <p className="questions__text">{item.text}</p>
+                        <p className="questions__text">
+                            {item.title  && <b>{item.title}</b>}
+                            {item.title  && <br/>}
+                            {item.text}</p>
                     </div>
                 )
             });
