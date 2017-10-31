@@ -11,23 +11,33 @@ class DeviceArea extends Component {
     };
 
     componentWillReceiveProps(nextProps) {
-        let newProgress = Math.round(nextProps.currentAnswer / nextProps.totalAnswers * 100);
+       if (this.state.progress < 100) {
+           let newProgress = Math.round(nextProps.currentAnswer / nextProps.totalAnswers * 100);
 
-        let timerId = setInterval(() => {
-           this.setState((prev) => {
-               return {
-                   progress: prev.progress + 1
+           let timerId = setInterval(() => {
+               this.setState((prev) => {
+                   return {
+                       progress: prev.progress + 1
+                   }
+               });
+
+               if (newProgress < this.state.progress) {
+                   clearInterval(timerId);
+                   this.setState((prev) => {
+                       return {
+                           progress: prev.progress - 1
+                       }
+                   });
                }
-           });
 
-            if (this.state.progress === newProgress) {
-                clearInterval(timerId);
-            }
-        }, 50);
+               if (this.state.progress === newProgress) {
+                   clearInterval(timerId);
+               }
+           }, 50);
+       }
     };
 
     render() {
-
         return (
             <div className="phone-container">
                 <div className="phone">

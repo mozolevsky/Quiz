@@ -2,7 +2,7 @@
 
 .quiz {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 
   &__left-side {
     width: 70%;
@@ -51,10 +51,6 @@
 
 @media (min-width: 1400px) {
   .quiz {
-    &__area {
-      margin-bottom: 138px;
-    }
-
     &__right-side {
       padding-top: 90px;
     }

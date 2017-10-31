@@ -65,24 +65,9 @@ const quizData = [
         ]
     },
     {
-        title: 'When it comes to your stature, you are…',
-        questions: [
-            {
-                label: 'A',
-                title: 'You find your skin tends to be dry, rough, or dull, and thin. ',
-                text: 'You can see your veins. If you have acne, it’s mostly dry and bumpy, with blackheads.'
-            },
-            {
-                label: 'B',
-                title: 'You find your skin to be rosy, radiant, flushed, and warm. ',
-                text: 'You are prone to freckles.  Your veins are less prominent. If you have acne, it’s red, irritated and angry looking.',
-            },
-            {
-                label: 'C',
-                title: 'Your skin is smooth, moist, thick, and pale. ',
-                text: 'Your veins are not prominent. You have few freckles or moles. If you have acne, they are few, but greasy, with deep pustules.',
-            },
-        ]
+        bigTitle: 'Cheers! You completed the quiz.',
+        title: 'Please hold while we calculate the results…',
+        desc: 'You’ll soon receive a detailed report of your Ayurvedic body type with food recomendations, nutritional tips and personalized meal plans.'
     }
 ];
 
@@ -92,6 +77,7 @@ class Quiz extends Component {
         super(props);
         this.state = {
             step: 0,
+            progress: 0,
             questionsAmount: 0,
             answers: []
         };
@@ -113,8 +99,16 @@ class Quiz extends Component {
         }
     }
 
-    nextStep(answerType = 'unknown') {
-        if (this.state.step < this.state.questionsAmount) {
+    nextStep(answerType) {
+        if (this.state.step > 0) {
+            this.setState((prevState) => {
+                return {
+                    progress: prevState.progress + 1
+                }
+            });
+        }
+
+        if (this.state.step < this.state.questionsAmount + 1) {
             this.setState((prevState) => {
                 return {
                     step: prevState.step + 1,
@@ -125,7 +119,7 @@ class Quiz extends Component {
     };
 
     render() {
-        const {step, questionsAmount} = this.state;
+        const {step, progress, questionsAmount} = this.state;
 
         return (
             <div className="quiz">
@@ -139,10 +133,10 @@ class Quiz extends Component {
                             <QuizDetails key={step} data={quizData[step]} toNextStep={this.nextStep}/>
                         </ReactCSSTransitionGroup>
                     </div>
-                    <ProgressBar currentAnswer={step} totalAnswers={questionsAmount}/>
+                    <ProgressBar currentAnswer={progress} totalAnswers={questionsAmount}/>
                 </div>
                 <div className="quiz__right-side">
-                    <DeviceArea currentAnswer={step} totalAnswers={questionsAmount}/>
+                    <DeviceArea currentAnswer={progress} totalAnswers={questionsAmount}/>
                    <div className="quiz__list-area">
                        <TickList
                            listTitle={listData.listTitle}

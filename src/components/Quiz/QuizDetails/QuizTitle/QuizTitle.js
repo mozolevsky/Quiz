@@ -5,10 +5,14 @@ import './QuizTitle.css';
 
 class QuizTitle extends Component {
     render() {
-        const {stepTitle} = this.props;
+        const {stepTitle, bigTitle} = this.props;
 
         return (
-            <h1 className="quiz__title">{stepTitle}</h1>
+            <h1 className="quiz__title">
+                {bigTitle && <b>bigTitle</b>}
+                {bigTitle && <br/>}
+                {stepTitle}
+            </h1>
         );
     }
 }

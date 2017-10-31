@@ -11,7 +11,7 @@ class QuizDetails extends Component {
 
         return (
             <div>
-                <QuizTitle stepTitle={data.title}/>
+                <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>
                 <QuizDescription stepDesc={data.desc}/>
                 <Button
                     buttonData={data.button}
@@ -21,6 +21,7 @@ class QuizDetails extends Component {
                     stepQuestions={data.questions}
                     toNextStep={toNextStep}
                 />
+
             </div>
         );
     }
