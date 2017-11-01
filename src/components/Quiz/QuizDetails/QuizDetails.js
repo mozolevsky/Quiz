@@ -4,6 +4,7 @@ import QuizTitle from './QuizTitle/QuizTitle';
 import QuizDescription from './QuizDescription/QuizDescription';
 import Button from './Button/Button';
 import Questions from './Questions/Questions';
+import FinalCalculationsBar from './FinalCalculationsBar/FinalCalculationsBar';
 
 class QuizDetails extends Component {
     render() {
@@ -21,7 +22,10 @@ class QuizDetails extends Component {
                     stepQuestions={data.questions}
                     toNextStep={toNextStep}
                 />
-
+                <FinalCalculationsBar
+                    toCalculate={data.calculations}
+                    toNextStep={toNextStep}
+                />
             </div>
         );
     }
