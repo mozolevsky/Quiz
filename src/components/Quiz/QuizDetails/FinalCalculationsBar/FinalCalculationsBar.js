@@ -10,15 +10,15 @@ class FinalCalculationsBar extends Component {
         this.state = {
             progress: 0
         };
-
-        this.animateProgress = this.animateProgress.bind(this);
     }
 
     animateProgress() {
         let timerId = setInterval(() => {
 
-            if(this.state.progress >= 98) {
+            if (this.state.progress >= 100) {
                 clearInterval(timerId);
+                this.props.toNextStep();
+                return;
             }
 
             this.setState((prev) => {
@@ -29,33 +29,22 @@ class FinalCalculationsBar extends Component {
         }, 100);
     }
 
+    componentDidMount() {
+        this.animateProgress();
+    }
+
     render() {
-       const {toCalculate} = this.props;
        const {progress} = this.state;
-       let finalCalcBlock = null;
-
-       if (toCalculate) {
-           if (progress === 0) {
-               this.animateProgress();
-           }
-
-           finalCalcBlock = (
-               <div className="final-calc">
-                   <p className="final-calc__progress">{progress}%</p>
-                   <Line
-                       percent={progress}
-                       strokeWidth="0.5"
-                       strokeColor="#7c5cd1"
-                       trailColor="transparent"
-                       style={{width: '100%'}}
-                   />
-               </div>
-           )
-       }
-
-        return (
-            <div>
-                {finalCalcBlock}
+       return (
+            <div className="final-calc">
+                <p className="final-calc__progress">{progress}%</p>
+                <Line
+                    percent={progress}
+                    strokeWidth="0.5"
+                    strokeColor="#7c5cd1"
+                    trailColor="transparent"
+                    style={{width: '100%'}}
+                />
             </div>
         );
     }

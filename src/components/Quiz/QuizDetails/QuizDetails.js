@@ -22,10 +22,7 @@ class QuizDetails extends Component {
                     stepQuestions={data.questions}
                     toNextStep={toNextStep}
                 />
-                <FinalCalculationsBar
-                    toCalculate={data.calculations}
-                    toNextStep={toNextStep}
-                />
+                {data.calculations && <FinalCalculationsBar toNextStep={toNextStep} />}
             </div>
         );
     }

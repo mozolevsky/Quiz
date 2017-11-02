@@ -104,19 +104,21 @@ class Quiz extends Component {
     }
 
     nextStep(answerType) {
-        if (this.state.step > 0) {
+        const {step} = this.state;
+
+        if (quizData[step].questions) {
             this.setState((prevState) => {
                 return {
-                    progress: prevState.progress + 1
+                    progress: prevState.progress + 1,
+                    answers: [...prevState.answers, answerType]
                 }
             });
         }
 
-        if (this.state.step < this.state.questionsAmount + 1) {
+        if (step < quizData.length - 1) {
             this.setState((prevState) => {
                 return {
                     step: prevState.step + 1,
-                    answers: [...prevState.answers, answerType]
                 }
             });
         }
