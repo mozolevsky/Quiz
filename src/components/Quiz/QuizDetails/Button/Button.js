@@ -8,15 +8,11 @@ class Button extends Component {
         const {buttonData, toNextStep} = this.props;
 
         return (
-            <div>
-                {buttonData &&
-                    <button
-                        type="submit"
-                        className={`button button_${buttonData.style}`}
-                        onClick={toNextStep}
-                    >{buttonData.text}</button>
-                }
-            </div>
+            <button
+                type="submit"
+                className={`button button_${buttonData.style}`}
+                onClick={toNextStep}
+            >{buttonData.text}</button>
         );
     }
 }

@@ -31,11 +31,19 @@
       background: url('../../../../img/arrow-for-button.svg') no-repeat center;
     }
   }
+
+  &_margin-top {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: $screen-md) {
   .button {
     width: 85%;
     display: block;
+
+    &_margin-top {
+      width: 100%;
+    }
   }
 }

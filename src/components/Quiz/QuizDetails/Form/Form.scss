@@ -1,0 +1,66 @@
+@import "../../../../sharedStyles/variables.scss";
+
+.form {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4.2rem;
+    font-weight: bold;
+    line-height: 1.71;
+    color: $color-main;
+  }
+
+  &__desc {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.14;
+    color: $color-main;
+  }
+
+  &__input-area {
+    position: relative;
+    margin-bottom: 24px;
+
+    &_arrow {
+      &::before {
+        content: '';
+        position: absolute;
+        left: -42px;
+        top: -14px;
+        width: 45px;
+        height: 45px;
+        background: url('../../../../img/arrow-left.svg') no-repeat center;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    line-height: 1.37;
+    font-weight: bold;
+    color: $color-main;
+  }
+
+  &__input {
+    padding: 14px 19px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #f6f4ff;
+    border: 1px solid #f6f4ff;
+
+    font-family: Courier;
+    font-size: 1.8rem;
+    line-height: 1.22;
+    color: #b3b1bb;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.28);
+      border: solid 1px $color-main;
+      outline: none;
+    }
+  }
+}

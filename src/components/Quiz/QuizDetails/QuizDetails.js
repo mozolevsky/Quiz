@@ -5,6 +5,7 @@ import QuizDescription from './QuizDescription/QuizDescription';
 import Button from './Button/Button';
 import Questions from './Questions/Questions';
 import FinalCalculationsBar from './FinalCalculationsBar/FinalCalculationsBar';
+import Form from './Form/Form';
 
 class QuizDetails extends Component {
     render() {
@@ -14,15 +15,16 @@ class QuizDetails extends Component {
             <div>
                 <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>
                 <QuizDescription stepDesc={data.desc}/>
-                <Button
-                    buttonData={data.button}
-                    toNextStep={toNextStep}
-                />
+                {
+                    data.button.type === 'start' &&
+                    <Button buttonData={data.button} toNextStep={toNextStep} />
+                }
                 <Questions
                     stepQuestions={data.questions}
                     toNextStep={toNextStep}
                 />
                 {data.calculations && <FinalCalculationsBar toNextStep={toNextStep} />}
+                {data.isForm && <Form formData={data}/>}
             </div>
         );
     }

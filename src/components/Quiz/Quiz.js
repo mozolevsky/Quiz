@@ -24,7 +24,8 @@ const quizData = [
         desc: 'When choosing your answers please think of your situation all round rather than what you currently feel.',
         button: {
             text: 'Start the body type quiz',
-            style: 'arrow'
+            style: 'arrow',
+            type: 'start'
         }
     },
     {
@@ -65,13 +66,36 @@ const quizData = [
         ]
     },
     {
+        title: 'When it comes to your stature, you are…',
+        questions: [
+            {
+                label: 'A',
+                text: 'Very tall or very short, slight.'
+            },
+            {
+                label: 'B',
+                text: 'Medium, or average in height'
+            },
+            {
+                label: 'C',
+                text: 'You can be short, or larger, broader'
+            },
+        ],
+    },
+    {
         bigTitle: 'Cheers! You completed the quiz.',
         title: 'Please hold while we calculate the results…',
         desc: 'You’ll soon receive a detailed report of your Ayurvedic body type with food recomendations, nutritional tips and personalized meal plans.',
         calculations: true
     },
     {
-        bigTitle: 'Here will be form'
+        formTitle: 'Your report is ready!',
+        isForm: true,
+        button: {
+            text: 'Continue to the Report',
+            style: 'margin-top',
+            type: 'finish'
+        }
     }
 ];
 
