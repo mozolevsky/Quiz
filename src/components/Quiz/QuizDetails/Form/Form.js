@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import './Form.css';
 
@@ -42,12 +42,12 @@ class Form extends Component {
 
 }
 
-/*Questions.PropTypes = {
-    stepQuestions: PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        title: PropTypes.number,
-        text: PropTypes.string.isRequired,
-    })).isRequired
-};*/
+Form.PropTypes = {
+    stepQuestions: PropTypes.shape({
+        formTitle: PropTypes.string,
+        isForm: PropTypes.bool.isRequired,
+        button: PropTypes.obj
+    })
+};
 
 export default Form;

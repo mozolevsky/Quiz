@@ -16,7 +16,7 @@ class QuizDetails extends Component {
                 <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>
                 <QuizDescription stepDesc={data.desc}/>
                 {
-                    data.button.type === 'start' &&
+                    data.button && data.button.type === 'start' &&
                     <Button buttonData={data.button} toNextStep={toNextStep} />
                 }
                 <Questions

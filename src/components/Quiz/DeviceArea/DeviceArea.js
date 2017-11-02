@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './DeviceArea.css';
+import tickComplete from '../../../img/tick-complete.svg';
 
 class DeviceArea extends Component {
     constructor(props) {
@@ -35,17 +36,30 @@ class DeviceArea extends Component {
                }
            }, 50);
        }
+
     };
 
     render() {
+        let progressBlock = (
+            <div className="screen__number-container">
+                <p className="screen__number">{this.state.progress}</p>
+                <p className="screen__number-text">complete</p>
+            </div>
+        );
+
+        if (this.state.progress === 100) {
+            progressBlock = (
+                <div className="screen__number-container">
+                    <img src={tickComplete} alt="" className="screen__progress-img"/>
+                </div>
+            )
+        }
+
         return (
             <div className="phone-container">
                 <div className="phone">
                     <div className="screen">
-                        <div className="screen__number-container">
-                            <p className="screen__number">{this.state.progress}</p>
-                            <p className="screen__number-text">complete</p>
-                        </div>
+                        {progressBlock}
                     </div>
                     <div className="phone__marker phone__marker_vitta">Vatta</div>
                     <div className="phone__marker phone__marker_pitta">Pitta</div>

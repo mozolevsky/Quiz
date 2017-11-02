@@ -17,7 +17,6 @@ class ProgressBar extends Component {
                     percent={percent}
                     strokeColor="#7c5cd1"
                     trailColor="rgba(124, 91, 209, 0.15)"
-                    style={{width: '80%'}}
                 />
             </div>
         );
