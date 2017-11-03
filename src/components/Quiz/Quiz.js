@@ -19,7 +19,7 @@ const listData = {
 };
 
 const quizData = [
-    {
+/*    {
         title: 'The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes.',
         desc: 'When choosing your answers please think of your situation all round rather than what you currently feel.',
         button: {
@@ -87,7 +87,7 @@ const quizData = [
         title: 'Please hold while we calculate the results…',
         desc: 'You’ll soon receive a detailed report of your Ayurvedic body type with food recomendations, nutritional tips and personalized meal plans.',
         calculations: true
-    },
+    },*/
     {
         formTitle: 'Your report is ready!',
         isForm: true,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
+import axios from 'axios';
 import './Form.css';
 
 
@@ -70,19 +71,30 @@ class Form extends Component {
         }
 
         if (e.target.name === 'name') {
-            this.setState({errorName: !!this.state.name});
+            this.setState({errorName: !this.state.name});
         }
     };
 
     handleSubmit = (e) => {
         if (!this.state.errorEmail && this.state.name && this.state.email) {
-            console.log(this.state);
+
+            axios.post('/node-mailer', {
+                name: this.state.name,
+                email: this.state.email,
+                link: `/report/type=${this.state.yogaType}&name=${this.state.name}`
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         }
         e.preventDefault();
     };
 
     validateEmail = (email) => {
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     };
 
