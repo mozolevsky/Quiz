@@ -5,7 +5,6 @@ import axios from 'axios';
 import './Form.css';
 
 
-
 class Form extends Component {
     state = {
         name: '',
@@ -144,7 +143,7 @@ Form.PropTypes = {
     formData: PropTypes.shape({
         formTitle: PropTypes.string,
         isForm: PropTypes.bool.isRequired,
-        button: PropTypes.obj
+        button: PropTypes.object.isRequired
     }),
     answers: PropTypes.array.isRequired
 };

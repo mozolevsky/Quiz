@@ -19,7 +19,7 @@ const listData = {
 };
 
 const quizData = [
-/*    {
+    {
         title: 'The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes.',
         desc: 'When choosing your answers please think of your situation all round rather than what you currently feel.',
         button: {
@@ -87,7 +87,7 @@ const quizData = [
         title: 'Please hold while we calculate the results…',
         desc: 'You’ll soon receive a detailed report of your Ayurvedic body type with food recomendations, nutritional tips and personalized meal plans.',
         calculations: true
-    },*/
+    },
     {
         formTitle: 'Your report is ready!',
         isForm: true,
@@ -101,19 +101,14 @@ const quizData = [
 
 
 class Quiz extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            step: 0,
-            progress: 0,
-            questionsAmount: 0,
-            answers: []
-        };
+    state = {
+        step: 0,
+        progress: 0,
+        questionsAmount: 0,
+        answers: []
+    };
 
-        this.nextStep = this.nextStep.bind(this);
-    }
-
-    componentWillMount() {
+    componentWillMount = () => {
         let amount = 0;
 
         quizData.forEach((item) => {
@@ -127,7 +122,7 @@ class Quiz extends Component {
         }
     }
 
-    nextStep(answerType) {
+    nextStep = (answerType) => {
         const {step} = this.state;
 
         if (quizData[step].questions) {

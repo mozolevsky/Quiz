@@ -15,8 +15,7 @@ class QuizDescription extends Component {
 }
 
 QuizDescription.PropTypes = {
-    stepDesc: PropTypes.string,
-    visible: PropTypes.bool
+    stepDesc: PropTypes.string
 };
 
 export default QuizDescription;

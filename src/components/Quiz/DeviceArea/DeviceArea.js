@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './DeviceArea.css';
 import tickComplete from '../../../img/tick-complete.svg';
 
 class DeviceArea extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            progress: 0
-        }
+    state = {
+        progress: 0
     };
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps = (nextProps) => {
        if (this.state.progress < 100) {
            let newProgress = Math.round(nextProps.currentAnswer / nextProps.totalAnswers * 100);
 
@@ -72,5 +69,10 @@ class DeviceArea extends Component {
         )
     }
 }
+
+DeviceArea.PropTypes = {
+    currentAnswer: PropTypes.number.isRequired,
+    totalAnswers: PropTypes.number.isRequired
+};
 
 export default DeviceArea;

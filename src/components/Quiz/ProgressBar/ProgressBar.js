@@ -4,7 +4,6 @@ import { Line } from 'rc-progress';
 import './ProgressBar.css';
 
 
-
 class ProgressBar extends Component {
     render() {
         const {currentAnswer, totalAnswers, } = this.props;

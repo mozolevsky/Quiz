@@ -18,7 +18,8 @@ class QuizTitle extends Component {
 }
 
 QuizTitle.PropTypes = {
-    stepTitle: PropTypes.string
+    stepTitle: PropTypes.string,
+    stepBigTitle: PropTypes.string
 };
 
 

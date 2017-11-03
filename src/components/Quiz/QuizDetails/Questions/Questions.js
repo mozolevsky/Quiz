@@ -4,18 +4,13 @@ import './Questions.css';
 
 
 class Questions extends Component {
-    constructor(props) {
-        super(props);
-        this.switchStep = this.switchStep.bind(this);
-    }
-
-    switchStep(answerType, e) {
+    switchStep = (answerType, e) => {
         e.currentTarget.classList.add("blink", "blink-3", "blink-furiously");
 
         setTimeout(() => {
             this.props.toNextStep(answerType);
         }, 1000);
-    }
+    };
 
     render() {
         const {stepQuestions, toNextStep} = this.props;
@@ -52,7 +47,7 @@ class Questions extends Component {
 Questions.PropTypes = {
     stepQuestions: PropTypes.arrayOf(PropTypes.shape({
         label: PropTypes.string.isRequired,
-        title: PropTypes.number,
+        title: PropTypes.string,
         text: PropTypes.string.isRequired,
     })).isRequired
 };

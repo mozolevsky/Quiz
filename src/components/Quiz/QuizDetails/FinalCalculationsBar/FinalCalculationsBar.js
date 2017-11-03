@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 import './FinalCalculationBar.css';
 
 class FinalCalculationsBar extends Component {
-    constructor(props) {
-        super(props);
+    state = {
+        progress: 0
+    };
 
-        this.state = {
-            progress: 0
-        };
-    }
-
-    animateProgress() {
+    animateProgress = () => {
         let timerId = setInterval(() => {
 
             if (this.state.progress >= 100) {
@@ -29,7 +25,7 @@ class FinalCalculationsBar extends Component {
         }, 100);
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.animateProgress();
     }
 

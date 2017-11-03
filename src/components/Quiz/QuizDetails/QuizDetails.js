@@ -31,8 +31,9 @@ class QuizDetails extends Component {
 }
 
 QuizDetails.PropTypes = {
-    data: PropTypes.obj,
-    toNextStep: PropTypes.func
+    data: PropTypes.object.isRequired,
+    toNextStep: PropTypes.func.isRequired,
+    answers: PropTypes.array.isRequired
 };
 
 export default QuizDetails;

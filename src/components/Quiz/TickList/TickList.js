@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './TickList.css';
 
 
-
 class TickList extends Component {
     render() {
         const {listTitle, listItems} = this.props;
@@ -26,8 +25,8 @@ class TickList extends Component {
 }
 
 TickList.PropTypes = {
-    listTitle: PropTypes.string,
-    listItems: PropTypes.array
+    listTitle: PropTypes.string.isRequired,
+    listItems: PropTypes.array.isRequired
 };
 
 export default TickList;
