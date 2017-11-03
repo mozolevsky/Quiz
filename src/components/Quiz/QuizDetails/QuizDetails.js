@@ -9,7 +9,7 @@ import Form from './Form/Form';
 
 class QuizDetails extends Component {
     render() {
-        const {data, toNextStep} = this.props;
+        const {data, toNextStep, calcYogaType} = this.props;
 
         return (
             <div>
@@ -23,8 +23,8 @@ class QuizDetails extends Component {
                     stepQuestions={data.questions}
                     toNextStep={toNextStep}
                 />
-                {data.calculations && <FinalCalculationsBar toNextStep={toNextStep} />}
-                {data.isForm && <Form formData={data}/>}
+                {data.calculations && <FinalCalculationsBar toNextStep={toNextStep}/>}
+                {data.isForm && <Form formData={data} calcYogaType={calcYogaType}/>}
             </div>
         );
     }

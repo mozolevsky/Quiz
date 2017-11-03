@@ -6,8 +6,9 @@ import './Form.css';
 
 
 class Form extends Component {
-    componentDidMount(){
+    componentDidMount() {
         this.nameInput.focus();
+        this.props.calcYogaType();
     }
 
     render() {
@@ -32,9 +33,7 @@ class Form extends Component {
                         <label htmlFor="name" className="form__label">Email</label>
                         <input type="text" id="name" className="form__input" placeholder="kellysanders@gmail.com"/>
                     </div>
-                    <Button
-                        buttonData={formData.button}
-                    />
+                    <Button buttonData={formData.button} />
                 </form>
             </div>
         )
