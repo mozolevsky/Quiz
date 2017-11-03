@@ -148,52 +148,8 @@ class Quiz extends Component {
         }
     };
 
-    calculateYogaType = () => {
-        const {answers} = this.state;
-        let typesData = {
-            A: {
-                name: 'vatta',
-                count: 0,
-                percentage: 0
-            },
-            B: {
-                name: 'pitta',
-                count: 0,
-                percentage: 0
-            },
-            C: {
-                name: 'kapha',
-                count: 0,
-                percentage: 0
-            }
-        };
-
-        answers.forEach((answer) => {
-            typesData[answer].count += 1;
-            typesData[answer].percentage = Math.round(typesData[answer].count / answers.length * 100);
-        });
-
-        console.log(Object.values(typesData)); // temp
-
-        let typesDataArray = Object.values(typesData);
-        typesDataArray.sort(function(a, b) {
-            return b.percentage - a.percentage ;
-        });
-
-        let yogaType = typesDataArray[0].name;
-        if (typesDataArray[0].percentage - typesDataArray[1].percentage < 5) {
-            yogaType = `${typesDataArray[0].name}-${typesDataArray[1].name}`;
-        }
-        if (typesDataArray[1].percentage - typesDataArray[2].percentage < 5) {
-            yogaType = `${typesDataArray[0].name}-${typesDataArray[1].name}-${typesDataArray[2].name}`;
-        }
-
-        console.log(yogaType);
-        return yogaType;
-    };
-
     render() {
-        const {step, progress, questionsAmount} = this.state;
+        const {step, progress, questionsAmount, answers} = this.state;
 
         return (
             <div className="quiz">
@@ -207,8 +163,8 @@ class Quiz extends Component {
                             <QuizDetails
                                 key={step}
                                 data={quizData[step]}
+                                answers={answers}
                                 toNextStep={this.nextStep}
-                                calcYogaType={this.calculateYogaType}
                             />
                         </ReactCSSTransitionGroup>
                     </div>

@@ -58,9 +58,12 @@
     color: #b3b1bb;
 
     &:focus {
-      background-color: rgba(255, 255, 255, 0.28);
       border: solid 1px $color-main;
       outline: none;
     }
   }
+}
+
+.input-error {
+  background: lightpink;
 }
