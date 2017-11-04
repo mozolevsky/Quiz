@@ -76,6 +76,17 @@ class Landing extends Component {
         });
     };
 
+    work = () => {
+        let arr = [1, 2, 3, 4, 5];
+
+       let result = arr.reduce((sum, item) => {
+           return sum + item * 2;
+       }, 0);
+
+       console.log(result);
+
+    };
+
     render() {
         return (
             <div>
@@ -83,6 +94,7 @@ class Landing extends Component {
                 <button onClick={this.pushAnswerA}>Add A</button>
                 <button onClick={this.pushAnswerB}>Add B</button>
                 <button onClick={this.pushAnswerC}>Add C</button>
+                <button onClick={this.work}>Work with arrays</button>
             </div>
         );
     }
