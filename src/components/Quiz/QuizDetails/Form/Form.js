@@ -38,22 +38,36 @@ class Form extends Component {
             }
         };
 
+        let totalAnsweredQuestions = 0;
+
         answers.forEach((answer) => {
-            typesData[answer].count += 1;
-            typesData[answer].percentage = Math.round(typesData[answer].count / answers.length * 100);
+            if (typesData[answer]) {
+                typesData[answer].count += 1;
+                totalAnsweredQuestions += 1;
+            }
         });
 
         let typesDataArray = Object.values(typesData);
+        typesDataArray.forEach((item) => {
+            item.percentage = Math.round(item.count / totalAnsweredQuestions * 100);
+        });
+
         typesDataArray.sort(function(a, b) {
             return b.percentage - a.percentage ;
         });
 
-        let yogaType = typesDataArray[0].name;
-        if (typesDataArray[0].percentage - typesDataArray[1].percentage < 5) {
-            yogaType = `${typesDataArray[0].name}-${typesDataArray[1].name}`;
-        }
-        if (typesDataArray[1].percentage - typesDataArray[2].percentage < 5) {
-            yogaType = `${typesDataArray[0].name}-${typesDataArray[1].name}-${typesDataArray[2].name}`;
+        let yogaType = 'unknown';
+        let [max, middle, min] = typesDataArray;
+
+        if (max.count > 0) {
+            yogaType = max.name;
+
+            if (max.percentage - middle.percentage < 5) {
+                yogaType = `${max.name}-${middle.name}`;
+            }
+            if (max.percentage - min.percentage < 5) {
+                yogaType = `${max.name}-${middle.name}-${min.name}`;
+            }
         }
 
         this.setState({yogaType});
