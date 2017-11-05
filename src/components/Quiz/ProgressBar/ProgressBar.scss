@@ -20,6 +20,10 @@
     letter-spacing: -0.9px;
     color: $color-main;
   }
+
+  &__procent-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: $screen-md) {
@@ -28,3 +32,40 @@
    padding-right: 5%;
  }
 }
+
+@media (max-width: $screen-sm) {
+  .progress-line {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    height: 44px;
+
+    &__desc {
+      position: absolute;
+      margin-bottom: 0;
+      top: 14px;
+      right: 16px;
+
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: normal;
+    }
+
+    &__procent-mobile {
+      position: absolute;
+      display: block;
+      margin: 0;
+      top: 14px;
+      left: 16px;
+
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: normal;
+    }
+  }
+ }
