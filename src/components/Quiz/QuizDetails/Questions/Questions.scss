@@ -5,9 +5,7 @@
 
   &__question {
     margin-bottom: 20px;
-    padding-left: 27px;
-    padding-right: 27px;
-    padding-top: 26px;
+    padding: 26px 27px;
     display: flex;
     align-items: flex-start;
     border-radius: 3px;
@@ -42,7 +40,6 @@
 
   &__text {
     margin: 0;
-    padding-bottom: 26px;
     width: 80%;
     font-size: 1.8rem;
     line-height: 1.38;
@@ -93,5 +90,27 @@
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .questions {
+    font-size: 1.6rem;
+
+    &__question {
+      padding: 19px 5px 19px 15px;
+      margin-bottom: 10px;
+      border-left: solid 1px #e3d8ff;
+      background: transparent;
+    }
+
+    &__variant {
+      margin-right: 8px;
+    }
+
+    &__skip-link {
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
   }
 }
