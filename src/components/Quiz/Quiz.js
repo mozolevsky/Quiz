@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header/Header.jsx';
+import Header from './Header/Header';
 import QuizDetails from './QuizDetails/QuizDetails';
 import ProgressBar from './ProgressBar/ProgressBar';
 import DeviceArea from './DeviceArea/DeviceArea';
