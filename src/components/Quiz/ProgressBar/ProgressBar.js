@@ -16,11 +16,10 @@ class ProgressBar extends Component {
                 <p className="progress-line__procent-mobile">{percent}%</p>
                 <Line
                     percent={percent}
-                    strokeWidth={isMobile ? 44 : 1}
-                    trailWidth={isMobile ? 44 : 1}
                     strokeLinecap={isMobile ? 'square' : 'round'}
                     strokeColor={isMobile ? '#9270ef' : '#7c5cd1'}
                     trailColor={isMobile ? '#514d55' : "rgba(124, 91, 209, 0.15)"}
+                    style={{height: isMobile ? '100%' : ''}}
                 />
             </div>
         );
