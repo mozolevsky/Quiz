@@ -1,0 +1,165 @@
+/* colors */
+/* global text params */
+/* font */
+/* breakpoints */
+.phone-container {
+  position: relative;
+  margin: auto;
+  width: 290px; }
+  .phone-container__marker {
+    position: absolute;
+    z-index: 3;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60.7px;
+    padding-left: 7px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 25.4px;
+    text-align: center;
+    text-transform: uppercase; }
+    .phone-container__marker::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 9px;
+      width: 6.6px;
+      height: 6.6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85); }
+    .phone-container__marker_vitta {
+      background-color: #7c5cd1;
+      top: 92px;
+      left: 8px; }
+    .phone-container__marker_pitta {
+      background-color: #fdbea3;
+      top: 102px;
+      right: -8px; }
+    .phone-container__marker_kapha {
+      background-color: #f492d2;
+      top: 184px;
+      right: 10px; }
+
+.phone {
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  top: 0;
+  background: rgba(246, 249, 252, 0.95);
+  transition: opacity .8s;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 249px;
+  height: 491px;
+  border-radius: 30px;
+  box-shadow: inset 6px -6px 15px rgba(145, 160, 180, 0.45), -30px 30px 40px rgba(118, 146, 180, 0.18);
+  left: 0;
+  background: linear-gradient(to bottom left, #f3f8fb, #e5ebf2);
+  opacity: 1; }
+  .phone__marker {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60.7px;
+    padding-left: 7px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 25.4px;
+    text-align: center;
+    text-transform: uppercase; }
+    .phone__marker_vitta {
+      background-color: #7c5cd1;
+      top: 95px;
+      left: -11px; }
+    .phone__marker_pitta {
+      background-color: #fdbea3;
+      top: 106px;
+      right: -31px; }
+    .phone__marker_kapha {
+      background-color: #f492d2;
+      top: 189px;
+      right: -13px; }
+
+.phone:after,
+.phone:before {
+  content: "";
+  position: absolute; }
+
+.phone:before {
+  width: 76px;
+  height: 8px;
+  left: 90px;
+  top: 26px;
+  border-radius: 4px;
+  background: #e4eaf1; }
+
+.phone:after {
+  width: 40px;
+  height: 40px;
+  left: 102px;
+  bottom: 12px;
+  border-radius: 35px;
+  background: #dde3eb; }
+
+.screen {
+  --screen-width: 216px;
+  --form-spacing: 25px;
+  --form-separator: #e6ebf1;
+  position: relative;
+  z-index: 2;
+  width: var(--screen-width);
+  height: 379px;
+  border-radius: 6px;
+  background: url("../../../img/device-bg.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: none;
+  left: 0;
+  top: 52px;
+  box-shadow: -1px 1px 6px rgba(170, 183, 204, 0.2); }
+  .screen__number-container {
+    position: absolute;
+    left: 50%;
+    top: 63px;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .screen__number {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 10px;
+    opacity: 0.9;
+    font-size: 3.8rem;
+    font-weight: bold;
+    letter-spacing: -2.2px;
+    line-height: 1;
+    color: #7c5cd1; }
+    .screen__number::after {
+      content: '%';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: right;
+      color: #7c5cd1; }
+  .screen__number-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    color: #7c5cd1;
+    text-transform: uppercase; }

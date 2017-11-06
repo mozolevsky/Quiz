@@ -1,0 +1,16 @@
+@import url(../fonts/fonts.css);
+/* colors */
+/* global text params */
+/* font */
+/* breakpoints */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "AvenirNext", Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  color: #514d55; }
+  @media (max-width: 767px) {
+    body {
+      font-size: 1.8rem; } }

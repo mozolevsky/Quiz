@@ -1,0 +1,57 @@
+/* colors */
+/* global text params */
+/* font */
+/* breakpoints */
+.progress-line {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12%;
+  padding-right: 19%;
+  padding-top: 25px;
+  height: 78px;
+  box-sizing: border-box;
+  background-color: #faf9ff; }
+  .progress-line__desc {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.21;
+    letter-spacing: -0.9px;
+    color: #7c5cd1; }
+  .progress-line__procent-mobile {
+    display: none; }
+
+@media (max-width: 991px) {
+  .progress-line {
+    padding-left: 5%;
+    padding-right: 5%; } }
+
+@media (max-width: 767px) {
+  .progress-line {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    height: 44px; }
+    .progress-line__desc {
+      position: absolute;
+      margin-bottom: 0;
+      top: 14px;
+      right: 16px;
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: normal; }
+    .progress-line__procent-mobile {
+      position: absolute;
+      display: block;
+      margin: 0;
+      top: 14px;
+      left: 16px;
+      font-size: 1.4rem;
+      line-height: 1.21;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: normal; } }

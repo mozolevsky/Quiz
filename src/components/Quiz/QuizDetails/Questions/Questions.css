@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* colors */
+/* global text params */
+/* font */
+/* breakpoints */
+.questions {
+  font-size: 1.8rem; }
+  .questions__question {
+    margin-bottom: 20px;
+    padding: 26px 27px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 3px;
+    background: #ffffff url("../../../../img/right-arrow.svg") no-repeat calc(100% - 27px) center;
+    background-size: 24px;
+    box-shadow: 0 6px 10px 0 rgba(214, 200, 251, 0.24);
+    border: solid 1px #e3d8ff;
+    border-left: 2px solid #7c5cd1; }
+    .questions__question:hover {
+      cursor: pointer; }
+  .questions__variant {
+    margin: 0;
+    margin-right: 19px;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(202, 156, 244, 0.11);
+    border: solid 1px #7c5cd1;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #7c5cd1; }
+  .questions__text {
+    margin: 0;
+    width: 80%;
+    font-size: 1.8rem;
+    line-height: 1.38;
+    color: #514d55; }
+  .questions__skip-link {
+    padding-right: 23px;
+    position: relative;
+    border: none;
+    background: transparent;
+    line-height: 25px;
+    font-size: 1.8rem;
+    color: #7c5cd1; }
+    .questions__skip-link:hover {
+      cursor: pointer; }
+    .questions__skip-link::after {
+      position: absolute;
+      content: '→';
+      right: 0;
+      color: #7c5cd1; }
+
+.blink {
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-duration: 1s; }
+
+.blink-infinite {
+  animation-iteration-count: infinite; }
+
+.blink-3 {
+  animation-iteration-count: 3; }
+
+.blink-furiously {
+  animation-duration: 0.3s; }
+
+@keyframes blink {
+  50% {
+    opacity: 0; } }
+
+@media (max-width: 767px) {
+  .questions {
+    font-size: 1.6rem; }
+    .questions__question {
+      padding: 19px 5px 19px 15px;
+      margin-bottom: 10px;
+      border-left: solid 1px #e3d8ff;
+      background: transparent; }
+    .questions__variant {
+      margin-right: 8px; }
+    .questions__skip-link {
+      margin-top: 8px;
+      margin-bottom: 20px; } }

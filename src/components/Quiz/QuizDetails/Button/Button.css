@@ -1,0 +1,43 @@
+/* colors */
+/* global text params */
+/* font */
+/* breakpoints */
+.button {
+  position: relative;
+  height: 77px;
+  width: 450px;
+  margin-bottom: 50px;
+  border-radius: 100px;
+  background-color: #7c5cd1;
+  box-shadow: 0 12px 24px 0 rgba(124, 91, 209, 0.26);
+  border: solid 4px #7c5cd1;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  outline: none; }
+  .button:hover {
+    cursor: pointer; }
+  .button_arrow::before {
+    content: '';
+    position: absolute;
+    right: -43px;
+    top: -30px;
+    width: 45px;
+    height: 45px;
+    background: url("../../../../img/arrow-for-button.svg") no-repeat center; }
+  .button_margin-top {
+    margin-top: 40px; }
+
+@media (max-width: 991px) {
+  .button {
+    width: 100%;
+    height: 58px;
+    display: block;
+    font-size: 1.6rem; }
+    .button_arrow::before {
+      right: -14px;
+      top: -55px;
+      transform: rotate(-30deg); }
+    .button_margin-top {
+      margin-top: 24px; } }
