@@ -5,100 +5,9 @@ import ProgressBar from './ProgressBar/ProgressBar';
 import DeviceArea from './DeviceArea/DeviceArea';
 import TickList from './TickList/TickList';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import quizData from '../../data/quiz';
+import listData from '../../data/listQuiz';
 import './Quiz.css';
-
-const listData = {
-    listTitle: 'Your Ayurvedic Report',
-    listItems: [
-        'Understand your qualities and quirks',
-        'Everyone will be on the same page',
-        'Projects will get off the ground faster',
-        'You’ll know exactly what’s going on',
-        'You’ll free up time spent on meetings',
-    ]
-};
-
-const quizData = [
-    {
-        title: 'The following quiz will reveal your Ayurvedic body type. It’ll only take 2 minutes.',
-        desc: 'When choosing your answers please think of your situation all round rather than what you currently feel.',
-        button: {
-            text: 'Start the body type quiz',
-            style: 'arrow',
-            type: 'start'
-        }
-    },
-    {
-        title: 'When it comes to your stature, you are…',
-        questions: [
-            {
-                label: 'A',
-                text: 'Very tall or very short, slight.'
-            },
-            {
-                label: 'B',
-                text: 'Medium, or average in height'
-            },
-            {
-                label: 'C',
-                text: 'You can be short, or larger, broader'
-            },
-        ],
-    },
-    {
-        title: 'When it comes to your stature, you are…',
-        questions: [
-            {
-                label: 'A',
-                title: 'You find your skin tends to be dry, rough, or dull, and thin. ',
-                text: 'You can see your veins. If you have acne, it’s mostly dry and bumpy, with blackheads.'
-            },
-            {
-                label: 'B',
-                title: 'You find your skin to be rosy, radiant, flushed, and warm. ',
-                text: 'You are prone to freckles.  Your veins are less prominent. If you have acne, it’s red, irritated and angry looking.',
-            },
-            {
-                label: 'C',
-                title: 'Your skin is smooth, moist, thick, and pale. ',
-                text: 'Your veins are not prominent. You have few freckles or moles. If you have acne, they are few, but greasy, with deep pustules.',
-            },
-        ]
-    },
-    {
-        title: 'When it comes to your stature, you are…',
-        questions: [
-            {
-                label: 'A',
-                text: 'Very tall or very short, slight.'
-            },
-            {
-                label: 'B',
-                text: 'Medium, or average in height'
-            },
-            {
-                label: 'C',
-                text: 'You can be short, or larger, broader'
-            },
-        ],
-    },
-    {
-        bigTitle: 'Cheers! You completed the quiz.',
-        title: 'Please hold while we calculate the results…',
-        desc: 'You’ll soon receive a detailed report of your Ayurvedic body type with food recomendations, nutritional tips and personalized meal plans.',
-        calculations: true
-    },
-    {
-        formTitle: 'Your report is ready!',
-        isForm: true,
-        button: {
-            text: 'Continue to the Report',
-            style: 'margin-top',
-            type: 'finish'
-        }
-    }
-];
-
 
 class Quiz extends Component {
     state = {
@@ -110,7 +19,6 @@ class Quiz extends Component {
 
     componentWillMount = () => {
         let amount = 0;
-
         quizData.forEach((item) => {
             if (item.questions) {
                 amount +=1;

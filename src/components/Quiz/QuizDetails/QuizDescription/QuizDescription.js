@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './QuizDescription.css';
 
-class QuizDescription extends Component {
-    render() {
-        const {stepDesc} = this.props;
+const QuizDescription = (props) => {
+    const {stepDesc} = props;
 
-        return (
-            <div>
-                {stepDesc && <p className="quiz__description">{stepDesc}</p>}
-            </div>
-        );
-    }
+    return (
+        <div>
+            {stepDesc && <p className="quiz__description">{stepDesc}</p>}
+        </div>
+    );
 }
 
 QuizDescription.PropTypes = {
