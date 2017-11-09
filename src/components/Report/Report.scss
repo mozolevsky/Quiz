@@ -1,0 +1,13 @@
+@import '../../sharedStyles/variables.scss';
+
+.report-container {
+    display: flex;
+
+    &__menu-area {
+        width: 268px;
+    }
+
+    &__content-area {
+        width: calc(100% - 268px);
+    }
+}

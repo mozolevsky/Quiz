@@ -15,3 +15,11 @@ $screen-sm: 767px;
 $screen-md: 991px;
 $screen-lg: 1199px;
 
+/* mixins */
+
+@mixin center-in-block() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
