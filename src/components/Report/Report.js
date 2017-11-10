@@ -48,6 +48,10 @@ const linksArray = [
     {
         name: "Gems",
         link: "#"
+    },
+    {
+        name: 12,
+        link: 12
     }
 ];
 
@@ -56,7 +60,7 @@ class Report extends Component {
         return (
             <div className="report-container">
                 <section className="report-container__menu-area">
-                    <SideBar links={linksArray}/>
+                    <SideBar links={linksArray} />
                 </section>
                 <section className="report-container__content-area">
                     main content will be here
