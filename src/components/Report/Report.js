@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import SideBar from './SideBar/SideBar';
+import ReportHeader from './ReportHeader/ReportHeader';
 import './Report.css';
 
 // temp data
@@ -48,22 +49,21 @@ const linksArray = [
     {
         name: "Gems",
         link: "#"
-    },
-    {
-        name: 12,
-        link: 12
     }
 ];
 
 class Report extends Component {
     render() {
         return (
-            <div className="report-container">
+            <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
                     <SideBar links={linksArray} />
                 </section>
                 <section className="report-container__content-area">
-                    main content will be here
+                    <ReportHeader/>
+                    <div id="page-wrap">
+                        Text'll be here
+                    </div>
                 </section>
             </div>
         );
