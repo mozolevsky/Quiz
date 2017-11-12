@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import './SideBar.css';
 
 class SideBar extends Component {
     render() {
-        const {links} = this.props;
+        const {pagesData} = this.props;
 
-        let linksForPages = links.map((item, i) => {
+        let linksForPages = pagesData.map((item, i) => {
             return (
-                <a href={item.link} key={i} className="side-bar__page-link">{item.name}</a>
+                <Link to={`/report/${item.link}`} key={i} className="side-bar__page-link">{item.name}</Link>
             )
         });
 
@@ -27,7 +28,7 @@ class SideBar extends Component {
                         </div>
                         <div className="side-bar__extra-links">
                             <div className="side-bar__extra-link-area">
-                                <a href="/" className="side-bar__extra-link">Meal Plans</a>
+                                <Link to={`/report/meal-plans`} className="side-bar__extra-link">Meal Plans</Link>
                                 <span className="side-bar__extra-label">New</span>
                             </div>
                         </div>
@@ -39,7 +40,7 @@ class SideBar extends Component {
 }
 
 SideBar.propTypes = {
-    links: PropTypes.arrayOf(PropTypes.shape({
+    pagesData: PropTypes.arrayOf(PropTypes.shape({
         link: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired
       })).isRequired

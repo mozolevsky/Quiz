@@ -2,67 +2,72 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import SideBar from './SideBar/SideBar';
 import ReportHeader from './ReportHeader/ReportHeader';
+import ReportContent from './ReportContent/ReportContent';
 import './Report.css';
 
 // temp data
-const linksArray = [
+const reportPages = [
     {
         name: "Overview",
-        link: "#"
+        link: "overview"
     },
     {
         name: "Foods and Diet",
-        link: "#"
+        link: "foods-and-diet"
     },
     {
         name: "Exercise",
-        link: "#"
+        link: "exercise"
     },
     {
         name: "Herbs",
-        link: "#"
+        link: "herbs"
     },
     {
         name: "Spices",
-        link: "#"
+        link: "spices"
     },
     {
         name: "Aromatherapy",
-        link: "#"
+        link: "aromatherapy"
     },
     {
         name: "Massage",
-        link: "#"
+        link: "massage"
     },
     {
         name: "Yoga",
-        link: "#"
+        link: "yoga"
     },
     {
         name: "Colors",
-        link: "#"
+        link: "colors"
     },
     {
         name: "Mantras",
-        link: "#"
+        link: "mantras"
     },
     {
         name: "Gems",
-        link: "#"
+        link: "gems"
     }
 ];
 
+
+
 class Report extends Component {
     render() {
+        const {match} = this.props;
+
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
-                    <SideBar links={linksArray} />
+                    <SideBar pagesData={reportPages}/>
                 </section>
                 <section className="report-container__content-area">
                     <ReportHeader/>
                     <div id="page-wrap">
-                        Text'll be here
+                        <ReportContent match={match} pagesData={reportPages}/>
                     </div>
                 </section>
             </div>
