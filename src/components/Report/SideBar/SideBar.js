@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './SideBar.css';
 
 class SideBar extends Component {
@@ -9,7 +9,14 @@ class SideBar extends Component {
 
         let linksForPages = pagesData.map((item, i) => {
             return (
-                <Link to={`/report/${item.link}`} key={i} className="side-bar__page-link">{item.name}</Link>
+                <NavLink 
+                    to={`/report/${item.link}`} 
+                    key={i} 
+                    className="side-bar__page-link"
+                    activeClassName="side-bar__page-link_active"
+                    >
+                        {item.name}
+                </NavLink>
             )
         });
 
@@ -28,7 +35,7 @@ class SideBar extends Component {
                         </div>
                         <div className="side-bar__extra-links">
                             <div className="side-bar__extra-link-area">
-                                <Link to={`/report/meal-plans`} className="side-bar__extra-link">Meal Plans</Link>
+                                <NavLink to={`/report/meal-plans`} className="side-bar__extra-link">Meal Plans</NavLink>
                                 <span className="side-bar__extra-label">New</span>
                             </div>
                         </div>

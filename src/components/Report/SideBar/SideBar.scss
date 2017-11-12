@@ -64,6 +64,55 @@
         color: #9a8fb7;
         text-decoration: none;
 
+        &:hover {
+            position: relative;
+            color: #9270ef;
+            @include transition(0.4s);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -17px;
+                top: 0;
+                width: 3px;
+                height: 25px;
+                background: #9270ef;
+                animation-name: sideBarLinkHover;
+                animation-duration: 0.4s;
+            }
+        }
+
+        &_active {
+            position: relative;
+            color: #9270ef;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -17px;
+                top: 0;
+                width: 3px;
+                height: 25px;
+                background: #9270ef;
+            }
+        }
+
+        &_active:hover {
+            position: relative;
+            color: #9270ef;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -17px;
+                top: 0;
+                border-radius: 0;
+                width: 3px;
+                height: 25px;
+                background: #9270ef;
+            }
+        }
+
         &:first-child {
             margin-top: 0;
         }
