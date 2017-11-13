@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SideBar from './SideBar/SideBar';
 import ReportHeader from './ReportHeader/ReportHeader';
 import ReportContent from './ReportContent/ReportContent';
+import ReportFooter from './ReportFooter/ReportFooter';
 import './Report.css';
 
 // temp data
@@ -66,9 +67,10 @@ class Report extends Component {
                 </section>
                 <section className="report-container__content-area">
                     <ReportHeader/>
-                    <div id="page-wrap">
+                    <div id="page-wrap" className="report-container__content-main">
                         <ReportContent match={match} pagesData={reportPages}/>
                     </div>
+                    <ReportFooter/>
                 </section>
             </div>
         );

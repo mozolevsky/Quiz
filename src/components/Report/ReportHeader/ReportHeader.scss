@@ -83,3 +83,32 @@
     color: #9a8fb7;
     text-decoration: none;
   }
+
+  @media (max-width: $screen-sm) {
+    .report-header {
+      padding: 18px 0 19px 13px;
+      border-radius: 3px;
+      background-color: #7c5cd1;
+      box-shadow: 0 6px 10px 0 rgba(215, 200, 251, 0.24), 0 2px 4px 0 rgba(50, 37, 85, 0.02);
+      border: solid 1px #e3d8ff;
+
+      &__link {
+        height: 21px;
+      }
+    }
+
+    .bm-burger-button {
+      width: 21px;
+      height: 15px;
+      top: 21px;
+      right: 19px;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    .bm-burger-bars {
+      background: #fff;
+    }
+  }

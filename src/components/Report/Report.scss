@@ -8,6 +8,28 @@
     }
 
     &__content-area {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         width: calc(100% - 268px);
+    }
+
+    &__content-main {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: $screen-sm) {
+    .report-container {
+        display: block;
+    
+        &__menu-area {
+            display: none;
+        }
+    
+        &__content-area {
+            width: 100%;
+        }
     }
 }

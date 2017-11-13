@@ -1,0 +1,43 @@
+@import '../../../sharedStyles/variables.scss';
+
+.report-footer {
+    padding-top: 37px;
+    padding-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+
+    &__logo {
+        margin: 0;
+        margin-bottom: 18px;
+    }
+
+    &__desc {
+        margin: 0;
+        line-height: 22px;
+        font-size: 1.6rem;
+        color: #8d8693;
+        text-align: center;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .report-footer {
+        padding: 23px 16px;
+        background-color: #352856;
+
+        &__desc {
+            opacity: 0.5;
+            font-size: 1.4rem;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        &__logo {
+            width: 68px;
+            margin-bottom: 14px;
+        }
+    }
+}
