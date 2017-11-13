@@ -1,0 +1,49 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+.top-img {
+    margin-top: 50px;
+    margin-bottom: 38px;
+    width: 100%;
+    height: 100%;
+    background-color: #7c5cd1;
+
+    &__img {
+        position: relative;
+        display: block;
+        width: 100%;
+        bottom: 25px;
+
+        &_left {
+            right: 25px;
+        }
+
+        &_right {
+            left: 25px;
+        }
+    }
+}
+
+@media (max-width: $screen-lg) {
+    .top-img {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .top-img {
+        margin-top: 5px;
+        margin-bottom: 27px;
+        width: calc(100% + 40px);
+        box-sizing: border-box;
+        margin-right: -20px;
+        margin-left: -20px;
+
+        &__img {
+            bottom: 5px;
+            right: 0;
+            left: 0;
+        }
+    }
+}

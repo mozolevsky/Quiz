@@ -1,21 +1,16 @@
-/* colors */
 $color-main: #7c5cd1;
 $color-text: #514d55;
 
-/* global text params */
 $font-size: 2rem;
 $line-height: 1.7;
 
-/* font */
 $font-family: "AvenirNext", Arial, sans-serif;
 
-/* breakpoints */
 $screen-xs: 479px;
 $screen-sm: 767px;
 $screen-md: 991px;
 $screen-lg: 1199px;
 
-/* mixins */
 @mixin center-in-block() {
     display: flex;
     justify-content: center;
@@ -26,7 +21,6 @@ $screen-lg: 1199px;
     transition: all $time $type;
 }
 
-/* animations */
 @keyframes sideBarLinkHover {
     0%   {height: 3px; top: 10px;}
     25%  {height: 9px; top: 8px;}

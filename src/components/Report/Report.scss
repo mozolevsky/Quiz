@@ -15,7 +15,16 @@
     }
 
     &__content-main {
-        flex: 1;
+        width: 780px;
+        margin: auto;
+    }
+}
+
+@media (max-width: $screen-lg) {
+    .report-container {
+        &__content-main {
+            width: 90%;
+        }
     }
 }
 
@@ -30,6 +39,13 @@
     
         &__content-area {
             width: 100%;
+        }
+
+        &__content-main {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            box-sizing: border-box;
         }
     }
 }
