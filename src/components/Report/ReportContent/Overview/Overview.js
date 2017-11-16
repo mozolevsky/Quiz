@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
+import TipText from '../Shared/TipText/TipText';
 
 
 class Overview extends Component {
@@ -24,9 +25,11 @@ class Overview extends Component {
                     contribute, this leads to a certain tendency of expression within you.
                 </p>
 
-                <div>
-                    Purple block here
-                </div>
+                <TipText 
+                    title="Before you read on…"
+                    descFirst="Some of the descriptions below might not quite fit with you, but remember that a Vata type also contains lesser amounts of Pita and Kapha which express themselves differently."
+                    descSecond="So… if something here doesn’t seem to relate to your body, then know that the Pita and Kapha forces must be dominating this particular area within you are expressing different qualities."
+                />
 
                 <h3 className="title">Vata’s Elemental Traits & Characteristics</h3>
                 <p>Vata is brittle, airy, cold, prone roughness, wrinkling, and dryness: like a tree in the winter. It’s windy, 
