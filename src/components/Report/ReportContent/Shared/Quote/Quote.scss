@@ -1,5 +1,36 @@
 @import '../../../../../sharedStyles/variables.scss';
 
-.example {
-    color: $color-main;
+.quote {
+    margin-left: 83px;
+    padding-left: 23px;
+    position: relative;
+
+    font-family: Merriweather;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: #7c5cd1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #f6f4ff;
+        box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
+    }
+
+    &_short {
+        white-space: pre;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .quote {
+        margin-left: 0;
+        font-size: 1.8rem;
+        line-height: 1.67;
+    }
 }
