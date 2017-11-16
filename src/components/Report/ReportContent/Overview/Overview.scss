@@ -1,0 +1,21 @@
+@import '../../../../sharedStyles/variables.scss';
+
+.overview {
+    &__divider {
+        height: 3px;
+        background: #ededed;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .overview {
+        &__divider {
+            margin-left: auto;
+            margin-right: auto;
+            width: 102px;
+            height: 2px;
+            opacity: 0.22;
+            background: #514d56;
+        }
+    }
+}
