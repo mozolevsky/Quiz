@@ -2,7 +2,64 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import TopImg from '../Shared/TopImg/TopImg';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
+import TabsVertical from '../Shared/TabsVertical/TabsVertical';
 
+
+
+
+const permittedFoods = [
+    {
+        title: 'Vegetables',
+        food: ['All bitter greens', 'cabbage', 'cauliflower', 'Brussels sprouts', 'sweet-corn', 'swede', 'radish', 'green beans', 'leeks', 'lettuce', 'peas', 'potatoes', 'cooked tomato', 'mushrooms ', 'car-rots', 'celery', 'broccoli', 'garlic', 'bok choy', 'onions', 'green/red peppers', 'beetroot', 'kale ', 'watercress', 'turnips']
+    },
+    {
+        title: 'Fruits',
+        food: ['Some fruits']
+    },
+    {
+        title: 'Legumes',
+        food: ['Some Legumes']
+    },
+    {
+        title: 'Grains',
+        food: ['Some graints']
+    },
+    {
+        title: 'Meat',
+        food: ['Some meat']
+    },
+    {
+        title: 'Dairy',
+        food: ['Some dairy']
+    }
+];
+
+const prohibitedFoods = [
+    {
+        title: 'Vegetables',
+        food: ['All bitter greens', 'cabbage', 'cauliflower', 'Brussels sprouts', 'sweet-corn', 'swede', 'radish', 'green beans', 'leeks', 'lettuce', 'peas', 'potatoes', 'cooked tomato', 'mushrooms ', 'car-rots', 'celery', 'broccoli', 'garlic', 'bok choy', 'onions', 'green/red peppers', 'beetroot', 'kale ', 'watercress', 'turnips']
+    },
+    {
+        title: 'Fruits',
+        food: ['Some fruits']
+    },
+    {
+        title: 'Legumes',
+        food: ['Some Legumes']
+    },
+    {
+        title: 'Grains',
+        food: ['Some graints']
+    },
+    {
+        title: 'Meat',
+        food: ['Some meat']
+    },
+    {
+        title: 'Dairy',
+        food: ['Some dairy']
+    }
+];
 
 class FoodsAndDiet extends Component {
     render() {
@@ -27,8 +84,9 @@ class FoodsAndDiet extends Component {
                     Winter, be particularly mindful about staying balanced during the cold, dry months of 
                     the year.</p>
 
-                <div>Here will be tabs first</div>
-                <div>Here will be tabs second</div>
+                <TabsVertical type="purple" food={permittedFoods}/>
+                
+                <TabsVertical type="pink" food={prohibitedFoods}/>
 
                 <p>Cook your foods for the best digestion. Keep the “raw” to fresh sweet, heavy fruits, pickles and condiments.</p>
                 <ContinueBtn link="/report/exercise" txt="Recommended Exercises"/>

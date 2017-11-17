@@ -27,3 +27,11 @@ $screen-lg: 1199px;
     50%  {height: 18px; top: 3.5px;}
     100% {height: 25px; top: 0;}
 }
+
+@keyframes fade {
+    0% {opacity: 0}
+    25% {opacity: 0.25}
+    50% {opacity: 0.5}
+    75% {opacity: 0.75}
+    100% {opacity: 1}
+}

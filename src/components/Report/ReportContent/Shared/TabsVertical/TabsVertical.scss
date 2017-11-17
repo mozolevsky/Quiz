@@ -1,0 +1,97 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+$tabs-pink: #d15c72;
+
+.vertical-tabs {
+    display: flex;
+    border-radius: 4px;
+
+    &_purple {
+        background-color: #f6f4ff;
+        box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
+
+        & .react-tabs__tab--selected {
+            background-color: #f6f4ff;
+            color: $color-main;
+        }
+    }
+
+    &_pink {
+        background-color: #faf9fc;
+        box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
+
+        & .react-tabs__tab--selected {
+            background-color: #faf9fc;
+            color: $tabs-pink;
+        }
+    }
+
+    &__titles-area {
+        width: 136px;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+
+    &__title {
+        @include center-in-block();
+        padding: 15px 24px;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        color: #b6b3bf;
+        background: #fff;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__tab-panel {
+        margin: 0;
+        padding: 24px;
+        box-sizing: border-box;
+        width: calc(100% - 136px);
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &.react-tabs__tab-panel--selected {
+            display: flex;
+            opacity: 1;
+            animation: fade 0.6s ease-in-out;
+        }
+    }
+
+    &__content {
+        margin: 0;
+        padding: 0;
+        width: 33%;
+        font-size: 1.6rem;
+        line-height: 2.13;
+        // 
+        &_purple {
+            color: $color-main;
+        }
+
+        &_pink {
+            color: $tabs-pink;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .vertical-tabs {
+        &__content {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .vertical-tabs {
+        &__content {
+            width: 100%;
+        }
+    }
+}
