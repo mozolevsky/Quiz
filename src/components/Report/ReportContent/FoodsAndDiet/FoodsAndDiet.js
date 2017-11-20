@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import TopImg from '../Shared/TopImg/TopImg';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
-import TabsVertical from '../Shared/TabsVertical/TabsVertical';
-
+import TabsToAccordion from '../Shared/TabsToAccordion/TabsToAccordion';
 
 
 
@@ -84,9 +83,17 @@ class FoodsAndDiet extends Component {
                     Winter, be particularly mindful about staying balanced during the cold, dry months of 
                     the year.</p>
 
-                <TabsVertical type="purple" food={permittedFoods}/>
-                
-                <TabsVertical type="pink" food={prohibitedFoods}/>
+                <TabsToAccordion 
+                    type="purple" 
+                    food={permittedFoods}
+                    title="Good to Eat"
+                />
+
+                <TabsToAccordion 
+                    type="pink" 
+                    food={prohibitedFoods}
+                    title="Better to Avoid"
+                />
 
                 <p>Cook your foods for the best digestion. Keep the “raw” to fresh sweet, heavy fruits, pickles and condiments.</p>
                 <ContinueBtn link="/report/exercise" txt="Recommended Exercises"/>

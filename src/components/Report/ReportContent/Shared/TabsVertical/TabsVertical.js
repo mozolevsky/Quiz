@@ -8,14 +8,14 @@ class TabsVertical extends Component {
 
     render() {
         const {type} = this.props || 'purple';
-        const {food} = this.props;
+        const {data} = this.props;
 
-        const tabTitles = food.map((category, i) => {
+        const tabTitles = data.map((category, i) => {
             return <Tab key={i} className="vertical-tabs__title">{category.title}</Tab>
         });
         
 
-        const tabsAreas = food.map((category, i) => {
+        const tabsAreas = data.map((category, i) => {
             let foodsItems = category.food.map((foodItem, i) => {
                 return <p key={i} className={`vertical-tabs__content vertical-tabs__content_${this.props.type}`}>{foodItem}</p>
             })

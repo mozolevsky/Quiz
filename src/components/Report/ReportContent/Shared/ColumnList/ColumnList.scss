@@ -1,0 +1,53 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+.column-list {
+    padding: 36px 39px 27px 46px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f6f4ff;
+    box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
+
+    &_purple {
+        color: $color-main;
+    }
+
+    &_pink {
+        color: $pink;
+    }
+
+    &__item {
+        width: 25%;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.13;
+    }
+}
+
+@media(max-width: $screen-lg) {
+    .column-list {
+        padding: 30px;
+
+        &__item {
+            width: 30%;
+        }
+    }
+}
+
+@media(max-width: $screen-md) {
+    .column-list {
+        &__item {
+            width: 50%;
+        }
+    }
+}
+
+@media(max-width: $screen-sm) {
+    .column-list {
+        padding: 12px 23px;
+
+        &__item {
+            width: 100%;
+        }
+    }
+}
