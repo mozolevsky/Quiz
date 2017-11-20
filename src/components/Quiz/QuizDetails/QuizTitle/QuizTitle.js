@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './QuizTitle.css';
 
 
-class QuizTitle extends Component {
-    render() {
-        const {stepTitle, stepBigTitle} = this.props;
+const QuizTitle = (props) => {
+    const {stepTitle, stepBigTitle} = props;
 
-        return (
-            <h1 className="quiz__title">
-                {stepBigTitle && <b>{stepBigTitle}</b>}
-                {stepBigTitle && <br/>}
-                {stepTitle}
-            </h1>
-        );
-    }
+    return (
+        <h1 className="quiz__title">
+            {stepBigTitle && <b>{stepBigTitle}</b>}
+            {stepBigTitle && <br/>}
+            {stepTitle}
+        </h1>
+    );
 }
 
 QuizTitle.PropTypes = {

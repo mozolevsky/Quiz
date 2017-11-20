@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
 
-class Button extends Component {
-    render() {
-        const {buttonData, toNextStep} = this.props;
+const Button = (props) => {
+    const {buttonData, toNextStep} = props;
 
-        return (
-            <button
-                type="submit"
-                className={`button button_${buttonData.style}`}
-                onClick={toNextStep}
-            >{buttonData.text}</button>
-        );
-    }
+    return (
+        <button
+            type="submit"
+            className={`button button_${buttonData.style}`}
+            onClick={toNextStep}
+        >{buttonData.text}</button>
+    );
 }
 
 Button.PropTypes = {

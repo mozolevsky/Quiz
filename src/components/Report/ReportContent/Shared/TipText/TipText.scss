@@ -1,0 +1,43 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+.tip-text {
+    margin-bottom: 43px;
+    padding: 36px 35px 27px 166px;
+
+    border-radius: 4px;
+    background-color: $color-main;
+    box-shadow: 0 16px 25px 0 rgba(152, 143, 176, 0.23);
+    color: #fff;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 2.8rem;
+        line-height: 1;
+        font-weight: 600;
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        line-height: 1.67;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .tip-text {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 30px;
+        padding: 73px 29px 29px 24px;
+
+        &__title {
+            margin-bottom: 6px;
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+
+        &__desc {
+            line-height: 1.4;
+        }
+    }
+}

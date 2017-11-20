@@ -7,3 +7,9 @@ https://habrahabr.ru/post/329996/
 
 React cli guide
 https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
+
+Component for burger menu
+https://github.com/negomi/react-burger-menu
+
+Component for progress bar
+https://github.com/react-component/progress
