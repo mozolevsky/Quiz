@@ -1,0 +1,117 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+
+.collapse {
+    $trans: all 0.3s ease-in;
+
+    position: relative;
+    margin-bottom: 20px;
+    padding: 29px 23px 27px 23px;
+    box-sizing: border-box;
+    width: 380px;
+    box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
+    
+    &_opened {
+        background-color: #f6f4ff;
+        transition: $trans;
+
+        & .collapse__desc {
+            max-height: 500px;
+            transition: $trans;
+        }
+
+        &::after {
+            transform: rotate(180deg);
+            transition: $trans;
+        }
+
+    }
+
+    &_closed {
+        background-color: #ffffff;
+        transition: $trans;
+
+        & .collapse__desc {
+            max-height: 44px;
+            transition: $trans;
+        }
+
+        &::after {
+            transform: rotate(0);
+            transition: $trans;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        right: 27px;
+        width: 16px;
+        height: 16px;
+        background: url('../../../../../img/arrow-down-purple.svg') no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 16px;
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1;
+        text-align: left;
+        color: $color-main;
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        text-align: left;
+        color: $color-text;
+        line-height: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: max-height 0.2s ease-in;
+    }
+}
+
+.collapse-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+@media (max-width: $screen-lg) {
+    .collapse {
+        padding: 20px;
+        width: 49%;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .collapse {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .collapse {
+        padding: 14px 20px 22px 20px;
+        width: 100%;
+
+        &::after {
+            top: 20px;
+        }
+
+        &__title {
+            margin-bottom: 7px;
+            font-size: 2.2rem;
+            line-height: 1.27;
+        }
+    }
+}
