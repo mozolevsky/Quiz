@@ -1,6 +1,7 @@
 @import '../../../../../sharedStyles/variables.scss';
 
 .tip-text {
+    position: relative;
     margin-bottom: 43px;
     padding: 36px 35px 27px 166px;
 
@@ -8,6 +9,19 @@
     background-color: $color-main;
     box-shadow: 0 16px 25px 0 rgba(152, 143, 176, 0.23);
     color: #fff;
+
+    &__word {
+        position: absolute;
+        top: 57px;
+        left: 51px;
+        transform: rotate(-30deg);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 88px;
+        left: 88px;
+    }
 
     &__title {
         margin: 0;
@@ -29,6 +43,18 @@
         margin-right: -20px;
         margin-bottom: 30px;
         padding: 73px 29px 29px 24px;
+
+        &__word {
+            top: 22px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+
+        &__arrow {
+            top: 22px;
+            left: 75px;
+            transform: rotateX(180deg) rotateZ(-21deg);
+        }
 
         &__title {
             margin-bottom: 6px;

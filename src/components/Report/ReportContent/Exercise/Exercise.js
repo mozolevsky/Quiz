@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import TopImg from '../Shared/TopImg/TopImg';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
+import ColumnList from '../Shared/ColumnList/ColumnList';
+
+const typesOfExercises = [
+    "Aerobics",
+    "Ashtanga Yoga",
+    "Belly dancing",
+    "Dancing",
+    "Power ",
+    "Walking",
+    "Running",
+    "Rowing ",
+    "Soccer",
+    "Zumba",
+];
 
 class Exercise extends Component {
     render() {
@@ -19,7 +33,7 @@ class Exercise extends Component {
 
                 <p>Don’t rely on counting calories to keep you slim, instead look at food as fuel for your activities: and then use them to push your movements into more challenging arenas. You have wonderful endurance! Find ways you really love to move your body. 30 minutes to  an hour everyday of strenuous, dynamic movement is all you need. And get up early to do it.</p>
 
-                <div>Lightpurple block contains list here</div>
+                <ColumnList type="purple" list={typesOfExercises}/>
 
                 <ContinueBtn link="/report/herbs" txt="Recommended Herbs"/>
            </div>
