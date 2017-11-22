@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
 import TipText from '../Shared/TipText/TipText';
+import ChartBlock from '../Shared/ChartBlock/ChartBlock';
 import './Overview.css';
 
 
@@ -9,11 +10,21 @@ class Overview extends Component {
     render() {
         return (
            <div>
-               <section className="overview__top">Here will be top block</section>
+               <section className="overview__top">
+                    <div className="overview__top-text">
+                        <h1 className="title overview__top-title">Hey, Johanson.<br/> According to the quiz, <b>your body type is Vata.</b>
+                        </h1>
+                        <p className="overview__desc">When we discover our dosha, we learn where and how these forces move and accumulate, which leads us to understand how health or disease manifests in our body and psychology.</p>
+                    </div>
+
+                    <div className="overview__chart-wrapper">
+                        <ChartBlock/>
+                    </div>
+               </section>
 
                <div className="overview__divider"></div>
 
-               <h1 className="title">Here’s what you should know about Vata…</h1>
+               <h3 className="title">Here’s what you should know about Vata…</h3>
                <p>
                     When we discover our dosha, we learn where and how these forces move and accumulate,
                     which leads us to understand how health or disease manifests in our body and psychology.

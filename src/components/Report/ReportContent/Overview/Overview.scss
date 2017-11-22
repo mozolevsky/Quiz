@@ -1,15 +1,115 @@
 @import '../../../../sharedStyles/variables.scss';
 
 .overview {
+    &__top {
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 67px;
+        display: flex;
+    }
+
+    &__top-title.title {
+        font-size: 3.8rem;
+        letter-spacing: -0.6px;
+    }
+
+    &__top-text {
+        width: 461px;
+    }
+
+    &__desc {
+        margin: 0;
+    }
+
     &__divider {
         height: 3px;
         background: #ededed;
         margin-bottom: 25px;
     }
+
+    &__chart-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 286px;
+            right: 20px;
+            width: 32px;
+            height: 38px;
+            background: url('../../../../img/report-top-block-arrow.svg') no-repeat center;
+            background-size: cover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 333px;
+            right: -107px;
+            width: 234px;
+            height: 54px;
+            background: url('../../../../img/report-top-block-caption.svg') no-repeat center;
+            background-size: cover;
+            transform: rotate(-13deg);
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .overview {
+        margin-top: 21px;
+
+        &__top-title.title {
+            margin-bottom: 442px;
+        }
+
+        &__chart-wrapper {
+            position: absolute;
+            top: 175px;
+        }
+    }
 }
 
 @media (max-width: $screen-sm) {
     .overview {
+
+        &__top {
+            margin-top: 21px;
+            padding-bottom: 28px;
+        }
+
+        &__top-text {
+            width: 100%;
+        }
+
+        &__top-title.title {
+            margin-bottom: 338px;
+            font-size: 2.4rem;
+            line-height: 1.42;
+        }
+
+        &__chart-wrapper {
+            top: 120px;
+            left: 50%;
+            transform: translate(-50%);
+
+            &::before {
+                top: 222px;
+                right: 29px;
+                transform: rotate(38deg);
+            }
+
+            &::after {
+                top: 256px;
+                right: 52px;
+                width: 148px;
+                height: 36px;
+                transform: rotate(-2deg);
+            }
+        }
+
         &__divider {
             margin-left: auto;
             margin-right: auto;

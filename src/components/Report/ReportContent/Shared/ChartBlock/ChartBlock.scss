@@ -1,0 +1,324 @@
+@import '../../../../../sharedStyles/variables.scss';
+
+
+.chart-block {
+    width: 335px;
+    height: 335px;
+
+    &__inner-round {
+        position: relative;
+        @include center-in-block;
+        height: 100%;
+        background-color: #f6f4ff;
+        border-radius: 50%;
+    }
+
+    &__inner-rect {
+        width: 255px;
+        height: 313px;
+        background: #fff;
+        box-shadow: 0 12px 24px 0 rgba(171, 161, 196, 0.12);
+    }
+
+    &__chart {
+        margin: 41px auto 19px;
+        width: 155px;
+        height: 155px;
+        background: #fbfbfc url('../../../../../img/user_icon.svg') no-repeat center;
+        border-radius: 50%;
+    }
+
+    &__types {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    &__type {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__data {
+        margin: 0;
+        margin-right: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        
+        &_vata {
+            margin-left: 54px;
+            color: $color-main;
+        }
+
+        &_kapha {
+            margin-left: 42px;
+            color: #f492d2;
+            
+        }
+
+        &_pitta {
+            margin-left: 51px;
+            color: #fdbea3;
+        }
+    }
+
+    &__point {
+        margin-right: 6px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+        &_vata {
+            background: $color-main;
+        }
+
+        &_kapha {
+            background: #f492d2;
+        }
+
+        &_pitta {
+            background: #fdbea3;
+        }
+    }
+
+    &__line {
+        height: 6px;
+        border-radius: 4px;
+
+        &_vata {
+            background: $color-main;
+        }
+
+        &_kapha {
+            background: #f492d2;
+        }
+
+        &_pitta {
+            background: #fdbea3;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        padding: 10px 15px 10px 31px;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+
+        &-text {
+            position: relative;
+            margin: 0;
+            line-height: 22px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: uppercase;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 5px;
+                left: -15px;
+                width: 11px;
+                height: 11px;
+                background-color: transparent;
+                box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+                border: solid 3px rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+        }
+
+        &_vatta {
+            top: 37px;
+            left: -24px;
+            background-color: $color-main;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: -60px;
+                height: 1px;
+                width: 60px;
+                background-color: $color-main;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 26px;
+                right: -75px;
+                height: 1px;
+                width: 18px;
+                background-color: $color-main;
+                transform: rotate(45deg);
+            }
+        }
+
+        &_pitta {
+            top: 54px;
+            right: -77px;
+            background-color: #fdbea3;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: -90px;
+                height: 1px;
+                width: 90px;
+                background-color: #fdbea3;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 26px;
+                left: -105px;
+                height: 1px;
+                width: 18px;
+                background-color: #fdbea3;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &_kapha {
+            top: 180px;
+            right: -50px;
+            background-color: #f492d2;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: -70px;
+                height: 1px;
+                width: 70px;
+                background-color: #f492d2;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 14px;
+                left: -85px;
+                height: 1px;
+                width: 18px;
+                background-color: #f492d2;
+                transform: rotate(45deg); 
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: $screen-sm) {
+    .chart-block {
+        width: 248px;
+        height: 248px;
+
+        &__inner-rect {
+            width: 189px;
+            height: 217px;
+        }
+
+        &__chart {
+            margin: 29px auto 15px;
+            width: 107px;
+            height: 107px;
+        }
+
+        &__type {
+            margin-bottom: 0;
+        }
+
+        &__data {
+            &_vata {
+                margin-left: 21px;
+            }
+
+            &_kapha {
+                margin-left: 9px;
+            }
+
+            &_pitta {
+                margin-left: 19px;
+            }
+        }
+
+        &__label {
+            padding: 3.6px 8.4px 3.6px 19.4px;
+            
+            &-text {
+                line-height: 19px;
+                font-size: 1.4rem;
+
+                &::before {
+                    top: 6px;
+                    left: -11px;
+                    width: 6.6px;
+                    height: 6.6px;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+                    border: none;
+                }
+            }
+
+            &_vatta {
+                top: 31px;
+                left: -6px;
+                
+                &::before {
+                    top: 13px;
+                    right: -40px;
+                    width: 40px; 
+                }
+
+                &::after {
+                    top: 19px;
+                    right: -55px;
+                    width: 18px;
+                }
+            }
+
+            &_pitta {
+               top: 40px;
+               right: -26px;
+                
+                &::before {
+                    top: 13px;
+                    left: -44px;
+                    width: 45px; 
+                }
+
+                &::after {
+                    top: 19px;
+                    left: -59px;
+                    width: 18px;
+                }
+            }
+
+            &_kapha {
+                top: 122px;
+                right: -20px;
+
+                &::before {
+                    top: 14px;
+                    left: -23px;
+                    height: 1px;
+                    width: 25px;
+                }
+
+                &::after {
+                    top: 11px;
+                    left: -30px;
+                    height: 1px;
+                    width: 8px;
+                }
+            }
+        }
+    }
+}

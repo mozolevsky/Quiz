@@ -1,0 +1,36 @@
+@import '../../../sharedStyles/variables.scss';
+
+.nav-link-list {
+    padding-top: 10px;
+    padding-bottom: 13px;
+    background-color: #f6f4ff;
+    border: solid 1px #e8e4f2;
+
+    &__link {
+        display: block;
+        padding-left: 22px;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.44;
+        text-align: left;
+        color: $color-main;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 13px;
+            right: 35px;
+            width: 16px;
+            height: 13px;
+            background: url('../../../img/right-arrow.svg') no-repeat center;
+            background-size: cover;
+        }
+    }
+}
+
+

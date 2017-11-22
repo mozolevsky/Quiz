@@ -5,7 +5,6 @@ import './ReportFooter.css';
 
 
 const ReportFooter = (props) => {
-    console.log(logo);
     return (
         <section className="report-footer">
             <img src={logo} alt="footer logo yoganosh" className="report-footer__logo"/>
