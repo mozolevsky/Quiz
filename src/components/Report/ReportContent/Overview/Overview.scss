@@ -26,6 +26,35 @@
         background: #ededed;
         margin-bottom: 25px;
     }
+
+    &__chart-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 286px;
+            right: 20px;
+            width: 32px;
+            height: 38px;
+            background: url('../../../../img/report-top-block-arrow.svg') no-repeat center;
+            background-size: cover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 333px;
+            right: -107px;
+            width: 234px;
+            height: 54px;
+            background: url('../../../../img/report-top-block-caption.svg') no-repeat center;
+            background-size: cover;
+            transform: rotate(-13deg);
+        }
+    }
 }
 
 @media (max-width: $screen-md) {
@@ -33,7 +62,7 @@
         margin-top: 21px;
 
         &__top-title.title {
-            margin-bottom: 375px;
+            margin-bottom: 442px;
         }
 
         &__chart-wrapper {
@@ -45,6 +74,12 @@
 
 @media (max-width: $screen-sm) {
     .overview {
+
+        &__top {
+            margin-top: 21px;
+            padding-bottom: 28px;
+        }
+
         &__top-text {
             width: 100%;
         }
@@ -59,6 +94,20 @@
             top: 120px;
             left: 50%;
             transform: translate(-50%);
+
+            &::before {
+                top: 222px;
+                right: 29px;
+                transform: rotate(38deg);
+            }
+
+            &::after {
+                top: 256px;
+                right: 52px;
+                width: 148px;
+                height: 36px;
+                transform: rotate(-2deg);
+            }
         }
 
         &__divider {

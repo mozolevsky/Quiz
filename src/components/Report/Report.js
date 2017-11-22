@@ -12,7 +12,7 @@ import './Report.css';
 const reportPages = [
     {
         name: "Overview",
-        link: "overview"
+        link: ""
     },
     {
         name: "Foods and Diet",

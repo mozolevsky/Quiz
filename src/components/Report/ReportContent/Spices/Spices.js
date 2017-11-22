@@ -57,7 +57,7 @@ class Spices extends Component {
                 <h1 className="title">Recommended Spices for Vata</h1>
                 <p>Cras semper nisi vitae arcu congue euismod. In sit amet varius nisi. Nullam eu orci hendrerit lorem aliquet blandit. Pellentesque ac hendrerit nibh. Cras semper nisi vitae arcu congue euismod. In sit amet varius nisi. Nullam eu orci hendrerit lorem aliquet blandit. Pellentesque ac hendrerit nibh.</p>
 
-                <ColumnList list={tempDataListColumn} type="purple"/>
+                <ColumnList list={tempDataListColumn} type="purple" style={{marginBottom: 56}}/>
 
                 <ContinueBtn link="/report/aromatherapy" txt="Recommended Oils"/>
            </div>

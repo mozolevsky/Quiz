@@ -32,8 +32,7 @@ class ReportContent extends Component {
                 <Route exact={true} path={`${match.path}/herbs`} component={Herbs}/>
                 <Route exact={true} path={`${match.path}/mantras`} component={Mantras}/>
                 <Route exact={true} path={`${match.path}/massage`} component={Massage}/>
-                <Route exact={false} path={`${match.path}/overview`} component={Overview}/>
-                <Route exact={false} path={`${match.path}`} component={Overview}/>
+                <Route exact={true} path={`${match.path}`} component={Overview}/>
                 <Route exact={true} path={`${match.path}/spices`} component={Spices}/>
                 <Route exact={true} path={`${match.path}/yoga`} component={Yoga}/>
                 <Route exact={true} path={`${match.path}/meal-plans`} component={MealPlans}/>

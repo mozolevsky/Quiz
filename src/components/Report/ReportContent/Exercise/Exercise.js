@@ -33,7 +33,7 @@ class Exercise extends Component {
 
                 <p>Don’t rely on counting calories to keep you slim, instead look at food as fuel for your activities: and then use them to push your movements into more challenging arenas. You have wonderful endurance! Find ways you really love to move your body. 30 minutes to  an hour everyday of strenuous, dynamic movement is all you need. And get up early to do it.</p>
 
-                <ColumnList type="purple" list={typesOfExercises}/>
+                <ColumnList type="purple" list={typesOfExercises} style={{marginBottom: 56}}/>
 
                 <ContinueBtn link="/report/herbs" txt="Recommended Herbs"/>
            </div>
