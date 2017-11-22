@@ -5,6 +5,7 @@ import ReportHeader from './ReportHeader/ReportHeader';
 import ReportContent from './ReportContent/ReportContent';
 import ReportFooter from './ReportFooter/ReportFooter';
 import NavLinkList from './NavLinkList/NavLinkList';
+import Collapse, {Panel} from 'rc-collapse';
 import './Report.css';
 
 // temp data
@@ -58,8 +59,19 @@ const reportPages = [
 
 
 class Report extends Component {
+    state = {
+        mobileNavTitle: 'Overview'
+    }
+
+    setMobileNavTitle = (e) => {
+        this.setState({
+            mobileNavTitle: e.target.innerText
+        });
+    }
+
     render() {
         const {match} = this.props;
+        const {mobileNavTitle} = this.state;
 
         return (
             <div className="report-container" id="outer-container">
@@ -70,11 +82,19 @@ class Report extends Component {
                     <ReportHeader/>
                     <div id="page-wrap" style={{flex: 1}}>
                         <div className="report-container__content-main">
+                            <div className="report-container__mobile-nav">
+                            <Collapse>
+                                <Panel header={mobileNavTitle}>
+                                <NavLinkList pagesData={reportPages} getTitle={this.setMobileNavTitle}/>
+                            </Panel>
+                            </Collapse>
+                            </div>
+
                             <ReportContent match={match} pagesData={reportPages}/>
                         </div>
                     </div>
 
-                    <div className="report-container__mobile-links">
+                    <div className="report-container__mobile-links"> 
                         <NavLinkList pagesData={reportPages}/>
                     </div>
 

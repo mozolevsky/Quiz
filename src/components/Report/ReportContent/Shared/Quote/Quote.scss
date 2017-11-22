@@ -32,5 +32,9 @@
         margin-left: 0;
         font-size: 1.8rem;
         line-height: 1.67;
+
+        &_short {
+            white-space: pre-line;
+        }
     }
 }

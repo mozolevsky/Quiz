@@ -22,6 +22,10 @@
     &__mobile-links {
         display: none;
     }
+
+    &__mobile-nav {
+        display: none;
+    }
 }
 
 @media (max-width: $screen-lg) {
@@ -54,6 +58,43 @@
 
         &__mobile-links {
             display: block;
+        }
+        
+        &__mobile-nav {
+            display: block;
+            margin: 0 -20px;
+
+            & .rc-collapse-header {
+                position: relative;
+                background-color: #f6f4ff;
+                box-shadow: 0 2px 4px 0 rgba(49, 37, 83, 0.09);
+                border: solid 1px #ebe9f4;
+
+                font-size: 1.6rem;
+                line-height: 22px;
+                font-weight: bold;
+                color: $color-main;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    top: 28px;
+                    right: 26px;
+                    background: url('../../img/arrow-down-purple.svg') no-repeat center;
+                    background-size: cover;
+                    transition: all 0.3s ease-in;
+                    transform: rotate(0deg);
+                }
+            }
+
+            & .rc-collapse-item-active .rc-collapse-header {
+                &::before {
+                    transition: all 0.3s ease-in;
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 }

@@ -13,6 +13,7 @@ const NavLinkList = (props) => {
                             key={i} 
                             to={`/report/${item.link}`} 
                             className="nav-link-list__link"
+                            onClick={props.getTitle}
                         >{item.name}</NavLink>
                     )
                 })
