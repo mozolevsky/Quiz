@@ -4,6 +4,7 @@ import SideBar from './SideBar/SideBar';
 import ReportHeader from './ReportHeader/ReportHeader';
 import ReportContent from './ReportContent/ReportContent';
 import ReportFooter from './ReportFooter/ReportFooter';
+import NavLinkList from './NavLinkList/NavLinkList';
 import './Report.css';
 
 // temp data
@@ -72,6 +73,11 @@ class Report extends Component {
                             <ReportContent match={match} pagesData={reportPages}/>
                         </div>
                     </div>
+
+                    <div className="report-container__mobile-links">
+                        <NavLinkList pagesData={reportPages}/>
+                    </div>
+
                     <ReportFooter/>
                 </section>
             </div>

@@ -13,6 +13,7 @@ import Overview from './Overview/Overview';
 import Spices from './Spices/Spices';
 import Yoga from './Yoga/Yoga';
 import MealPlans from './MealPlans/MealPlans';
+import ScrollToTop from '../../ScrollToTop/ScrollToTop';
 
 
 
@@ -22,7 +23,7 @@ class ReportContent extends Component {
         const {match} = this.props;
 
         return (
-           <div>
+            <ScrollToTop>
                 <Route exact={true} path={`${match.path}/aromatherapy`} component={Aromatherapy}/>
                 <Route exact={true} path={`${match.path}/colors`} component={Colors}/>
                 <Route exact={true} path={`${match.path}/exercise`} component={Exercise}/>
@@ -35,7 +36,7 @@ class ReportContent extends Component {
                 <Route exact={true} path={`${match.path}/spices`} component={Spices}/>
                 <Route exact={true} path={`${match.path}/yoga`} component={Yoga}/>
                 <Route exact={true} path={`${match.path}/meal-plans`} component={MealPlans}/>
-           </div>
+            </ScrollToTop>
         );
     }
 }
