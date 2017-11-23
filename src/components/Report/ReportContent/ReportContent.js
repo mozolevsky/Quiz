@@ -69,14 +69,21 @@ class ReportContent extends Component {
                     path={`${match.path}/colors`} 
                     render={() => <Colors pageData={pagesData[8]}/>}
                 />
-                 <Route 
+                <Route 
                     exact={true} 
                     path={`${match.path}/mantras`} 
                     render={() => <Mantras pageData={pagesData[9]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/gems`} 
+                    render={() => <Gems pageData={pagesData[10]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/meal-plans`} 
+                    render={() => <MealPlans pageData={pagesData[11]}/>}
                 />                      
-
-                <Route exact={true} path={`${match.path}/gems`} component={Gems}/>
-                <Route exact={true} path={`${match.path}/meal-plans`} component={MealPlans}/>
             </ScrollToTop>
         );
     }
