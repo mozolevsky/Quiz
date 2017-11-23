@@ -7,12 +7,18 @@ const Quote = (props) => {
     const isShort = props.short ? 'quote_short' : '';
 
     return (
-        <p className={`quote ${isShort}`}>{props.txt}</p>
+        <div className={`quote ${isShort}`}>
+            {
+                props.txt.map((str, i) => {
+                    return <p key={i} className="quote_text">{str}</p>
+                })
+            }
+        </div>
     )
 }
 
 Quote.propTypes = {
-    txt: PropTypes.string.isRequired
+    txt: PropTypes.arrayOf(PropTypes.string.isRequired)
 }
 
 export default Quote;

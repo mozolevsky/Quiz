@@ -49,15 +49,33 @@ class ReportContent extends Component {
                     path={`${match.path}/spices`} 
                     render={() => <Spices pageData={pagesData[4]}/>}
                 />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/aromatherapy`} 
+                    render={() => <Aromatherapy pageData={pagesData[5]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/massage`} 
+                    render={() => <Massage pageData={pagesData[6]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/yoga`} 
+                    render={() => <Yoga pageData={pagesData[7]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/colors`} 
+                    render={() => <Colors pageData={pagesData[8]}/>}
+                />
+                 <Route 
+                    exact={true} 
+                    path={`${match.path}/mantras`} 
+                    render={() => <Mantras pageData={pagesData[9]}/>}
+                />                      
 
-
-                <Route exact={true} path={`${match.path}/aromatherapy`} component={Aromatherapy}/>
-                <Route exact={true} path={`${match.path}/colors`} component={Colors}/>
                 <Route exact={true} path={`${match.path}/gems`} component={Gems}/>
-                
-                <Route exact={true} path={`${match.path}/mantras`} component={Mantras}/>
-                <Route exact={true} path={`${match.path}/massage`} component={Massage}/>
-                <Route exact={true} path={`${match.path}/yoga`} component={Yoga}/>
                 <Route exact={true} path={`${match.path}/meal-plans`} component={MealPlans}/>
             </ScrollToTop>
         );
