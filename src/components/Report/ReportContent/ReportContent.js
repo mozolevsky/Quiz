@@ -39,15 +39,24 @@ class ReportContent extends Component {
                     path={`${match.path}/exercise`} 
                     render={() => <Exercise pageData={pagesData[2]}/>}
                 />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/herbs`} 
+                    render={() => <Herbs pageData={pagesData[3]}/>}
+                />
+                <Route 
+                    exact={true} 
+                    path={`${match.path}/spices`} 
+                    render={() => <Spices pageData={pagesData[4]}/>}
+                />
 
 
                 <Route exact={true} path={`${match.path}/aromatherapy`} component={Aromatherapy}/>
                 <Route exact={true} path={`${match.path}/colors`} component={Colors}/>
                 <Route exact={true} path={`${match.path}/gems`} component={Gems}/>
-                <Route exact={true} path={`${match.path}/herbs`} component={Herbs}/>
+                
                 <Route exact={true} path={`${match.path}/mantras`} component={Mantras}/>
                 <Route exact={true} path={`${match.path}/massage`} component={Massage}/>
-                <Route exact={true} path={`${match.path}/spices`} component={Spices}/>
                 <Route exact={true} path={`${match.path}/yoga`} component={Yoga}/>
                 <Route exact={true} path={`${match.path}/meal-plans`} component={MealPlans}/>
             </ScrollToTop>
