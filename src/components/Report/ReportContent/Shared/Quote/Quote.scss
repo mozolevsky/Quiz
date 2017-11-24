@@ -25,6 +25,10 @@
     &_short {
         white-space: pre;
     }
+
+    &_text {
+        margin: 0;
+    }
 }
 
 @media (max-width: $screen-sm) {

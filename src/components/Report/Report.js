@@ -7,6 +7,7 @@ import ReportFooter from './ReportFooter/ReportFooter';
 import NavLinkList from './NavLinkList/NavLinkList';
 import Collapse, {Panel} from 'rc-collapse';
 import './Report.css';
+import reportData from '../../data/reportData.json';
 
 // temp data
 const reportPages = [
@@ -60,7 +61,8 @@ const reportPages = [
 
 class Report extends Component {
     state = {
-        mobileNavTitle: 'Overview'
+        mobileNavTitle: 'Overview',
+        reportData: reportData.vatta
     }
 
     setMobileNavTitle = (e) => {
@@ -69,9 +71,14 @@ class Report extends Component {
         });
     }
 
+    componentDidMount() {
+        //later here will be request to API 
+        
+    }
+
     render() {
         const {match} = this.props;
-        const {mobileNavTitle} = this.state;
+        const {mobileNavTitle, reportData} = this.state;
 
         return (
             <div className="report-container" id="outer-container">
@@ -90,7 +97,7 @@ class Report extends Component {
                             </Collapse>
                             </div>
 
-                            <ReportContent match={match} pagesData={reportPages}/>
+                            <ReportContent match={match} pagesData={reportData}/>
                         </div>
                     </div>
 
