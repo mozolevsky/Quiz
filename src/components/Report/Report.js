@@ -40,7 +40,6 @@ class Report extends Component {
    }
 
     render() {
-        const {match} = this.props;
         const {mobileNavTitle, reportData} = this.state;
 
         return (
@@ -60,7 +59,7 @@ class Report extends Component {
                             </Collapse>
                             </div>
 
-                            <ReportContent match={match} pagesData={reportData}/>
+                            <ReportContent pagesData={reportData}/>
                         </div>
                     </div>
 

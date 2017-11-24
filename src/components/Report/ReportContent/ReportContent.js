@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
+import {Route } from 'react-router-dom';
 import Aromatherapy from './Aromatherapy/Aromatherapy';
 import Colors from './Colors/Colors';
 import Exercise from './Exercise/Exercise';
@@ -24,6 +24,10 @@ class ReportContent extends Component {
 
         return (
             <ScrollToTop>
+                <Route
+                    path={`/report/type*`} 
+                    render={() => <Overview pageData={pagesData[0]}/>}
+                />
                 <Route 
                     exact={true} 
                     path={`/report/overview`} 
@@ -83,7 +87,7 @@ class ReportContent extends Component {
                     exact={true} 
                     path={`/report/meal-plans`} 
                     render={() => <MealPlans pageData={pagesData[11]}/>}
-                />                      
+                />                 
             </ScrollToTop>
         );
     }
