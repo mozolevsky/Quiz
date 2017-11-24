@@ -9,55 +9,7 @@ import Collapse, {Panel} from 'rc-collapse';
 import './Report.css';
 import reportData from '../../data/reportData.json';
 
-// temp data
-const reportPages = [
-    {
-        name: "Overview",
-        link: ""
-    },
-    {
-        name: "Foods and Diet",
-        link: "foods-and-diet"
-    },
-    {
-        name: "Exercise",
-        link: "exercise"
-    },
-    {
-        name: "Herbs",
-        link: "herbs"
-    },
-    {
-        name: "Spices",
-        link: "spices"
-    },
-    {
-        name: "Aromatherapy",
-        link: "aromatherapy"
-    },
-    {
-        name: "Massage",
-        link: "massage"
-    },
-    {
-        name: "Yoga",
-        link: "yoga"
-    },
-    {
-        name: "Colors",
-        link: "colors"
-    },
-    {
-        name: "Mantras",
-        link: "mantras"
-    },
-    {
-        name: "Gems",
-        link: "gems"
-    }
-];
-
-
+// const contentLink = "/report/type=vatta-pitta-kapha&name=adam";
 
 class Report extends Component {
     state = {
@@ -71,10 +23,21 @@ class Report extends Component {
         });
     }
 
-    componentDidMount() {
-        //later here will be request to API 
-        
+    getContentType = (str) => {
+        if (str.includes("/report/type=")) {
+            let startChar = str.indexOf('=') + 1;
+            let lastChar = str.indexOf('&');
+
+            return str.substring(startChar, lastChar);
+        }
     }
+
+    componentDidMount() {
+        let contentType = this.getContentType(this.props.location.pathname);
+        this.setState({
+            reportData: reportData[contentType] || reportData.vatta
+        });
+   }
 
     render() {
         const {match} = this.props;
@@ -83,7 +46,7 @@ class Report extends Component {
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
-                    <SideBar pagesData={reportPages}/>
+                    <SideBar pagesData={reportData}/>
                 </section>
                 <section className="report-container__content-area">
                     <ReportHeader/>
@@ -92,7 +55,7 @@ class Report extends Component {
                             <div className="report-container__mobile-nav">
                             <Collapse>
                                 <Panel header={mobileNavTitle}>
-                                <NavLinkList pagesData={reportPages} getTitle={this.setMobileNavTitle}/>
+                                <NavLinkList pagesData={reportData} getTitle={this.setMobileNavTitle}/>
                             </Panel>
                             </Collapse>
                             </div>
@@ -102,7 +65,7 @@ class Report extends Component {
                     </div>
 
                     <div className="report-container__mobile-links"> 
-                        <NavLinkList pagesData={reportPages}/>
+                        <NavLinkList pagesData={reportData}/>
                     </div>
 
                     <ReportFooter/>

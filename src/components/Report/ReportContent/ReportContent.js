@@ -20,68 +20,68 @@ import ScrollToTop from '../../ScrollToTop/ScrollToTop';
 
 class ReportContent extends Component {
     render() {
-        const {match, pagesData} = this.props;
+        const {pagesData} = this.props;
 
         return (
             <ScrollToTop>
                 <Route 
                     exact={true} 
-                    path={`${match.path}`} 
-                    render={() => <Overview pageData={pagesData[0]} />}
+                    path={`/report/overview`} 
+                    render={() => <Overview pageData={pagesData[0]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/foods-and-diet`} 
+                    path={`/report/foods-and-diet`} 
                     render={() => <FoodsAndDiet pageData={pagesData[1]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/exercise`} 
+                    path={`/report/exercise`} 
                     render={() => <Exercise pageData={pagesData[2]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/herbs`} 
+                    path={`/report/herbs`} 
                     render={() => <Herbs pageData={pagesData[3]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/spices`} 
+                    path={`/report/spices`} 
                     render={() => <Spices pageData={pagesData[4]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/aromatherapy`} 
+                    path={`/report/aromatherapy`} 
                     render={() => <Aromatherapy pageData={pagesData[5]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/massage`} 
+                    path={`/report/massage`} 
                     render={() => <Massage pageData={pagesData[6]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/yoga`} 
+                    path={`/report/yoga`} 
                     render={() => <Yoga pageData={pagesData[7]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/colors`} 
+                    path={`/report/colors`} 
                     render={() => <Colors pageData={pagesData[8]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/mantras`} 
+                    path={`/report/mantras`} 
                     render={() => <Mantras pageData={pagesData[9]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/gems`} 
+                    path={`/report/gems`} 
                     render={() => <Gems pageData={pagesData[10]}/>}
                 />
                 <Route 
                     exact={true} 
-                    path={`${match.path}/meal-plans`} 
+                    path={`/report/meal-plans`} 
                     render={() => <MealPlans pageData={pagesData[11]}/>}
                 />                      
             </ScrollToTop>

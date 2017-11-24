@@ -20,6 +20,8 @@ class SideBar extends Component {
             )
         });
 
+        let lastLinkForPages = pagesData[pagesData.length - 1];
+
         return (
             <div className="side-bar">
                 <div className="side-bar__fixed-area">
@@ -35,7 +37,7 @@ class SideBar extends Component {
                         </div>
                         <div className="side-bar__extra-links">
                             <div className="side-bar__extra-link-area">
-                                <NavLink to={`/report/meal-plans`} className="side-bar__extra-link">Meal Plans</NavLink>
+                                <NavLink to={`/report/${lastLinkForPages.link}`} className="side-bar__extra-link">{lastLinkForPages.name}</NavLink>
                                 <span className="side-bar__extra-label">New</span>
                             </div>
                         </div>

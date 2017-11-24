@@ -23,7 +23,7 @@ class Gems extends Component {
                 <p>{texts[0]}</p>
                 <p>{texts[1]}</p>
 
-                <ContinueBtn link="/report" title="Back to" txt="Recommended Yoga"/>
+                <ContinueBtn link="/report/overview" title="Back to" txt="Recommended Yoga"/>
            </div>
         );
     }

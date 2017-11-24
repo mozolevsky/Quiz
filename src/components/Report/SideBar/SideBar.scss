@@ -64,6 +64,10 @@
         color: #9a8fb7;
         text-decoration: none;
 
+        &:last-child {
+            display: none;
+        }
+
         &:hover {
             position: relative;
             color: #9270ef;
@@ -133,7 +137,7 @@
         font-weight: 500;
         line-height: 3.06;
         color: #ffffff;
-        text-decoration: none;
+        text-decoration: none; 
     }
 
     &__extra-label {
