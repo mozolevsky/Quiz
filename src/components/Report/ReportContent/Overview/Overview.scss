@@ -14,7 +14,7 @@
     }
 
     &__top-text {
-        width: 461px;
+        width: 52%;
     }
 
     &__desc {
@@ -28,7 +28,8 @@
     }
 
     &__chart-wrapper {
-        position: relative;
+        position: absolute;
+        right: 0;
 
         &::before {
             content: '';
@@ -61,6 +62,10 @@
     .overview {
         margin-top: 21px;
 
+        &__top-text {
+            width: 100%;
+        }
+
         &__top-title.title {
             margin-bottom: 442px;
         }
@@ -68,6 +73,8 @@
         &__chart-wrapper {
             position: absolute;
             top: 175px;
+            left: 50%;
+            transform: translate(-50%);
         }
     }
 }
@@ -92,8 +99,6 @@
 
         &__chart-wrapper {
             top: 120px;
-            left: 50%;
-            transform: translate(-50%);
 
             &::before {
                 top: 222px;
