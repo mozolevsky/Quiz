@@ -8,7 +8,16 @@ import './Overview.css';
 
 class Overview extends Component {
     render() {
-        const {titles, texts, tip} = this.props.pageData.content;
+        const {
+            titles, 
+            texts, 
+            tip
+        } = this.props.pageData.content;
+        const {
+            vatta,
+            pitta,
+            kapha
+        } = this.props;
 
         return (
            <div>
@@ -19,7 +28,11 @@ class Overview extends Component {
                     </div>
 
                     <div className="overview__chart-wrapper">
-                        <ChartBlock/>
+                        <ChartBlock
+                            vatta={vatta}
+                            pitta={pitta}
+                            kapha={kapha}
+                        />
                     </div>
                </section>
 

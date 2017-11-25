@@ -20,18 +20,33 @@ import ScrollToTop from '../../ScrollToTop/ScrollToTop';
 
 class ReportContent extends Component {
     render() {
-        const {pagesData} = this.props;
+        const {
+            pagesData,
+            vatta,
+            pitta,
+            kapha
+        } = this.props;
 
         return (
             <ScrollToTop>
                 <Route
                     path={`/report/type*`} 
-                    render={() => <Overview pageData={pagesData[0]}/>}
+                    render={() => <Overview 
+                                        pageData={pagesData[0]}
+                                        vatta={vatta}
+                                        pitta={pitta}
+                                        kapha={kapha}
+                                    />}
                 />
                 <Route 
                     exact={true} 
                     path={`/report/overview`} 
-                    render={() => <Overview pageData={pagesData[0]}/>}
+                    render={() => <Overview 
+                        pageData={pagesData[0]}
+                        vatta={vatta}
+                        pitta={pitta}
+                        kapha={kapha}
+                    />}
                 />
                 <Route 
                     exact={true} 

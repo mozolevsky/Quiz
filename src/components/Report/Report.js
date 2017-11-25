@@ -9,12 +9,13 @@ import Collapse, {Panel} from 'rc-collapse';
 import './Report.css';
 import reportData from '../../data/reportData.json';
 
-// const contentLink = "/report/type=vatta-pitta-kapha&name=adam";
-
 class Report extends Component {
     state = {
         mobileNavTitle: 'Overview',
-        reportData: reportData.vatta
+        reportData: reportData.vatta,
+        vatta: 0,
+        pitta: 0, 
+        kapha: 0
     }
 
     setMobileNavTitle = (e) => {
@@ -23,24 +24,43 @@ class Report extends Component {
         });
     }
 
-    getContentType = (str) => {
-        if (str.includes("/report/type=")) {
-            let startChar = str.indexOf('=') + 1;
-            let lastChar = str.indexOf('&');
+    getContentType = (url) => {
+        if (url.includes("/report/type=")) {
+            let startChar = url.indexOf('=') + 1;
+            let lastChar = url.indexOf('&');
 
-            return str.substring(startChar, lastChar);
+            return url.substring(startChar, lastChar);
+        }
+    }
+
+    getTypesPersentages = (url) => {
+        if (url.includes("percentages=")) {
+            return url.match(/[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}/)[0].split("-");
         }
     }
 
     componentDidMount() {
-        let contentType = this.getContentType(this.props.location.pathname);
+        const url = this.props.location.pathname;
+        const contentType = this.getContentType(url);
+
+        console.log(this.getTypesPersentages(url));
+
         this.setState({
-            reportData: reportData[contentType] || reportData.vatta
+            reportData: reportData[contentType] || reportData.vatta,
+            vatta: this.getTypesPersentages(url)[0],
+            pitta: this.getTypesPersentages(url)[1],
+            kapha: this.getTypesPersentages(url)[2]
         });
    }
 
     render() {
-        const {mobileNavTitle, reportData} = this.state;
+        const {
+            mobileNavTitle, 
+            reportData,
+            vatta,
+            pitta,
+            kapha
+        } = this.state;
 
         return (
             <div className="report-container" id="outer-container">
@@ -59,7 +79,12 @@ class Report extends Component {
                             </Collapse>
                             </div>
 
-                            <ReportContent pagesData={reportData}/>
+                            <ReportContent 
+                                pagesData={reportData}
+                                vatta={vatta}
+                                pitta={pitta}
+                                kapha={kapha}
+                            />
                         </div>
                     </div>
 
