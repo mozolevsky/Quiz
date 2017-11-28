@@ -16,14 +16,16 @@ class Overview extends Component {
         const {
             vatta,
             pitta,
-            kapha
+            kapha,
+            name,
+            type
         } = this.props;
-
+        console.log(this.props);
         return (
            <div>
                <section className="overview__top">
                     <div className="overview__top-text">
-                        <h1 className="title overview__top-title" dangerouslySetInnerHTML={ {__html: titles[0]} }/>
+                        <h1 className="title overview__top-title">Hey, {name}.<br/> According to the quiz, <b>your body type is {type}.</b></h1>
                         <p className="overview__desc">{texts[0]}</p>
                     </div>
 

@@ -33,6 +33,16 @@ class Report extends Component {
         }
     }
 
+    getParameterByName = (url, name) => {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
     getTypesPersentages = (url) => {
         if (url.includes("percentages=")) {
             return url.match(/[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}/)[0].split("-");
@@ -42,14 +52,13 @@ class Report extends Component {
     componentDidMount() {
         const url = this.props.location.pathname;
         const contentType = this.getContentType(url);
-
-        console.log(this.getTypesPersentages(url));
-
         this.setState({
             reportData: reportData[contentType] || reportData.vatta,
             vatta: this.getTypesPersentages(url)[0],
             pitta: this.getTypesPersentages(url)[1],
-            kapha: this.getTypesPersentages(url)[2]
+            kapha: this.getTypesPersentages(url)[2],
+            name: this.getParameterByName(url, "name"),
+            type: contentType
         });
    }
 
@@ -59,9 +68,10 @@ class Report extends Component {
             reportData,
             vatta,
             pitta,
-            kapha
+            kapha,
+            name,
+            type
         } = this.state;
-
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
@@ -84,6 +94,8 @@ class Report extends Component {
                                 vatta={vatta}
                                 pitta={pitta}
                                 kapha={kapha}
+                                name={name}
+                                type={type}
                             />
                         </div>
                     </div>

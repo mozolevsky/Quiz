@@ -24,9 +24,10 @@ class ReportContent extends Component {
             pagesData,
             vatta,
             pitta,
-            kapha
+            kapha,
+            name,
+            type
         } = this.props;
-
         return (
             <ScrollToTop>
                 <Route
@@ -36,6 +37,8 @@ class ReportContent extends Component {
                                         vatta={vatta}
                                         pitta={pitta}
                                         kapha={kapha}
+                                        name={name}
+                                        type={type}
                                     />}
                 />
                 <Route 

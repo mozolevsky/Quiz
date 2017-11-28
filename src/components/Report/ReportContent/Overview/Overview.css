@@ -1,0 +1,115 @@
+@keyframes sideBarLinkHover {
+  0% {
+    height: 3px;
+    top: 10px; }
+  25% {
+    height: 9px;
+    top: 8px; }
+  50% {
+    height: 18px;
+    top: 3.5px; }
+  100% {
+    height: 25px;
+    top: 0; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+.overview__top {
+  position: relative;
+  margin-top: 50px;
+  padding-bottom: 67px;
+  display: flex; }
+
+.overview__top-title.title {
+  font-size: 3.8rem;
+  letter-spacing: -0.6px; }
+
+.overview__top-text {
+  width: 52%; }
+
+.overview__desc {
+  margin: 0; }
+
+.overview__divider {
+  height: 3px;
+  background: #ededed;
+  margin-bottom: 25px; }
+
+.overview__chart-wrapper {
+  position: absolute;
+  right: 0; }
+  .overview__chart-wrapper::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 286px;
+    right: 20px;
+    width: 32px;
+    height: 38px;
+    background: url("../../../../img/report-top-block-arrow.svg") no-repeat center;
+    background-size: cover; }
+  .overview__chart-wrapper::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 333px;
+    right: -107px;
+    width: 234px;
+    height: 54px;
+    background: url("../../../../img/report-top-block-caption.svg") no-repeat center;
+    background-size: cover;
+    transform: rotate(-13deg); }
+
+@media (max-width: 991px) {
+  .overview {
+    margin-top: 21px; }
+    .overview__top-text {
+      width: 100%; }
+    .overview__top-title.title {
+      margin-bottom: 442px; }
+    .overview__chart-wrapper {
+      position: absolute;
+      top: 175px;
+      left: 50%;
+      transform: translate(-50%); } }
+
+@media (max-width: 767px) {
+  .overview__top {
+    margin-top: 21px;
+    padding-bottom: 28px; }
+  .overview__top-text {
+    width: 100%; }
+  .overview__top-title.title {
+    margin-bottom: 338px;
+    font-size: 2.4rem;
+    line-height: 1.42; }
+  .overview__chart-wrapper {
+    top: 120px;
+    width: 248px; }
+    .overview__chart-wrapper::before {
+      top: 222px;
+      right: 29px;
+      transform: rotate(38deg); }
+    .overview__chart-wrapper::after {
+      top: 256px;
+      right: 52px;
+      width: 148px;
+      height: 36px;
+      transform: rotate(-2deg); }
+  .overview__divider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 102px;
+    height: 2px;
+    opacity: 0.22;
+    background: #514d56; } }

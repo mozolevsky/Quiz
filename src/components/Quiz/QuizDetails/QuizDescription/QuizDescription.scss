@@ -4,7 +4,9 @@
   margin-top: 0;
   font-size: 2.4rem;
   color: $color-text;
-  }
+  font-family:"AvenirNext";
+  line-height: 3.3rem;
+}
 
 @media (max-width: $screen-sm) {
   .quiz__description {
