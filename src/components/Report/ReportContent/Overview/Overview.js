@@ -20,7 +20,6 @@ class Overview extends Component {
             name,
             type
         } = this.props;
-        console.log(this.props);
         return (
            <div>
                <section className="overview__top">

@@ -5,8 +5,8 @@ import './SideBar.css';
 
 class SideBar extends Component {
     render() {
-        const {pagesData} = this.props;
-
+        const {pagesData, name} = this.props;
+        console.log(this.props);
         let linksForPages = pagesData.map((item, i) => {
             return (
                 <NavLink 
@@ -27,7 +27,7 @@ class SideBar extends Component {
                 <div className="side-bar__fixed-area">
                     <div className="side-bar__user-block">
                         <div className="side-bar__user-type">V</div>
-                        <p className="side-bar__user-name">Johanson</p>
+                        <p className="side-bar__user-name">{name}</p>
                     </div>
 
                     <div className="side-bar__pages-area">

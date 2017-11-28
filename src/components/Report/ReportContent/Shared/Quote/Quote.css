@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i");
 @keyframes sideBarLinkHover {
   0% {
     height: 3px;
@@ -27,8 +28,10 @@
 .quote {
   margin-left: 83px;
   padding-left: 23px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   position: relative;
-  font-family: Merriweather;
+  font-family: 'Merriweather', serif;
   font-size: 2rem;
   font-style: italic;
   line-height: 1.7;

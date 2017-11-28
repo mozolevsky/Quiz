@@ -75,7 +75,7 @@ class Report extends Component {
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
-                    <SideBar pagesData={reportData}/>
+                    <SideBar pagesData={reportData} name={name}/>
                 </section>
                 <section className="report-container__content-area">
                     <ReportHeader/>
