@@ -3,45 +3,34 @@ import React, {Component} from 'react';
 import {Doughnut} from 'react-chartjs-2';
 import './ChartBlock.css';
 
-const chartData = {
-    labels: ['pitta', 'kapha', 'vatta'],
-    datasets: [{
-        label: "My First dataset",
-        backgroundColor: ['#fdbea3','#f492d2','#7c5cd1' ],
-        borderColor: 'transparent',
-        data: [22, 22, 41],
-    }]
-};
-
-const chartOptions = {
-    layout: {
-        padding: 3,
-        margin: 0
-    },
-    legend: {
-        display: false
-    },
-    cutoutPercentage: 85
-}
-
 class ChartBlock extends Component {
-    state = {
-        isMobile: false
-    }
-
-    resize = () => {
-        this.setState({
-            isMobile: window.innerWidth < 768
-        });
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', () => this.resize());
-        this.resize();
-    }
-
     render() {
-        const {isMobile} = this.state;
+        const {
+            vatta,
+            pitta,
+            kapha
+        } = this.props;
+
+        const chartData = {
+            labels: ['pitta', 'kapha', 'vatta'],
+            datasets: [{
+                label: "Yoga type",
+                backgroundColor: ['#fdbea3','#f492d2','#7c5cd1' ],
+                borderColor: 'transparent',
+                data: [pitta, kapha, vatta],
+            }]
+        };
+        
+        const chartOptions = {
+            layout: {
+                padding: 3,
+                margin: 0
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 85
+        }
 
         return (
             <section className="chart-block">
@@ -70,21 +59,21 @@ class ChartBlock extends Component {
                         </div>
                         <div className="chart-block__types">
                             <div className="chart-block__type">
-                                <p className="chart-block__data chart-block__data_vata">41% Vata</p>
+                                <p className="chart-block__data chart-block__data_vata">{vatta}% Vata</p>
                                 <i className="chart-block__point chart-block__point_vata"></i>
-                                <div className="chart-block__line chart-block__line_vata" style={isMobile ? {width: 50} : {width: 70}}></div>
+                                <div className="chart-block__line chart-block__line_vata" style={{width: `${vatta * 0.7}px`}}></div>
                             </div>
-
+                            
                             <div className="chart-block__type">
-                                <p className="chart-block__data chart-block__data_kapha">22% Kapha</p>
-                                <i className="chart-block__point chart-block__point_kapha"></i>
-                                <div className="chart-block__line chart-block__line_kapha" style={isMobile ? {width: 31} : {width: 50}}></div>
-                            </div>
-
-                            <div className="chart-block__type">
-                                <p className="chart-block__data chart-block__data_pitta">22% Pitta</p>
+                                <p className="chart-block__data chart-block__data_pitta">{pitta}% Pitta</p>
                                 <i className="chart-block__point chart-block__point_pitta"></i>
-                                <div className="chart-block__line chart-block__line_pitta" style={isMobile ? {width: 53} : {width: 80}}></div>
+                                <div className="chart-block__line chart-block__line_pitta" style={{width: `${pitta * 0.7}px`}}></div>
+                            </div>
+
+                            <div className="chart-block__type">
+                                <p className="chart-block__data chart-block__data_kapha">{kapha}% Kapha</p>
+                                <i className="chart-block__point chart-block__point_kapha"></i>
+                                <div className="chart-block__line chart-block__line_kapha" style={{width: `${kapha * 0.7}px`}}></div>
                             </div>
                         </div>
                     </div>

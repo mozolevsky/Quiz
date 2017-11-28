@@ -70,7 +70,12 @@ class Form extends Component {
             }
         }
 
-        this.setState({yogaType});
+        this.setState({
+            yogaType: yogaType,
+            vatta: typesData.A.percentage,
+            pitta: typesData.B.percentage,
+            kapha: typesData.C.percentage
+        });
     };
 
     handleChange = (e) => {
@@ -90,11 +95,12 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         if (!this.state.errorEmail && this.state.name && this.state.email) {
+            const {yogaType, name, vatta, pitta, kapha} = this.state;
 
             axios.post('/node-mailer', {
                 name: this.state.name,
                 email: this.state.email,
-                link: `/report/type=${this.state.yogaType}&name=${this.state.name}`
+                link: `/report/type=${yogaType}&percentages=${vatta}-${pitta}-${kapha}&name=${name}`
             })
                 .then(function (response) {
                     console.log(response);

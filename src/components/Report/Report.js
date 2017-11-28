@@ -9,60 +9,13 @@ import Collapse, {Panel} from 'rc-collapse';
 import './Report.css';
 import reportData from '../../data/reportData.json';
 
-// temp data
-const reportPages = [
-    {
-        name: "Overview",
-        link: ""
-    },
-    {
-        name: "Foods and Diet",
-        link: "foods-and-diet"
-    },
-    {
-        name: "Exercise",
-        link: "exercise"
-    },
-    {
-        name: "Herbs",
-        link: "herbs"
-    },
-    {
-        name: "Spices",
-        link: "spices"
-    },
-    {
-        name: "Aromatherapy",
-        link: "aromatherapy"
-    },
-    {
-        name: "Massage",
-        link: "massage"
-    },
-    {
-        name: "Yoga",
-        link: "yoga"
-    },
-    {
-        name: "Colors",
-        link: "colors"
-    },
-    {
-        name: "Mantras",
-        link: "mantras"
-    },
-    {
-        name: "Gems",
-        link: "gems"
-    }
-];
-
-
-
 class Report extends Component {
     state = {
         mobileNavTitle: 'Overview',
-        reportData: reportData.vatta
+        reportData: reportData.vatta,
+        vatta: 0,
+        pitta: 0, 
+        kapha: 0
     }
 
     setMobileNavTitle = (e) => {
@@ -71,19 +24,48 @@ class Report extends Component {
         });
     }
 
-    componentDidMount() {
-        //later here will be request to API 
-        
+    getContentType = (url) => {
+        if (url.includes("/report/type=")) {
+            let startChar = url.indexOf('=') + 1;
+            let lastChar = url.indexOf('&');
+
+            return url.substring(startChar, lastChar);
+        }
     }
 
+    getTypesPersentages = (url) => {
+        if (url.includes("percentages=")) {
+            return url.match(/[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}/)[0].split("-");
+        }
+    }
+
+    componentDidMount() {
+        const url = this.props.location.pathname;
+        const contentType = this.getContentType(url);
+
+        console.log(this.getTypesPersentages(url));
+
+        this.setState({
+            reportData: reportData[contentType] || reportData.vatta,
+            vatta: this.getTypesPersentages(url)[0],
+            pitta: this.getTypesPersentages(url)[1],
+            kapha: this.getTypesPersentages(url)[2]
+        });
+   }
+
     render() {
-        const {match} = this.props;
-        const {mobileNavTitle, reportData} = this.state;
+        const {
+            mobileNavTitle, 
+            reportData,
+            vatta,
+            pitta,
+            kapha
+        } = this.state;
 
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
-                    <SideBar pagesData={reportPages}/>
+                    <SideBar pagesData={reportData}/>
                 </section>
                 <section className="report-container__content-area">
                     <ReportHeader/>
@@ -92,17 +74,22 @@ class Report extends Component {
                             <div className="report-container__mobile-nav">
                             <Collapse>
                                 <Panel header={mobileNavTitle}>
-                                <NavLinkList pagesData={reportPages} getTitle={this.setMobileNavTitle}/>
+                                <NavLinkList pagesData={reportData} getTitle={this.setMobileNavTitle}/>
                             </Panel>
                             </Collapse>
                             </div>
 
-                            <ReportContent match={match} pagesData={reportData}/>
+                            <ReportContent 
+                                pagesData={reportData}
+                                vatta={vatta}
+                                pitta={pitta}
+                                kapha={kapha}
+                            />
                         </div>
                     </div>
 
                     <div className="report-container__mobile-links"> 
-                        <NavLinkList pagesData={reportPages}/>
+                        <NavLinkList pagesData={reportData}/>
                     </div>
 
                     <ReportFooter/>
