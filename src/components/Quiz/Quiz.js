@@ -61,8 +61,10 @@ class Quiz extends Component {
                     <div className="quiz__area">
                         <ReactCSSTransitionGroup
                             transitionName="quiz"
+                            transitionAppear={true}
+                            transitionAppearTimeout={500}
                             transitionEnterTimeout={500}
-                            transitionLeaveTimeout={1}>
+                            transitionLeaveTimeout={300}>
                             <QuizDetails
                                 key={step}
                                 data={quizData[step]}

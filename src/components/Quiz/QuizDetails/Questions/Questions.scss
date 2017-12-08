@@ -4,6 +4,7 @@
   font-size: 1.8rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+
   &__question {
     margin-bottom: 20px;
     padding: 26px 27px;
@@ -15,9 +16,11 @@
     box-shadow: 0 6px 10px 0 rgba(214, 200, 251, 0.24);
     border: solid 1px #e3d8ff;
     border-left: 2px solid $color-main;
+    @include transition();
 
     &:hover {
       cursor: pointer;
+      background-color: #FAF9FF;
     }
   }
 

@@ -46,9 +46,19 @@
 
 .quiz-leave.quiz-leave-active {
   opacity: 0.01;
-  transition: opacity 1ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
+.quiz-appear {
+  opacity: 0.01;
+}
+
+.quiz-appear.quiz-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+ 
+  
 @media (min-width: 1400px) {
   .quiz {
     &__right-side {
