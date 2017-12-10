@@ -66,6 +66,7 @@
 
             & .rc-collapse-header {
                 position: relative;
+                padding: 13px 0 13px 27px;
                 background-color: #f6f4ff;
                 box-shadow: 0 2px 4px 0 rgba(49, 37, 83, 0.09);
                 border: solid 1px #ebe9f4;
@@ -80,7 +81,7 @@
                     position: absolute;
                     width: 16px;
                     height: 16px;
-                    top: 28px;
+                    top: 16px;
                     right: 26px;
                     background: url('../../img/arrow-down-purple.svg') no-repeat center;
                     background-size: cover;
@@ -89,12 +90,23 @@
                 }
             }
 
+            & .rc-collapse-item {
+                border-bottom: none;
+            }
+
             & .rc-collapse-item-active .rc-collapse-header {
                 &::before {
                     transition: all 0.3s ease-in;
                     transform: rotate(180deg);
                 }
             }
+        }
+
+        &__fixed-mobile-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 3;
         }
     }
 }

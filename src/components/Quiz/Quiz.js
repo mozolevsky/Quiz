@@ -64,7 +64,8 @@ class Quiz extends Component {
                             transitionAppear={true}
                             transitionAppearTimeout={500}
                             transitionEnterTimeout={500}
-                            transitionLeaveTimeout={300}>
+                            transitionLeave={false}
+                            >
                             <QuizDetails
                                 key={step}
                                 data={quizData[step]}

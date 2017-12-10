@@ -12,7 +12,7 @@ const QuizDetails = (props) => {
 
     return (
         <div>
-            <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>
+            {data.title && <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>}
             <QuizDescription stepDesc={data.desc}/>
             {
                 data.button && data.button.type === 'start' &&

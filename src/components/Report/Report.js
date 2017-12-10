@@ -13,15 +13,48 @@ class Report extends Component {
     state = {
         mobileNavTitle: 'Overview',
         reportData: reportData.vatta,
+        mobileNavMenuStatus: '1',
         vatta: 0,
         pitta: 0, 
         kapha: 0
+    }
+
+    
+    componentDidMount() {
+        const url = this.props.location.pathname;
+        const contentType = this.getContentType(url);
+        this.setState({
+            reportData: reportData[contentType] || reportData.vatta,
+            vatta: this.getTypesPersentages(url)[0],
+            pitta: this.getTypesPersentages(url)[1],
+            kapha: this.getTypesPersentages(url)[2],
+            name: this.getParameterByName(url, "name"),
+            type: contentType
+        });
+
+        window.addEventListener('scroll', this.handleScroll);
+   }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    };
+
+    handleScroll = () => {
+        const mobileNav = document.querySelector(".report-container__mobile-nav");
+
+        if (window.pageYOffset > 60) {
+            mobileNav.classList.add("report-container__fixed-mobile-menu");
+        } else {
+            mobileNav.classList.remove("report-container__fixed-mobile-menu");
+        }
     }
 
     setMobileNavTitle = (e) => {
         this.setState({
             mobileNavTitle: e.target.innerText
         });
+
+        this.toggleMobileMenu();    
     }
 
     getContentType = (url) => {
@@ -49,22 +82,18 @@ class Report extends Component {
         }
     }
 
-    componentDidMount() {
-        const url = this.props.location.pathname;
-        const contentType = this.getContentType(url);
-        this.setState({
-            reportData: reportData[contentType] || reportData.vatta,
-            vatta: this.getTypesPersentages(url)[0],
-            pitta: this.getTypesPersentages(url)[1],
-            kapha: this.getTypesPersentages(url)[2],
-            name: this.getParameterByName(url, "name"),
-            type: contentType
+    toggleMobileMenu = () => {
+        this.setState((prevState) => {
+            return {
+                ...prevState,
+                mobileNavMenuStatus: this.state.mobileNavMenuStatus === '1' ? '0' : '1'
+            } 
         });
-   }
+    }
 
     render() {
         const {
-            mobileNavTitle, 
+            mobileNavTitle,
             reportData,
             vatta,
             pitta,
@@ -77,16 +106,20 @@ class Report extends Component {
                 <section className="report-container__menu-area">
                     <SideBar pagesData={reportData} name={name}/>
                 </section>
+
                 <section className="report-container__content-area">
                     <ReportHeader/>
                     <div id="page-wrap" style={{flex: 1}}>
                         <div className="report-container__content-main">
-                            <div className="report-container__mobile-nav">
-                            <Collapse>
-                                <Panel header={mobileNavTitle}>
-                                <NavLinkList pagesData={reportData} getTitle={this.setMobileNavTitle}/>
-                            </Panel>
-                            </Collapse>
+                            <div className="report-container__mobile-nav" onClick={this.toggleMobileMenu}>
+                                <Collapse activeKey={this.state.mobileNavMenuStatus}>
+                                    <Panel header={mobileNavTitle} onClick={this.setMobileNavTitle}>
+                                        <NavLinkList 
+                                            pagesData={reportData} 
+                                            getTitle={this.setMobileNavTitle}
+                                        />
+                                    </Panel>        
+                                </Collapse>
                             </div>
 
                             <ReportContent 

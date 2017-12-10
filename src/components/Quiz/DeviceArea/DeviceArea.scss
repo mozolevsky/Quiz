@@ -33,22 +33,54 @@
       background: rgba(255, 255, 255, 0.85);
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     &_vitta {
       background-color: $color-main;
       top: 92px;
       left: 8px;
+
+      &::after {
+        top: 50%;
+        right: -59px;
+        width: 82px;
+        height: 9px;
+        background-image: url('../../../img/vata-line.svg');
+      }
     }
 
     &_pitta {
       background-color: #fdbea3;
       top: 102px;
       right: -8px;
+
+      &::after {
+        top: 50%;
+        left: -55px;
+        width: 60px;
+        height: 9px;
+        background-image: url('../../../img/pitta-line.svg');
+      }
     }
 
     &_kapha {
       background-color: #f492d2;
       top: 184px;
       right: 10px;
+
+      &::after {
+        top: 4px;
+        left: -36px;
+        width: 41px;
+        height: 9px;
+        background-image: url('../../../img/kapha-line.svg');
+      }
     }
   }
 }

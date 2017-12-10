@@ -6,7 +6,6 @@ import './SideBar.css';
 class SideBar extends Component {
     render() {
         const {pagesData, name} = this.props;
-        console.log(this.props);
         let linksForPages = pagesData.map((item, i) => {
             return (
                 <NavLink 

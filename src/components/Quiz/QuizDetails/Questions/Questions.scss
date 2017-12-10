@@ -75,7 +75,7 @@
 .blink {
   animation-name: blink;
   animation-timing-function: linear;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 
 }
 
@@ -88,12 +88,12 @@
 }
 
 .blink-furiously {
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
 }
 
 @keyframes blink {
   50% {
-    opacity: 0;
+    opacity: 0.4;
   }
 }
 

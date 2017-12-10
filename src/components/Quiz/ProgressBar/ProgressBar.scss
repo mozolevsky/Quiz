@@ -2,17 +2,17 @@
 
 
 .progress-line {
-  display: flex;
+  display: block;
   flex-direction: column;
   padding-left: 12%;
   padding-right: 19%;
   padding-top: 25px;
-  height: 78px;
+  padding-bottom: 25px;
   box-sizing: border-box;
   background-color: #faf9ff;
 
   &__desc {
-    margin-bottom: 5px;
+    margin-bottom: -7px;
     margin-top: 0;
     font-size: 1.4rem;
     font-weight: bold;
@@ -35,10 +35,9 @@
 
 @media (max-width: $screen-sm) {
   .progress-line {
+    display: flex;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     height: 44px;
 
     &__desc {
