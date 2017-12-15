@@ -7,8 +7,10 @@ import Questions from './Questions/Questions';
 import FinalCalculationsBar from './FinalCalculationsBar/FinalCalculationsBar';
 import Form from './Form/Form';
 
+
 const QuizDetails = (props) => {
     const {data, toNextStep, answers} = props;
+
 
     return (
         <div>

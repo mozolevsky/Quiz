@@ -43,26 +43,29 @@ class Quiz extends Component {
         }
 
         if (step < quizData.length - 1) {
-            this.setState((prevState) => {
-                return {
-                    step: prevState.step + 1,
-                }
-            });
+            this.setState({leaveStyle: 'quiz-leave-animation'});
+
+            setTimeout(() => {
+                this.setState((prevState) => {
+                    return {
+                        step: prevState.step + 1,
+                        leaveStyle: ''
+                    }
+                });
+            }, 300);
         }
     };
 
     render() {
-        const {step, progress, questionsAmount, answers} = this.state;
-
+        const {step, progress, questionsAmount, answers, leaveStyle} = this.state;
+        
         return (
             <div className="quiz">
                 <div className="quiz__left-side">
                     <Header/>
-                    <div className="quiz__area">
+                    <div className={`quiz__area ${leaveStyle}`}>
                         <ReactCSSTransitionGroup
                             transitionName="quiz"
-                            transitionAppear={true}
-                            transitionAppearTimeout={500}
                             transitionEnterTimeout={500}
                             transitionLeave={false}
                             >

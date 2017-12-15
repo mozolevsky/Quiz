@@ -6,19 +6,23 @@ $tabs-pink: #d15c72;
     display: flex;
     border-radius: 4px;
 
+    & .react-tabs__tab--selected {
+        position: relative;
+        box-shadow: -4px 5px 14px 0px rgba(171, 161, 196, 0.12);
+    }
+
     &_purple {
         background-color: #f6f4ff;
-        box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
 
         & .react-tabs__tab--selected {
             background-color: #f6f4ff;
             color: $color-main;
+            box-shadow: -4px 5px 14px 0px rgba(171, 161, 196, 0.12);
         }
     }
 
     &_pink {
         background-color: #faf9fc;
-        box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
 
         & .react-tabs__tab--selected {
             background-color: #faf9fc;
@@ -60,6 +64,7 @@ $tabs-pink: #d15c72;
             display: flex;
             opacity: 1;
             animation: fade 0.6s ease-in-out;
+            box-shadow: 0 6px 15px 0 rgba(171, 161, 196, 0.12);
         }
     }
 

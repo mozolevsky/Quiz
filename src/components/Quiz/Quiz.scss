@@ -5,6 +5,7 @@
   min-height: 100vh;
 
   &__left-side {
+    position: relative;
     width: 70%;
     height: 100vh;
     overflow: auto;
@@ -52,13 +53,17 @@
   transition: opacity 300ms ease-in;
 }
 
-.quiz-appear {
-  opacity: 0.01;
+.quiz-leave-animation {
+  animation-name: quizleave;
+  animation-duration: 0.3s;
 }
 
-.quiz-appear.quiz-appear-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+@keyframes quizleave {
+  0%   {opacity: 1;}
+  25%  {opacity: 0.75;}
+  50%  {opacity: 0.5;}
+  75%  {opacity: 0.25;}
+  100% {opacity: 0;}
 }
  
   
