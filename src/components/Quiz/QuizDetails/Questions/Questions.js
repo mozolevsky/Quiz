@@ -14,33 +14,28 @@ class Questions extends Component {
 
     render() {
         const {stepQuestions, toNextStep} = this.props;
-
-        if (stepQuestions) {
-            const questionsList = stepQuestions.map((item, i) => {
-                return (
-                    <div className="questions__question" key={i} onClick={(e) => this.switchStep(item.label, e)}>
-                        <div className="questions__variant">{item.label}</div>
-                        <p className="questions__text">
-                            {item.title  && <b>{item.title}</b>}
-                            {item.title  && <br/>}
-                            {item.text}</p>
-                    </div>
-                )
-            });
-
+        const questionsList = stepQuestions.map((item, i) => {
             return (
-                <div className="questions">
-                    {questionsList}
-                    <button
-                        className="questions__skip-link"
-                        type="button"
-                        onClick={toNextStep}
-                    >Skip</button>
+                <div className="questions__question" key={i} onClick={(e) => this.switchStep(item.label, e)}>
+                    <div className="questions__variant">{item.label}</div>
+                    <p className="questions__text">
+                        {item.title  && <b>{item.title}</b>}
+                        {item.title  && <br/>}
+                        {item.text}</p>
                 </div>
-            );
-        } else {
-            return (<div></div>);
-        }
+            )
+        });
+
+        return (
+            <div className="questions">
+                {questionsList}
+                <button
+                    className="questions__skip-link"
+                    type="button"
+                    onClick={toNextStep}
+                >Skip</button>
+            </div>
+        );
     }
 }
 

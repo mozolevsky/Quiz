@@ -1,0 +1,43 @@
+@import "../../../../sharedStyles/variables.scss";
+
+
+.progress-thick {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    height: 54px;
+
+    &__logo-img {
+        z-index: 1;
+        position: absolute;
+        left: 11px;
+    }
+
+    &__desc {
+        position: absolute;
+        margin: 0;
+        bottom: 10px;
+        right: 16px;
+        font-size: 1.4rem;
+        line-height: 1.21;
+        font-weight: 500;
+        color: #ffffff;
+        letter-spacing: normal;
+    }
+
+    &__procent {
+        position: absolute;
+        display: block;
+        margin: 0;
+        top: 10px;
+        right: 16px;
+        font-size: 1.4rem;
+        line-height: 1.21;
+        font-weight: bold;
+        color: #ffffff;
+        letter-spacing: normal;
+    }
+}
+

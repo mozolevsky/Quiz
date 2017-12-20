@@ -3,11 +3,12 @@
 .form {
   &__title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     font-size: 4.2rem;
-    font-weight: bold;
-    line-height: 1.71;
+    font-weight: 600;
+    line-height: 1.14;
     color: $color-main;
+
   }
 
   &__desc {
@@ -16,7 +17,11 @@
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 1.14;
-    color: $color-main;
+    color: #65606b;
+  }
+
+  &__wrapper {
+    max-width: 480px;
   }
 
   &__input-area {
@@ -41,7 +46,49 @@
     font-size: 1.6rem;
     line-height: 1.37;
     font-weight: bold;
-    color: $color-main;
+    color: $color-text;
+
+    &_checkbox {
+      position: relative;
+      padding-left: 36px;
+      line-height: 22px;
+      font-size: 16px;
+      text-align: left;
+      font-weight: normal;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & a {
+        color: inherit;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        top: -3px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.28);
+        border: solid 1px $color-main;
+      }
+
+      &::after {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        background: url('../../../../img/tick-list-icon.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
   }
 
   &__input {
@@ -49,18 +96,37 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: #f6f4ff;
-    border: 1px solid #f6f4ff;
+    background-color: rgba(255, 255, 255, 0.28);
+    border: solid 1px #c8c8c8;
 
     font-family: Courier;
     font-size: 1.8rem;
     line-height: 1.22;
     color: #b3b1bb;
 
+    &_checkbox {
+      display: none;
+    }
+
+    &_checkbox:checked + label::after {
+      display: block;
+    }
+
     &:focus {
       border: solid 1px $color-main;
       outline: none;
     }
+  }
+
+  &__additional {
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 500;
+    color: #999999;
+  }
+
+  &__additional-link {
+    color: #666666;
   }
 }
 
@@ -68,17 +134,19 @@
   background: lightpink;
 }
 
+
 @media (max-width: $screen-sm) {
   .form {
     &__title {
+      font-weight: bold;
       font-size: 2.4rem;
       line-height: 1.42;
     }
 
     &__desc {
       margin-bottom: 16px;
-      font-size: 24px;
-      line-height: 1.42;
+      font-size: 18px;
+      line-height: 25px;
     }
 
     &__input-area {

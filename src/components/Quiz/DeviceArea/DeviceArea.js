@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './DeviceArea.css';
 import tickComplete from '../../../img/tick-complete.svg';
 
+
 class DeviceArea extends Component {
     state = {
         progress: 0
@@ -58,9 +59,6 @@ class DeviceArea extends Component {
                     <div className="screen">
                         {progressBlock}
                     </div>
-                    <div className="phone__marker phone__marker_vitta">Vatta</div>
-                    <div className="phone__marker phone__marker_pitta">Pitta</div>
-                    <div className="phone__marker phone__marker_kapha">Kapha</div>
                 </div>
                 <div className="phone-container__marker phone-container__marker_vitta">Vatta</div>
                 <div className="phone-container__marker phone-container__marker_pitta">Pitta</div>

@@ -17,6 +17,10 @@
   color: #ffffff;
   outline: none;
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -33,8 +37,16 @@
     }
   }
 
-  &_margin-top {
-    margin-top: 40px;
+  &_send-form {
+    margin-top: 27px;
+    margin-bottom: 29px;
+    width: 487px;
+  }
+
+  &_send-request {
+    margin-top: 27px;
+    margin-bottom: 29px;
+    width: 399px;
   }
 }
 
@@ -44,6 +56,16 @@
     height: 58px;
     display: block;
     font-size: 1.6rem;
+
+    &_send-form {
+      margin-top: 22px;
+      width: 100%;
+    }
+
+    &_send-request {
+      margin-top: 22px;
+      width: 100%;
+    }
 
     &_arrow {
       &::before {

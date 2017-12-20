@@ -4,12 +4,10 @@ import './QuizTitle.css';
 
 
 const QuizTitle = (props) => {
-    const {stepTitle, stepBigTitle} = props;
+    const {stepTitle} = props;
 
     return (
         <h1 className="quiz__title">
-            {stepBigTitle && <b>{stepBigTitle}</b>}
-            {stepBigTitle && <br/>}
             {stepTitle}
         </h1>
     );

@@ -2,8 +2,8 @@
 
 .phone-container {
   position: relative;
-  margin: auto;
   width: 290px;
+  margin: 0;
 
   &__marker {
     position: absolute;
@@ -101,64 +101,30 @@
   left: 0;
   background: linear-gradient(to bottom left, #f3f8fb, #e5ebf2);
   opacity: 1;
+}
 
-  &__marker {
-    position: absolute;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 60.7px;
-    padding-left: 7px;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+.phone:after,
+.phone:before {
+  content: "";
+  position: absolute
+}
+.phone:before {
+  width: 76px;
+  height: 8px;
+  left: 90px;
+  top: 26px;
+  border-radius: 4px;
+  background: #e4eaf1;
+}
+.phone:after {
+  width: 40px;
+  height: 40px;
+  left: 102px;
+  bottom: 12px;
+  border-radius: 35px;
+  background: #dde3eb;
+}
 
-    font-size: 11px;
-    font-weight: bold;
-    color: #ffffff;
-    line-height: 25.4px;
-    text-align: center;
-    text-transform: uppercase;
-
-    &_vitta {
-      background-color: $color-main;
-      top: 95px;
-      left: -11px;
-    }
-
-    &_pitta {
-      background-color: #fdbea3;
-      top: 106px;
-      right: -31px;
-    }
-
-    &_kapha {
-      background-color: #f492d2;
-      top: 189px;
-      right: -13px;
-    }
-  }
-  }
-
-  .phone:after,
-  .phone:before {
-    content: "";
-    position: absolute
-  }
-  .phone:before {
-    width: 76px;
-    height: 8px;
-    left: 90px;
-    top: 26px;
-    border-radius: 4px;
-    background: #e4eaf1;
-  }
-  .phone:after {
-    width: 40px;
-    height: 40px;
-    left: 102px;
-    bottom: 12px;
-    border-radius: 35px;
-    background: #dde3eb;
-  }
 
 .screen {
   --screen-width: 216px;
@@ -226,6 +192,3 @@
     text-transform: uppercase;
   }
 }
-
-
-

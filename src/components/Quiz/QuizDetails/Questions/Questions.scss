@@ -99,6 +99,7 @@
 
 @media (max-width: $screen-sm) {
   .questions {
+    margin-top: 18px;
     font-size: 1.6rem;
 
     &__question {
@@ -106,6 +107,10 @@
       margin-bottom: 10px;
       border-left: solid 1px #e3d8ff;
       background: transparent;
+    }
+
+    &__text {
+      font-size: 1.6rem;
     }
 
     &__variant {

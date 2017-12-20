@@ -39,7 +39,7 @@ class FinalCalculationsBar extends Component {
                     strokeWidth="0.5"
                     strokeColor="#7c5cd1"
                     trailColor="transparent"
-                    style={{width: '100%'}}
+                    style={{width: '100%', height: '3px'}}
                 />
             </div>
         );

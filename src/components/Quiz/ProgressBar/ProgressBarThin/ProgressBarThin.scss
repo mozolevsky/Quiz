@@ -1,0 +1,35 @@
+@import "../../../../sharedStyles/variables.scss";
+
+.progress-thin {
+  display: block;
+  flex-direction: column;
+  width: 220px;
+  margin: auto;
+  margin-top: 55px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+
+  &__desc {
+    margin-bottom: -7px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: -0.9px;
+  }
+
+  &__procent-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $screen-md) {
+ .progress-thin {
+   padding-left: 5%;
+   padding-right: 5%;
+ }
+}
