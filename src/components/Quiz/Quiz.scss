@@ -81,8 +81,18 @@
 }
  
   
-@media (min-width: 1400px) {
+@media (min-width: 1600px) and (min-height: 800px) {
+  .quiz {
+    &__area {
+      margin-top: 10%;
+      margin-left: 20%;
+      margin-right: 17%;
+    }
 
+    &__right-side-logo {
+      margin-top: 100px;
+    }
+  }
 }
 
 
