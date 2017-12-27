@@ -56,21 +56,29 @@
             box-sizing: border-box;
         }
 
+        &__header-wrapper {
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        &__header-inVisible {
+            transform: translateY(-60px);
+        }
+
         &__mobile-links {
             display: block;
         }
         
         &__mobile-nav {
             display: block;
-            margin: 0 -20px;
-            position: absolute;
-            z-index: 3;
-            top: 60px;
             width: 100%;
 
             & .rc-collapse-header {
                 position: relative;
-                padding: 13px 0 13px 27px;
+                padding: 13px 0 13px 13px;
                 background-color: #f6f4ff;
                 box-shadow: 0 2px 4px 0 rgba(49, 37, 83, 0.09);
                 border: solid 1px #ebe9f4;

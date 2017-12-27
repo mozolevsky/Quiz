@@ -12,7 +12,7 @@ import reportData from '../../data/reportData.json';
 class Report extends Component {
     state = {
         mobileNavTitle: 'Overview',
-        mobileNavIsFixed: false,
+        mobileHeaderStatus: true,
         reportData: reportData.vatta,
         mobileNavMenuStatus: '1',
         vatta: 0,
@@ -32,19 +32,20 @@ class Report extends Component {
             name: this.getParameterByName(url, "name"),
             type: contentType
         });
+        
+        let currentScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
 
-        window.addEventListener('scroll', this.handleScroll);
+            let mobileHeaderStatus = window.scrollY > currentScrollY;
+            currentScrollY = window.scrollY;
+
+            this.setState({mobileHeaderStatus: !mobileHeaderStatus});
+        });
    }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     };
-
-    handleScroll = () => {
-        this.setState({
-            mobileNavIsFixed: window.pageYOffset > 60
-        });
-    }
 
     setMobileNavTitle = (e) => {
         this.setState({
@@ -91,7 +92,7 @@ class Report extends Component {
     render() {
         const {
             mobileNavTitle,
-            mobileNavIsFixed,
+            mobileHeaderStatus,
             reportData,
             vatta,
             pitta,
@@ -100,8 +101,6 @@ class Report extends Component {
             type
         } = this.state;
 
-        const mobileNavClasses = `report-container__mobile-nav ${mobileNavIsFixed ? 'report-container__fixed-mobile-menu' : null}`;
-
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
@@ -109,25 +108,24 @@ class Report extends Component {
                 </section>
 
                 <section className="report-container__content-area">
-                    <ReportHeader/>
+                    <div className={`report-container__header-wrapper ${mobileHeaderStatus ? '' : 'report-container__header-inVisible'}`}>
+                        <ReportHeader/>
+
+                        <div className="report-container__mobile-nav"
+                             onClick={this.toggleMobileMenu}>
+                            <Collapse activeKey={this.state.mobileNavMenuStatus}>
+                                <Panel header={mobileNavTitle} onClick={this.setMobileNavTitle}>
+                                    <NavLinkList 
+                                        pagesData={reportData} 
+                                        getTitle={this.setMobileNavTitle}
+                                    />
+                                </Panel>        
+                            </Collapse>
+                        </div>
+                    </div>
 
                     <div id="page-wrap" style={{flex: 1}}>
                         <div className="report-container__content-main">
-
-                            <div 
-                                className={mobileNavClasses}
-                                onClick={this.toggleMobileMenu}
-                             >
-                                <Collapse activeKey={this.state.mobileNavMenuStatus}>
-                                    <Panel header={mobileNavTitle} onClick={this.setMobileNavTitle}>
-                                        <NavLinkList 
-                                            pagesData={reportData} 
-                                            getTitle={this.setMobileNavTitle}
-                                        />
-                                    </Panel>        
-                                </Collapse>
-                            </div>
-
                             <ReportContent 
                                 pagesData={reportData}
                                 vatta={vatta}
