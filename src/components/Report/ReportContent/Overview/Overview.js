@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ContinueBtn from '../Shared/ContinueBtn/ContinueBtn';
 import TipText from '../Shared/TipText/TipText';
 import ChartBlock from '../Shared/ChartBlock/ChartBlock';
+import Wrapper from '../../../hoc/Wrapper';
 import './Overview.css';
 
 
@@ -13,6 +14,7 @@ class Overview extends Component {
             texts, 
             tip
         } = this.props.pageData.content;
+
         const {
             vatta,
             pitta,
@@ -20,8 +22,9 @@ class Overview extends Component {
             name,
             type
         } = this.props;
+
         return (
-           <div>
+           <Wrapper>
                <section className="overview__top">
                     <div className="overview__top-text">
                         <h1 className="title overview__top-title">Hey, {name}.<br/> According to the quiz, <b>your body type is {type}.</b></h1>
@@ -77,7 +80,7 @@ class Overview extends Component {
                 <p>{texts[15]}</p>
 
                 <ContinueBtn link="/report/foods-and-diet" txt="Foods and Diet"/>    
-           </div>
+           </Wrapper>
         );
     }
 }

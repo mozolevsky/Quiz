@@ -63,6 +63,10 @@
         &__mobile-nav {
             display: block;
             margin: 0 -20px;
+            position: absolute;
+            z-index: 3;
+            top: 60px;
+            width: 100%;
 
             & .rc-collapse-header {
                 position: relative;

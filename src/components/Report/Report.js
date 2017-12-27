@@ -12,6 +12,7 @@ import reportData from '../../data/reportData.json';
 class Report extends Component {
     state = {
         mobileNavTitle: 'Overview',
+        mobileNavIsFixed: false,
         reportData: reportData.vatta,
         mobileNavMenuStatus: '1',
         vatta: 0,
@@ -40,13 +41,9 @@ class Report extends Component {
     };
 
     handleScroll = () => {
-        const mobileNav = document.querySelector(".report-container__mobile-nav");
-
-        if (window.pageYOffset > 60) {
-            mobileNav.classList.add("report-container__fixed-mobile-menu");
-        } else {
-            mobileNav.classList.remove("report-container__fixed-mobile-menu");
-        }
+        this.setState({
+            mobileNavIsFixed: window.pageYOffset > 60
+        });
     }
 
     setMobileNavTitle = (e) => {
@@ -94,6 +91,7 @@ class Report extends Component {
     render() {
         const {
             mobileNavTitle,
+            mobileNavIsFixed,
             reportData,
             vatta,
             pitta,
@@ -101,6 +99,9 @@ class Report extends Component {
             name,
             type
         } = this.state;
+
+        const mobileNavClasses = `report-container__mobile-nav ${mobileNavIsFixed ? 'report-container__fixed-mobile-menu' : null}`;
+
         return (
             <div className="report-container" id="outer-container">
                 <section className="report-container__menu-area">
@@ -109,9 +110,14 @@ class Report extends Component {
 
                 <section className="report-container__content-area">
                     <ReportHeader/>
+
                     <div id="page-wrap" style={{flex: 1}}>
                         <div className="report-container__content-main">
-                            <div className="report-container__mobile-nav" onClick={this.toggleMobileMenu}>
+
+                            <div 
+                                className={mobileNavClasses}
+                                onClick={this.toggleMobileMenu}
+                             >
                                 <Collapse activeKey={this.state.mobileNavMenuStatus}>
                                     <Panel header={mobileNavTitle} onClick={this.setMobileNavTitle}>
                                         <NavLinkList 
