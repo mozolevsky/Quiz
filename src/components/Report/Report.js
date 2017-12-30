@@ -126,7 +126,8 @@ class Report extends Component {
 
                     <div id="page-wrap" style={{flex: 1}}>
                         <div className="report-container__content-main">
-                            <ReportContent 
+                            <ReportContent
+                                location={this.props.location} 
                                 pagesData={reportData}
                                 vatta={vatta}
                                 pitta={pitta}

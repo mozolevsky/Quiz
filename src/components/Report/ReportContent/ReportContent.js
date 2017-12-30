@@ -33,13 +33,13 @@ class ReportContent extends Component {
                 <Route
                     path={`/report/type*`} 
                     render={() => <Overview 
-                                        pageData={pagesData[0]}
-                                        vatta={vatta}
-                                        pitta={pitta}
-                                        kapha={kapha}
-                                        name={name}
-                                        type={type}
-                                    />}
+                        pageData={pagesData[0]}
+                        vatta={vatta}
+                        pitta={pitta}
+                        kapha={kapha}
+                        name={name}
+                        type={type}
+                    />}
                 />
                 <Route 
                     exact={true} 
