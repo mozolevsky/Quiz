@@ -59,7 +59,7 @@ class PasswordForm extends Component {
                    <div className="form__input-area">
                        <label htmlFor="name" className="form__label">Password</label>
                        <input
-                           type="text"
+                           type="password"
                            id="password"
                            name="password"
                            className={'form__input' + (errorPassword ? ' input-error' : '')}
