@@ -16,6 +16,7 @@
   text-align: center;
   color: #ffffff;
   outline: none;
+  transition: all 0.1s ease;
 
   &:disabled {
     opacity: 0.3;

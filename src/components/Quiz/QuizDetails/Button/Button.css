@@ -37,7 +37,8 @@
   font-weight: bold;
   text-align: center;
   color: #ffffff;
-  outline: none; }
+  outline: none;
+  transition: all 0.1s ease; }
   .button:disabled {
     opacity: 0.3; }
   .button:hover {

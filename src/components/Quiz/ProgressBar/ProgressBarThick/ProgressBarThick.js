@@ -9,6 +9,9 @@ const ProgressBarThick = (props) => {
     const {currentAnswer, totalAnswers, } = props;
     let percent = Math.round((currentAnswer / totalAnswers * 100) < 100 ? (currentAnswer / totalAnswers * 100) : 100);
 
+    const transition = 'stroke-dashoffset 0.8s ease 0s, stroke 0.8s ease';
+
+
 
     return (
         <div className="progress-thick">
@@ -23,6 +26,7 @@ const ProgressBarThick = (props) => {
                 strokeColor={'#9270ef'}
                 trailColor={'#514d55'}
                 style={{height: '100%'}}
+                transition={transition}
             />
         </div>
     );

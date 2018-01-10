@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './Questions.css';
 
 
+
+
 class Questions extends Component {
     switchStep = (answerType, e) => {
         e.currentTarget.classList.add("blink", "blink-3", "blink-furiously");

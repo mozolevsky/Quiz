@@ -7,12 +7,12 @@ import Questions from './Questions/Questions';
 import FinalCalculationsBar from './FinalCalculationsBar/FinalCalculationsBar';
 import LoginForm from './Form/LoginForm';
 import PasswordForm from './Form/PasswordForm';
-import Wrapper from '../../hoc/Wrapper';
 import QuizSubtitle from '../QuizDetails/QuizTitle/QuizSubtitle';
 
 
 const QuizDetails = (props) => {
     const {data, toNextStep, answers, sendRequest, dataFromForm} = props;
+
     const quizTitleElem =  (   
         data.title &&
         <QuizTitle stepTitle={data.title} stepBigTitle={data.bigTitle}/>
@@ -30,6 +30,7 @@ const QuizDetails = (props) => {
         <Questions
             stepQuestions={data.questions}
             toNextStep={toNextStep}
+            stepTitle={data.title} 
         />
     );
 
@@ -57,17 +58,18 @@ const QuizDetails = (props) => {
     );
 
     return (
-        <Wrapper>
+        <div>
             {formNameEmail}
             {formPassword}
             {quizTitleElem}
             {subtitleElem}
             {quizDescElem}
             {startBtn}
+
             {questionsElem}
             {finalCalcElem}
             {finishBtn}
-        </Wrapper>
+        </div>
     );
 }
 

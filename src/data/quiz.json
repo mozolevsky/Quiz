@@ -16,14 +16,46 @@
         }
     },
 {
-    "title": "When it comes to your stature, you are…",
+    "title": "When It comes to your body:",
     "questions": [{
             "label": "A",
-            "text": "Very tall or very short, slight."
+            "text": "You are thin with taught, or tight musculature, boney joints"
         },
         {
             "label": "B",
-            "text": "Medium, or average in height"
+            "text": "You have a medium build; symmetrical with good muscle development, and flexible joints."
+        },
+        {
+            "label": "C",
+            "text": "You have, stocky, solid build, and thick musculature, with larger, well-knit joints."
+        }
+    ]
+},
+{
+    "title": "When It comes to weight:",
+    "questions": [{
+            "label": "A",
+            "text": "You lose weight easily or tend to be underweight"
+        },
+        {
+            "label": "B",
+            "text": "Your weight is even, and constant. You have a good metabolism"
+        },
+        {
+            "label": "C",
+            "text": " You gain easily or tend to be overweight"
+        }
+    ]
+},
+{
+    "title": "When it comes to your stature:",
+    "questions": [{
+            "label": "A",
+            "text": "You are very tall or very short, slight."
+        },
+        {
+            "label": "B",
+            "text": "You are medium, or average in height"
         },
         {
             "label": "C",
@@ -32,37 +64,434 @@
     ]
 },
 {
-    "title": "When it comes to your stature, you are…",
+    "title": "When It comes to your eye shape:",
     "questions": [{
             "label": "A",
-            "title": "You find your skin tends to be dry, rough, or dull, and thin. ",
-            "text": "You can see your veins. If you have acne, it’s mostly dry and bumpy, with blackheads."
+            "text": "You eyes are smaller in shape, suffer dryness, or may be dark in color"
         },
         {
             "label": "B",
-            "title": "You find your skin to be rosy, radiant, flushed, and warm. ",
-            "text": "You are prone to freckles.  Your veins are less prominent. If you have acne, it’s red, irritated and angry looking."
+            "text": "You have a penetrating, gaze. Your eyes are bright, gray or green. Sensitive to light. Whites of eyes may get bloodshot easily."
         },
         {
             "label": "C",
-            "title": "Your skin is smooth, moist, thick, and pale. ",
-            "text": "Your veins are not prominent. You have few freckles or moles. If you have acne, they are few, but greasy, with deep pustules."
+            "text": "You have large, beautiful, eyes. A loving gaze. Dark or blue in color. Whites of eyes are very white."
         }
     ]
 },
 {
-    "title": "When it comes to your stature, you are…",
+    "title": "When it comes to your mouth:",
     "questions": [{
             "label": "A",
-            "text": "Very tall or very short, slight."
+            "text": "Your teeth are crooked, or you have a toothy grin. Thin gums."
         },
         {
             "label": "B",
-            "text": "Medium, or average in height"
+            "text": "Your teeth medium in size. Your gums are soft, tender."
         },
         {
             "label": "C",
-            "text": "You can be short, or larger, broader"
+            "text": "You have healthy, white, well-formed teeth. Strong gums."
+        }
+    ]
+},
+{
+    "title": "When looking at your face shape:",
+    "questions": [{
+            "label": "A",
+            "text": "Your face is thin, angular"
+        },
+        {
+            "label": "B",
+            "text": "Your face tapers gradually, appears symmetrical"
+        },
+        {
+            "label": "C",
+            "text": "You have a round face, or may appear plump. Cheeky."
+        }
+    ]
+},
+{
+    "title": "When you consider your complexion:",
+    "questions": [{
+            "label": "A",
+            "text": "You find your skin tends to be dry, rough, or dull, and thin: you can see your veins. If you have acne, it’s mostly dry and bumpy, with blackheads."
+        },
+        {
+            "label": "B",
+            "text": "You find your skin to be rosy, radiant, flushed, and warm. You are prone to freckles.  Your veins are less prominent. If you have acne, it’s red, irritated and angry looking."
+        },
+        {
+            "label": "C",
+            "text": "Your skin is smooth, moist, thick, and pale. Your veins are not prominent. You have few freckles or moles. If you have acne, they are few, but greasy, with deep pustules."
+        }
+    ]
+},
+{
+    "title": "When it comes to your hair",
+    "questions": [{
+            "label": "A",
+            "text": "Your hair tends to be dry, knots or splits easily. Tends to be brown, black in color"
+        },
+        {
+            "label": "B",
+            "text": "You hair tends to be straight, often fair, or red in color. There is a tendency to early graying, or balding."
+        },
+        {
+            "label": "C",
+            "text": "You have thick, curly, wavy, luxurious, hair.  May have tendency towards greasiness."
+        }
+    ]
+},
+{
+    "title": "When you consider your chest:",
+    "questions": [{
+            "label": "A",
+            "text": "You tend towards a flat chest, perhaps even sunken in appearance. "
+        },
+        {
+            "label": "B",
+            "text": "You have a moderately developed chest."
+        },
+        {
+            "label": "C",
+            "text": "You have an expanded, round, barreled or naturally “busty” chest."
+        }
+    ]
+},
+{
+    "title": "When you think about your body temperature:",
+    "questions": [{
+            "label": "A",
+            "text": "You always seem to be a bit chilly, with cold hands and toes"
+        },
+        {
+            "label": "B",
+            "text": "You’re always warm. You often feel sweaty, overheated. You can wear t-shirts in the winter."
+        },
+        {
+            "label": "C",
+            "text": "You are usually fairly comfortable, you don’t often feel too hot, or too cold."
+        }
+    ]
+},
+{
+    "title": "When you think about your desire for food at mealtimes:",
+    "questions": [{
+            "label": "A",
+            "text": "Your hunger is irregular, you may even forget to eat"
+        },
+        {
+            "label": "B",
+            "text": "Your hunger is strong and pronounced, you have to eat "
+        },
+        {
+            "label": "C",
+            "text": "Your hunger is mild but steady; you can easily skip a meal"
+        }
+    ]
+},
+{
+    "title": "When you think about how you assimilate your food:",
+    "questions": [{
+            "label": "A",
+            "text": "Your digestion is inconstant, often gassy, bloating"
+        },
+        {
+            "label": "B",
+            "text": "Your digestion runs quick and hot. You can eat most things. Sometimes there’s a burning quality in the gut."
+        },
+        {
+            "label": "C",
+            "text": "Your digestion is slow, and you tend to get congested."
+        }
+    ]
+},
+{
+    "title": "When you’re feel healthy and balanced you prefer:",
+    "questions": [{
+            "label": "A",
+            "text": "Lightly sweet, unctuous, sour or salty foods (sugar, oil, lemons, salt)"
+        },
+        {
+            "label": "B",
+            "text": "sweet and astringent foods (sugars, raw fruits and vegetables)"
+        },
+        {
+            "label": "C",
+            "text": "pungent, light, and astringent or bitter foods. (chilies, beans, green vegetables, garlic)"
+        }
+    ]
+},
+{
+    "title": "When you feel a hankering for something, you tend to crave:",
+    "questions": [{
+            "label": "A",
+            "text": "Sugary or cold foods (sweets, chocolate or ice drinks)"
+        },
+        {
+            "label": "B",
+            "text": "spicy things, oily, heavy things (salsa, or fried foods)"
+        },
+        {
+            "label": "C",
+            "text": "Sugar, fried or animal foods (ice cream, meat and chips)"
+        }
+    ]
+},
+{
+    "title": "When it comes to how you experience thirst:",
+    "questions": [{
+            "label": "A",
+            "text": "sometimes you’re thirsty, sometimes you’re not."
+        },
+        {
+            "label": "B",
+            "text": "You are often thirsty"
+        },
+        {
+            "label": "C",
+            "text": "You don’t get very thirsty"
+        }
+    ]
+},
+{
+    "title": "When it comes to your elimination pattern:",
+    "questions": [{
+            "label": "A",
+            "text": "Your stools are hard, or irregular. You experience constipation"
+        },
+        {
+            "label": "B",
+            "text": "Your stools are loose, soft. Sometimes you experience diarrhea"
+        },
+        {
+            "label": "C",
+            "text": "Your stools are thick, slow, and sluggish. Sometimes you experience mucus in your stool."
+        }
+    ]
+},
+{
+    "title": "When it comes to the weather, you feel worse when:",
+    "questions": [{
+            "label": "A",
+            "text": "It’s windy or dry and cold. You dislike feeling chilly all the time. "
+        },
+        {
+            "label": "B",
+            "text": "It’s too hot, you prefer cooler climates"
+        },
+        {
+            "label": "C",
+            "text": "It’s humid, or cool and damp: you feel tired and listless. You like warmer, drier and more moderate climates."
+        }
+    ]
+},
+{
+    "title": "When it comes to your physical activity:",
+    "questions": [{
+            "label": "A",
+            "text": "you move quickly"
+        },
+        {
+            "label": "B",
+            "text": "you move with determination"
+        },
+        {
+            "label": "C",
+            "text": "you always take your time, but possess good endurance"
+        }
+    ]
+},
+{
+    "title": "When it comes to how you learn new things:",
+    "questions": [{
+            "label": "A",
+            "text": "You grasp concepts quickly, but also quickly forget"
+        },
+        {
+            "label": "B",
+            "text": "You have good overall memory, and find it easy to learn"
+        },
+        {
+            "label": "C",
+            "text": "it may take you longer to “get it”, but you will always remember"
+        }
+    ]
+},
+{
+    "title": "When you consider your active nature:",
+    "questions": [{
+            "label": "A",
+            "text": "You are lively, quick to action, and you love change. It’s hard for you to sit still. Very often, you don’t finish what you start."
+        },
+        {
+            "label": "B",
+            "text": "You are intense and competitive. You like to keep focused. You are well organized and work efficiently with a sense of purpose."
+        },
+        {
+            "label": "C",
+            "text": "You may be slow and steady but will see it through to the end. You are easy-going, nurturing, and adaptable. You enjoy leisurely Activities."
+        }
+    ]
+},
+{
+    "title": "When it comes to your relationship with wealth:",
+    "questions": [{
+            "label": "A",
+            "text": "You spend quickly; you seem to have difficulty saving money"
+        },
+        {
+            "label": "B",
+            "text": "You can save, but spend money lavishly; you love giving gifts"
+        },
+        {
+            "label": "C",
+            "text": "You spend money on necessities; you’re good at saving"
+        }
+    ]
+},
+{
+    "title": "When you’re feeling stressed out:",
+    "questions": [{
+            "label": "A",
+            "text": "You are tend towards anxiety and fearfulness"
+        },
+        {
+            "label": "B",
+            "text": "You tend to become fiery, aggressive, defensive"
+        },
+        {
+            "label": "C",
+            "text": "You tend to become withdrawn and feel unmotivated"
+        }
+    ]
+},
+{
+    "title": "When it comes to your immunity or getting sick:",
+    "questions": [{
+            "label": "A",
+            "text": "Your immunity is low, you seem to easily catch whatever is going around. You get anxious. You feel aching or suffer chronic pain."
+        },
+        {
+            "label": "B",
+            "text": "Your immune system is pretty balanced. You get worn out in hot conditions. You are prone to fevers and inflammatory conditions. "
+        },
+        {
+            "label": "C",
+            "text": "You have a strong immune system and don’t often get sick, but when you do you feel  congested, or tend to hold onto water."
+        }
+    ]
+},
+{
+    "title": "When it comes to your sex drive and personal stamina:",
+    "questions": [{
+            "label": "A",
+            "text": "It’s low, or your energy is changeable. You’re never sure when you’re going to be in the mood."
+        },
+        {
+            "label": "B",
+            "text": "It’s high, and steady. Good Stamina. You’re always in the mood."
+        },
+        {
+            "label": "C",
+            "text": "It’s moderate. You’re happy to be affectionate. You have great stamina."
+        }
+    ]
+},
+{
+    "title": "When it comes to faith, or when it comes to beliefs you find important:",
+    "questions": [{
+            "label": "A",
+            "text": "your beliefs are constantly fluctuating; you may be rebellious."
+        },
+        {
+            "label": "B",
+            "text": "You are determined, and decisive. Sometimes even fanatical or obsessive."
+        },
+        {
+            "label": "C",
+            "text": "You are loyal, devoted. It takes you a long time to change your mind."
+        }
+    ]
+},
+{
+    "title": "Your optimistic nature is that:",
+    "questions": [{
+            "label": "A",
+            "text": "You can adapt quickly."
+        },
+        {
+            "label": "B",
+            "text": "You exhibit fortitude."
+        },
+        {
+            "label": "C",
+            "text": "You are loving."
+        }
+    ]
+},
+{
+    "title": "When it comes to your intellect, and what kind of thinker you are:",
+    "questions": [{
+            "label": "A",
+            "text": "You are Imaginative, quick, but faltering: you vacillate. It’s hard for you to make decisions."
+        },
+        {
+            "label": "B",
+            "text": "You are very focused, opinionated, but often accurate, and meticulous. You are insightful."
+        },
+        {
+            "label": "C",
+            "text": "You are slower to come to a decision, but your thinking is deliberate; your conclusions are precise."
+        }
+    ]
+},
+{
+    "title": "When it comes to your dream life:",
+    "questions": [{
+            "label": "A",
+            "text": "You find that the dreams change quickly; you dream about flying; you have fearful dreams often, or even nightmares"
+        },
+        {
+            "label": "B",
+            "text": "Your dream world is colorful, adventurous, fiery, can be violent, or passionate and romantic."
+        },
+        {
+            "label": "C",
+            "text": "You dream of water, lakes; about memories; sentimental persons or moments. You may feel you have few dreams, or don’t remember them."
+        }
+    ]
+},
+{
+    "title": "When you go to sleep:",
+    "questions": [{
+            "label": "A",
+            "text": "Your sleep is broken, restless; you suffer sleeplessness, or insomnia. Your sleeping is light and disturbed easily."
+        },
+        {
+            "label": "B",
+            "text": "You sleep soundly, but even if you miss some hours here or there, you can function well on less sleep. You find it easy to get up."
+        },
+        {
+            "label": "C",
+            "text": "You sleep deep, and for long hours, you like sleeping in, and are hard to rouse. You are not a morning person."
+        }
+    ]
+},
+{
+    "title": "When it comes to your conversation style:",
+    "questions": [{
+            "label": "A",
+            "text": "You are talkative, you even talk quickly (or very quickly)."
+        },
+        {
+            "label": "B",
+            "text": "You have a sharp, decisive, intense, style. Some may find you argumentative."
+        },
+        {
+            "label": "C",
+            "text": "You are slower and more deliberate in your responses. You take time to think things out. You may choose fewer words. You may speak monotonously."
         }
     ]
 },
