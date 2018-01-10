@@ -58,7 +58,7 @@
     }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: 1024px) {
     .overview {
         margin-top: 21px;
 
@@ -67,7 +67,7 @@
         }
 
         &__top-title.title {
-            margin-bottom: 442px;
+            margin-bottom: 360px;
         }
 
         &__chart-wrapper {
@@ -75,6 +75,20 @@
             top: 175px;
             left: 50%;
             transform: translate(-50%);
+
+            &::before {
+                top: 222px;
+                right: 29px;
+                transform: rotate(38deg);
+            }
+
+            &::after {
+                top: 256px;
+                right: 52px;
+                width: 148px;
+                height: 36px;
+                transform: rotate(-2deg);
+            }
         }
     }
 }

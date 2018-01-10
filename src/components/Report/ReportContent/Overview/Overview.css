@@ -70,18 +70,28 @@
     background-size: cover;
     transform: rotate(-13deg); }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .overview {
     margin-top: 21px; }
     .overview__top-text {
       width: 100%; }
     .overview__top-title.title {
-      margin-bottom: 442px; }
+      margin-bottom: 360px; }
     .overview__chart-wrapper {
       position: absolute;
       top: 175px;
       left: 50%;
-      transform: translate(-50%); } }
+      transform: translate(-50%); }
+      .overview__chart-wrapper::before {
+        top: 222px;
+        right: 29px;
+        transform: rotate(38deg); }
+      .overview__chart-wrapper::after {
+        top: 256px;
+        right: 52px;
+        width: 148px;
+        height: 36px;
+        transform: rotate(-2deg); } }
 
 @media (max-width: 767px) {
   .overview__top {

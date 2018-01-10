@@ -48,7 +48,7 @@
 
 @media (max-width: 767px) {
   .top-img {
-    margin-top: 5px;
+    margin-top: 115px;
     margin-bottom: 27px;
     width: calc(100% + 40px);
     box-sizing: border-box;
@@ -58,4 +58,5 @@
       bottom: 5px;
       right: 0;
       left: 0;
+      min-height: 138px;
       box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.35); } }
