@@ -14,7 +14,7 @@ class MealPlans extends Component {
         return (
            <div>
                 <TopImg 
-                    source={topImg.source} 
+                    source={'/static/images/' + topImg.source} 
                     desc={topImg.desc}
                     offset={topImg.offset}
                 />
