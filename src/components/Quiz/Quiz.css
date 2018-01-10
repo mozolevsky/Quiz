@@ -115,9 +115,14 @@
     height: auto;
     justify-content: flex-start; }
   .quiz__progress-top {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: block; }
   .quiz__area {
-    margin-top: 30px; }
+    margin-top: 84px; }
   .quiz__right-side {
     display: none; } }
 

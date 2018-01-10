@@ -56,3 +56,6 @@
     font-weight: bold;
     color: #ffffff;
     letter-spacing: normal; }
+
+.rc-progress-line-path {
+  transition: stroke-dashoffset 0.6s ease !important; }

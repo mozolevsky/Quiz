@@ -79,10 +79,10 @@ class LoginForm extends Component {
                        />
                    </div>
                     <div className="form__input-area">
-                        <label htmlFor="name" className="form__label">Email</label>
+                        <label htmlFor="email" className="form__label">Email</label>
                         <input
                             type="text"
-                            id="name"
+                            id="email"
                             name="email"
                             className={'form__input' + (errorEmail ? ' input-error' : '')}
                             placeholder="your@email.com"

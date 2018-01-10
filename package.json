@@ -9,7 +9,7 @@
     "npm-run-all": "^4.1.1",
     "prop-types": "^15.6.0",
     "rc-collapse": "^1.7.6",
-    "rc-progress": "^2.2.2",
+    "rc-progress": "^2.2.5",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-burger-menu": "^2.1.11",

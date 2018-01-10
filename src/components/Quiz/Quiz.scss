@@ -126,11 +126,16 @@
     }
 
     &__progress-top {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
       display: block;
     }
 
     &__area {
-      margin-top: 30px;
+      margin-top: 84px;
     }
 
     &__right-side {

@@ -12,7 +12,7 @@ import './Quiz.css';
 
 class Quiz extends Component {
     state = {
-        step: 0,
+        step: 3,
         progress: 0,
         questionsAmount: 0,
         answers: [], 
