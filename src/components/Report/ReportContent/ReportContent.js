@@ -31,7 +31,7 @@ class ReportContent extends Component {
         return (
             <ScrollToTop>
                 <Route
-                    path={`/report/type*`} 
+                    path={`/report/type*`}
                     render={() => <Overview 
                         pageData={pagesData[0]}
                         vatta={vatta}

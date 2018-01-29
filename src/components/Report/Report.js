@@ -11,7 +11,7 @@ import reportData from '../../data/reportData.json';
 
 class Report extends Component {
     state = {
-        mobileNavTitle: 'Overview',
+        mobileNavTitle: null,
         mobileHeaderStatus: true,
         reportData: reportData.vatta,
         mobileNavMenuStatus: '1',
@@ -20,6 +20,21 @@ class Report extends Component {
         kapha: 0
     }
 
+    componentDidUpdate(prevProps, prevState) {
+
+        let newMobileTitle = this.props.location.pathname.slice(8).replace(/-/g, ' ');
+        newMobileTitle = newMobileTitle[0].toUpperCase() + newMobileTitle.slice(1);
+
+        if (this.props.location.pathname.slice(8, 12) === 'type') {
+            newMobileTitle = 'Overwiew';
+        }
+        
+        if (prevState.mobileNavTitle !== newMobileTitle) {
+            this.setState({
+                mobileNavTitle: newMobileTitle
+            });
+        }
+    }
     
     componentDidMount() {
         const url = this.props.location.pathname;
@@ -109,7 +124,7 @@ class Report extends Component {
 
                 <section className="report-container__content-area">
                     <div className={`report-container__header-wrapper ${mobileHeaderStatus ? '' : 'report-container__header-inVisible'}`}>
-                        <ReportHeader/>
+                        <ReportHeader />
 
                         <div className="report-container__mobile-nav"
                              onClick={this.toggleMobileMenu}>

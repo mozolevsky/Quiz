@@ -11,7 +11,7 @@ const ContinueBtn = (props) => {
        <div>
            <p className="continue-btn__mobile-title">{title}:</p>
             <Link className="continue-btn" to={props.link}>
-                <span className="continue-btn__desctop-title">{title}</span>
+                <span className="continue-btn__desctop-title">{title}</span> 
                 <span className="continue-btn__marked-txt">{props.txt}</span>
             </Link>
        </div>

@@ -10,7 +10,7 @@
     border-radius: 3px;
     box-shadow: 0 6px 10px 0 rgba(215, 200, 251, 0.24);
     border: solid 1px #e3d8ff;
-    background: #ffffff url('/static/media/right-arrow.c5356fef.svg') no-repeat calc(100% - 29px) center;
+    background: url('/static/media/right-arrow.c5356fef.svg') no-repeat calc(100% - 29px) center;
     background-size: 24px;
 
     line-height: 25px;
@@ -45,7 +45,7 @@
         margin-bottom: 24px;
         height: 52px;
         padding-left: 18px;
-        background: #ffffff url('../../../../../img/right-arrow.svg') no-repeat calc(100% - 16px) center;
+        background: url('../../../../../img/right-arrow.svg') no-repeat calc(100% - 16px) center;
         background-size: 16px;
 
         &__mobile-title {

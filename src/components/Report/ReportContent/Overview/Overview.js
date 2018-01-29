@@ -79,7 +79,10 @@ class Overview extends Component {
 
                 <p>{texts[15]}</p>
 
-                <ContinueBtn link="/report/foods-and-diet" txt="Foods and Diet"/>    
+                <ContinueBtn 
+                    link="/report/foods-and-diet" 
+                    txt="Foods and Diet"
+                />   
            </Wrapper>
         );
     }

@@ -12,7 +12,7 @@ import './Quiz.css';
 
 class Quiz extends Component {
     state = {
-        step: 0,
+        step: 3,
         progress: 0,
         questionsAmount: 0,
         answers: [], 
@@ -158,7 +158,7 @@ class Quiz extends Component {
                     <div className={`quiz__area ${leaveStyle}`}>
                         <ReactCSSTransitionGroup
                             transitionName="quiz"
-                            transitionEnterTimeout={500}
+                            transitionEnterTimeout={200}
                             transitionLeave={false}
                             >
                             <QuizDetails
