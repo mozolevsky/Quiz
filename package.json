@@ -11,7 +11,6 @@
     "rc-collapse": "^1.7.6",
     "rc-progress": "^2.2.5",
     "react": "^16.0.0",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-burger-menu": "^2.1.11",
     "react-chartjs-2": "^2.6.4",
     "react-dom": "^16.0.0",

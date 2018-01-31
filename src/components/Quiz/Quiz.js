@@ -3,21 +3,24 @@ import QuizDetails from './QuizDetails/QuizDetails';
 import ProgressBarThin from './ProgressBar/ProgressBarThin/ProgressBarThin';
 import ProgressBarThick from './ProgressBar/ProgressBarThick/ProgressBarThick';
 import DeviceArea from './DeviceArea/DeviceArea';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import axios from 'axios';
 
 import quizData from '../../data/quiz';
 import logo from '../../img/logo.svg';
 import './Quiz.css';
 
+
+
 class Quiz extends Component {
     state = {
-        step: 3,
+        step: 0,
         progress: 0,
         questionsAmount: 0,
         answers: [], 
         name: '',
-        email: ''
+        email: '',
+        in: true
     };
 
     componentWillMount = () => {
@@ -26,7 +29,7 @@ class Quiz extends Component {
             if (item.questions) {
                 amount +=1;
             }
-        });
+        }); 
 
         if (amount > 0) {
             this.setState({questionsAmount: amount});
@@ -101,6 +104,8 @@ class Quiz extends Component {
     };
 
     nextStep = (answerType) => {
+        this.setState({ in: !this.state.in });
+
         const {step, progress, questionsAmount} = this.state;
 
         if (quizData[step].questions) {
@@ -147,7 +152,7 @@ class Quiz extends Component {
     }
 
     render() {
-        const {step, progress, questionsAmount, answers, leaveStyle} = this.state;
+        const {step, progress, questionsAmount, answers} = this.state;
         
         return (
             <div className="quiz">
@@ -155,12 +160,12 @@ class Quiz extends Component {
                     <div className="quiz__progress-top">
                         <ProgressBarThick currentAnswer={progress} totalAnswers={questionsAmount}/>
                     </div>
-                    <div className={`quiz__area ${leaveStyle}`}>
-                        <ReactCSSTransitionGroup
-                            transitionName="quiz"
-                            transitionEnterTimeout={200}
-                            transitionLeave={false}
-                            >
+                    <div className="quiz__area">
+                        <CSSTransition
+                            timeout={600}
+                            classNames="fade"
+                            in={this.state.in}
+                        >
                             <QuizDetails
                                 key={step}
                                 data={quizData[step]}
@@ -169,7 +174,7 @@ class Quiz extends Component {
                                 sendRequest={this.sendRequest}
                                 dataFromForm={this.getDataFromForm}
                             />
-                        </ReactCSSTransitionGroup>
+                        </CSSTransition>
                     </div>
                 </div>
                 <div className="quiz__right-side">

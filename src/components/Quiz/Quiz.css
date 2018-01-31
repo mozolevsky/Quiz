@@ -60,35 +60,19 @@
     height: 100%;
     background-color: white; }
 
-.quiz-enter {
+.fade-enter {
   opacity: 0.01; }
 
-.quiz-enter.quiz-enter-active {
+.fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 350ms ease-in; }
+  transition: opacity 600ms ease; }
 
-.quiz-leave {
-  opacity: 1; }
+.fade-exit {
+  opacity: 0.01; }
 
-.quiz-leave.quiz-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in; }
-
-.quiz-leave-animation {
-  animation-name: quizleave;
-  animation-duration: 0.5s; }
-
-@keyframes quizleave {
-  0% {
-    opacity: 1; }
-  25% {
-    opacity: 0.75; }
-  50% {
-    opacity: 0.5; }
-  75% {
-    opacity: 0.25; }
-  100% {
-    opacity: 0; } }
+.fade-exit.fade-exit-active {
+  opacity: 1;
+  transition: opacity 600ms ease; }
 
 @media (min-width: 1600px) and (min-height: 800px) {
   .quiz__area {
