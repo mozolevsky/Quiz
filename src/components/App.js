@@ -10,7 +10,7 @@ class App extends Component {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path='/quiz' component={Quiz}/>
+                <Route path='/' component={Quiz}/>
                 <Route path='/report' render={({ location }) => <Report location={location}/>}/>
             </Switch>
         </BrowserRouter>
