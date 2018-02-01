@@ -73,7 +73,7 @@ const QuizDetails = (props) => {
     );
 }
 
-QuizDetails.PropTypes = {
+QuizDetails.propTypes = {
     data: PropTypes.object.isRequired,
     toNextStep: PropTypes.func.isRequired,
     answers: PropTypes.array.isRequired

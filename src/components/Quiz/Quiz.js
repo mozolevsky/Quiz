@@ -104,6 +104,7 @@ class Quiz extends Component {
     };
 
     nextStep = (answerType) => {
+        // animation trigger
         this.setState({ in: !this.state.in });
 
         const {step, progress, questionsAmount} = this.state;
@@ -118,13 +119,10 @@ class Quiz extends Component {
         }
 
         if (step < quizData.length - 1) {
-            this.setState({leaveStyle: 'quiz-leave-animation'});
-
             setTimeout(() => {
                 this.setState((prevState) => {
                     return {
-                        step: prevState.step + 1,
-                        leaveStyle: ''
+                        step: prevState.step + 1
                     }
                 });
             }, 300);

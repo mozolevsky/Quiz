@@ -68,7 +68,7 @@ class DeviceArea extends Component {
     }
 }
 
-DeviceArea.PropTypes = {
+DeviceArea.propTypes = {
     currentAnswer: PropTypes.number.isRequired,
     totalAnswers: PropTypes.number.isRequired
 };

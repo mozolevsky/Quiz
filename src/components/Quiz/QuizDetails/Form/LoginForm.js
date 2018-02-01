@@ -105,7 +105,7 @@ class LoginForm extends Component {
 
 }
 
-LoginForm.PropTypes = {
+LoginForm.propTypes = {
     formData: PropTypes.shape({
         formTitle: PropTypes.string,
         isLogin: PropTypes.bool.isRequired,

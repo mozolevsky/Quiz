@@ -16,7 +16,7 @@ const Button = (props) => {
     );
 }
 
-Button.PropTypes = {
+Button.propTypes = {
     buttonData: PropTypes.shape({
         text: PropTypes.string,
         style: PropTypes.string

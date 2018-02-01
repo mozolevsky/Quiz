@@ -27,7 +27,7 @@ const ProgressBarThick = (props) => {
     );
 }
 
-ProgressBarThick.PropTypes = {
+ProgressBarThick.propTypes = {
     currentAnswer: PropTypes.number,
     totalAnswers: PropTypes.number
 };
