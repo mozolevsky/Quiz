@@ -13,7 +13,7 @@ const QuizSubtitle = (props) => {
     );
 }
 
-QuizSubtitle.PropTypes = {
+QuizSubtitle.propTypes = {
     subtitle: PropTypes.string
 };
 

@@ -4,7 +4,7 @@ import './QuizDescription.css';
 
 const QuizDescription = (props) => <p className="quiz__description">{props.stepDesc}</p>
 
-QuizDescription.PropTypes = {
+QuizDescription.propTypes = {
     stepDesc: PropTypes.string
 };
 

@@ -13,7 +13,7 @@ const QuizTitle = (props) => {
     );
 }
 
-QuizTitle.PropTypes = {
+QuizTitle.propTypes = {
     stepTitle: PropTypes.string,
     stepBigTitle: PropTypes.string
 };

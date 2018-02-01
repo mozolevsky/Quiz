@@ -13,12 +13,12 @@ class LoginForm extends Component {
         isBtnActive: false
     };
 
+    
     componentDidMount = () => {
         this.nameInput.focus();
     };
 
- 
-    formIsValid = () => {
+     formIsValid = () => {
         return !this.state.errorEmail && this.state.name && this.state.email;
     }
 
@@ -53,7 +53,9 @@ class LoginForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.dataFromForm(this.state.name, this.state.email);
-        this.props.toNextStep();
+        setTimeout(() => {
+            this.props.toNextStep();
+        }, 200);
     }
 
     render() {

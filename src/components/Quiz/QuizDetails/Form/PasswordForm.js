@@ -94,7 +94,7 @@ class PasswordForm extends Component {
 
 }
 
-PasswordForm.PropTypes = {
+PasswordForm.propTypes = {
     formData: PropTypes.shape({
         formTitle: PropTypes.string,
         isPassword: PropTypes.bool.isRequired,

@@ -20,7 +20,8 @@ class Quiz extends Component {
         answers: [], 
         name: '',
         email: '',
-        in: true
+        in: true,
+        allowClicksPerQuizStep: true
     };
 
     componentWillMount = () => {
@@ -104,29 +105,36 @@ class Quiz extends Component {
     };
 
     nextStep = (answerType) => {
-        // animation trigger
-        this.setState({ in: !this.state.in });
-
         const {step, progress, questionsAmount} = this.state;
 
-        if (quizData[step].questions) {
-            this.setState((prevState) => {
-                return {
-                    progress: prevState.progress + 1,
-                    answers: [...prevState.answers, answerType]
-                }
-            });
-        }
-
-        if (step < quizData.length - 1) {
-            setTimeout(() => {
+        if (this.state.allowClicksPerQuizStep) {
+            if (quizData[step].questions) {
                 this.setState((prevState) => {
                     return {
-                        step: prevState.step + 1
+                        progress: prevState.progress + 1,
+                        answers: [...prevState.answers, answerType]
                     }
                 });
-            }, 300);
+            }
+    
+            if (step < quizData.length - 1) {
+                this.setState((prevState) => {
+                    return {
+                        in: !this.state.in,
+                        step: prevState.step + 1,
+                        allowClicksPerQuizStep: false
+                    }
+                })
+            }
         }
+
+        setTimeout(() => {
+            this.setState((prevState) => {
+                return {
+                    allowClicksPerQuizStep: true
+                }
+            })
+        }, 650);
 
         if (progress === questionsAmount) {
             this.calculateYogaType();

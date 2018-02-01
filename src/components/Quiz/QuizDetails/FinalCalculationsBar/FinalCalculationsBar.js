@@ -46,7 +46,7 @@ class FinalCalculationsBar extends Component {
     }
 }
 
-FinalCalculationsBar.PropTypes = {
+FinalCalculationsBar.propTypes = {
     toCalculate: PropTypes.bool
 };
 

@@ -22,7 +22,7 @@ const TickList = (props) => {
     );
 }
 
-TickList.PropTypes = {
+TickList.propTypes = {
     listTitle: PropTypes.string.isRequired,
     listItems: PropTypes.array.isRequired
 };

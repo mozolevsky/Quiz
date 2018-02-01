@@ -41,7 +41,7 @@ class Questions extends Component {
     }
 }
 
-Questions.PropTypes = {
+Questions.propTypes = {
     stepQuestions: PropTypes.arrayOf(PropTypes.shape({
         label: PropTypes.string.isRequired,
         title: PropTypes.string,
